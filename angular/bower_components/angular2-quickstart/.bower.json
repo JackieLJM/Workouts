@@ -1,0 +1,15 @@
+{
+  "name": "angular2-quickstart",
+  "homepage": "https://github.com/angular/quickstart",
+  "version": "2.1.2",
+  "_release": "2.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.2",
+    "commit": "71b79220d8cc5d90edd8cae66da8cda32d7b3198"
+  },
+  "_source": "https://github.com/angular/quickstart.git",
+  "_target": "^2.1.2",
+  "_originalSource": "angular2-quickstart",
+  "_direct": true
+}

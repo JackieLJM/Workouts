@@ -1,0 +1,17 @@
+{
+  "name": "react",
+  "homepage": "https://github.com/JackieLJM/Workouts",
+  "authors": [
+    "JackieLJM <ljmlionshy@live.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

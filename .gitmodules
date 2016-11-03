@@ -1,0 +1,6 @@
+[submodule "leaderboard"]
+	path = leaderboard
+	url = https://github.com/meteor/leaderboard
+[submodule "react/fully-reactive-react-example"]
+	path = react/fully-reactive-react-example
+	url = https://github.com/belfz/fully-reactive-react-example
