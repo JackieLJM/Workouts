@@ -4,3 +4,6 @@
 [submodule "react/fully-reactive-react-example"]
 	path = react/fully-reactive-react-example
 	url = https://github.com/belfz/fully-reactive-react-example
+[submodule "react/react-hot-boilerplate"]
+	path = react/react-hot-boilerplate
+	url = https://github.com/gaearon/react-hot-boilerplate.git
