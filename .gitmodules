@@ -7,3 +7,9 @@
 [submodule "react/react-hot-boilerplate"]
 	path = react/react-hot-boilerplate
 	url = https://github.com/gaearon/react-hot-boilerplate.git
+[submodule "react/react-tutorial"]
+	path = react/react-tutorial
+	url = https://github.com/reactjs/react-tutorial.git
+[submodule "isomorphic/isomorphic-redux-app"]
+	path = isomorphic/isomorphic-redux-app
+	url = https://github.com/caljrimmer/isomorphic-redux-app.git
