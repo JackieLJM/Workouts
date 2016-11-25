@@ -13,3 +13,12 @@
 [submodule "isomorphic/isomorphic-redux-app"]
 	path = isomorphic/isomorphic-redux-app
 	url = https://github.com/caljrimmer/isomorphic-redux-app.git
+[submodule "isomorphic/redux-tutorial"]
+	path = isomorphic/redux-tutorial
+	url = https://github.com/happypoulp/redux-tutorial.git
+[submodule "isomorphic/elm-architecture-tutorial"]
+	path = isomorphic/elm-architecture-tutorial
+	url = https://github.com/evancz/elm-architecture-tutorial.git
+[submodule "isomorphic/simplest-redux-example"]
+	path = isomorphic/simplest-redux-example
+	url = https://github.com/jackielii/simplest-redux-example.git
