@@ -16,9 +16,15 @@
 [submodule "isomorphic/redux-tutorial"]
 	path = isomorphic/redux-tutorial
 	url = https://github.com/happypoulp/redux-tutorial.git
-[submodule "isomorphic/elm-architecture-tutorial"]
-	path = isomorphic/elm-architecture-tutorial
-	url = https://github.com/evancz/elm-architecture-tutorial.git
 [submodule "isomorphic/simplest-redux-example"]
 	path = isomorphic/simplest-redux-example
 	url = https://github.com/jackielii/simplest-redux-example.git
+[submodule "react/react-book-examples"]
+	path = react/react-book-examples
+	url = https://github.com/arcthur/react-book-examples.git
+[submodule "react/react-router-tutorial"]
+	path = react/react-router-tutorial
+	url = https://github.com/reactjs/react-router-tutorial
+[submodule "isomorphic/koa-react-full-example"]
+	path = isomorphic/koa-react-full-example
+	url = https://github.com/dozoisch/koa-react-full-example
