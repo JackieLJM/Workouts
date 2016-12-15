@@ -19,12 +19,24 @@
 [submodule "isomorphic/simplest-redux-example"]
 	path = isomorphic/simplest-redux-example
 	url = https://github.com/jackielii/simplest-redux-example.git
-[submodule "react/react-book-examples"]
-	path = react/react-book-examples
-	url = https://github.com/arcthur/react-book-examples.git
 [submodule "react/react-router-tutorial"]
 	path = react/react-router-tutorial
 	url = https://github.com/reactjs/react-router-tutorial
 [submodule "isomorphic/koa-react-full-example"]
 	path = isomorphic/koa-react-full-example
 	url = https://github.com/dozoisch/koa-react-full-example
+[submodule "react/react-router"]
+	path = react/react-router
+	url = http://github.com/ReactTraining/react-router.git
+[submodule "isomorphic/electron-react-boilerplate"]
+	path = isomorphic/electron-react-boilerplate
+	url = https://github.com/chentsulin/electron-react-boilerplate
+[submodule "react/react-boilerplate"]
+	path = react/react-boilerplate
+	url = https://github.com/mxstbr/react-boilerplate
+[submodule "visual/recharts"]
+	path = visual/recharts
+	url = https://github.com/recharts/recharts.git
+[submodule "react/react-demos"]
+	path = react/react-demos
+	url = https://github.com/ruanyf/react-demos
