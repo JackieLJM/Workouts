@@ -40,3 +40,6 @@
 [submodule "react/react-demos"]
 	path = react/react-demos
 	url = https://github.com/ruanyf/react-demos
+[submodule "react/reactMonkey"]
+	path = react/reactMonkey
+	url = https://github.com/ziaochina/reactMonkey.git
