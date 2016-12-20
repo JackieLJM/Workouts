@@ -43,3 +43,9 @@
 [submodule "react/reactMonkey"]
 	path = react/reactMonkey
 	url = https://github.com/ziaochina/reactMonkey.git
+[submodule "react/react-simple-pwa"]
+	path = react/react-simple-pwa
+	url = https://github.com/BosNaufal/react-simple-pwa.git
+[submodule "isomorphic/message-board"]
+	path = isomorphic/message-board
+	url = https://github.com/defshine/message-board.git
