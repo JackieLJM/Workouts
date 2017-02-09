@@ -49,3 +49,24 @@
 [submodule "isomorphic/message-board"]
 	path = isomorphic/message-board
 	url = https://github.com/defshine/message-board.git
+[submodule "react-native/navigation"]
+	path = react-native/navigation
+	url = https://github.com/mozillo/navigation.git
+[submodule "isomorphic/react-native-meteor-boilerplate"]
+	path = isomorphic/react-native-meteor-boilerplate
+	url = https://github.com/spencercarli/react-native-meteor-boilerplate.git
+[submodule "isomorphic/react-redux-universal-hot-example"]
+	path = isomorphic/react-redux-universal-hot-example
+	url = https://github.com/erikras/react-redux-universal-hot-example.git
+[submodule "isomorphic/redux"]
+	path = isomorphic/redux
+	url = https://github.com/reactjs/redux.git
+[submodule "isomorphic/react-redux"]
+	path = isomorphic/react-redux
+	url = https://github.com/reactjs/react-redux.git
+[submodule "react-native/example-react-native-redux"]
+	path = react-native/example-react-native-redux
+	url = https://github.com/alinz/example-react-native-redux
+[submodule "react-native/native-starter-kit"]
+	path = react-native/native-starter-kit
+	url = https://github.com/start-react/native-starter-kit.git
