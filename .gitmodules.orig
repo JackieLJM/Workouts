@@ -70,12 +70,15 @@
 [submodule "react-native/native-starter-kit"]
 	path = react-native/native-starter-kit
 	url = https://github.com/start-react/native-starter-kit.git
+<<<<<<< HEAD
 [submodule "react-native/react-native-one"]
 	path = react-native/react-native-one
 	url = https://github.com/wutongke/react-native-one.git
+=======
 [submodule "isomorphic/Webpack2-React-Redux-Boilerplate"]
 	path = isomorphic/Webpack2-React-Redux-Boilerplate
 	url = https://github.com/wxyyxc1992/Webpack2-React-Redux-Boilerplate.git
 [submodule "react-native/react-native-firebase-starter"]
 	path = react-native/react-native-firebase-starter
 	url = https://github.com/jsappme/react-native-firebase-starter.git
+>>>>>>> windows
