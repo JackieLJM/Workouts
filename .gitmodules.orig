@@ -75,10 +75,10 @@
 	path = react-native/react-native-one
 	url = https://github.com/wutongke/react-native-one.git
 =======
+>>>>>>> windows
 [submodule "isomorphic/Webpack2-React-Redux-Boilerplate"]
 	path = isomorphic/Webpack2-React-Redux-Boilerplate
 	url = https://github.com/wxyyxc1992/Webpack2-React-Redux-Boilerplate.git
 [submodule "react-native/react-native-firebase-starter"]
 	path = react-native/react-native-firebase-starter
 	url = https://github.com/jsappme/react-native-firebase-starter.git
->>>>>>> windows
