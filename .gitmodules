@@ -79,3 +79,21 @@
 [submodule "react-native/react-native-firebase-starter"]
 	path = react-native/react-native-firebase-starter
 	url = https://github.com/jsappme/react-native-firebase-starter.git
+[submodule "react-native/react-native-hot-redux-starter"]
+	path = react-native/react-native-hot-redux-starter
+	url = https://github.com/adampash/react-native-hot-redux-starter
+[submodule "isomorphic/react-server"]
+	path = isomorphic/react-server
+	url = https://github.com/huqingliang/react-server.git
+[submodule "isomorphic/react-isomorph-demo"]
+	path = isomorphic/react-isomorph-demo
+	url = https://github.com/larry011/react-isomorph-demo.git
+[submodule "react-native/react-native-redux"]
+	path = react-native/react-native-redux
+	url = https://github.com/sibelius/react-native-redux.git
+[submodule "isomorphic/redux-saga"]
+	path = isomorphic/redux-saga
+	url = https://github.com/redux-saga/redux-saga.git
+[submodule "isomorphic/redux-saga-beginner-tutorial"]
+	path = isomorphic/redux-saga-beginner-tutorial
+	url = https://github.com/redux-saga/redux-saga-beginner-tutorial
