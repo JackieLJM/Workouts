@@ -97,3 +97,9 @@
 [submodule "isomorphic/redux-saga-beginner-tutorial"]
 	path = isomorphic/redux-saga-beginner-tutorial
 	url = https://github.com/redux-saga/redux-saga-beginner-tutorial
+[submodule "react-native/reading"]
+	path = react-native/reading
+	url = https://github.com/attentiveness/reading.git
+[submodule "react-native/snowflake"]
+	path = react-native/snowflake
+	url = https://github.com/bartonhammond/snowflake.git
