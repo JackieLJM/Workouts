@@ -103,3 +103,6 @@
 [submodule "react-native/snowflake"]
 	path = react-native/snowflake
 	url = https://github.com/bartonhammond/snowflake.git
+[submodule "mern-starter"]
+	path = mern-starter
+	url = https://github.com/Hashnode/mern-starter.git
