@@ -106,3 +106,12 @@
 [submodule "mern-starter"]
 	path = mern-starter
 	url = https://github.com/Hashnode/mern-starter.git
+[submodule "isomorphic/webpack-react-redux-es6-boilerplate"]
+	path = isomorphic/webpack-react-redux-es6-boilerplate
+	url = https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate
+[submodule "react/css-modules-demos"]
+	path = react/css-modules-demos
+	url = https://github.com/ruanyf/css-modules-demos.git
+[submodule "isomorphic/minimal-example-for-babel-plugin-webpack-loaders"]
+	path = isomorphic/minimal-example-for-babel-plugin-webpack-loaders
+	url = https://github.com/istarkov/minimal-example-for-babel-plugin-webpack-loaders
