@@ -31,9 +31,6 @@
 [submodule "isomorphic/electron-react-boilerplate"]
 	path = isomorphic/electron-react-boilerplate
 	url = https://github.com/chentsulin/electron-react-boilerplate
-[submodule "react/react-boilerplate"]
-	path = react/react-boilerplate
-	url = https://github.com/mxstbr/react-boilerplate
 [submodule "visual/recharts"]
 	path = visual/recharts
 	url = https://github.com/recharts/recharts.git
@@ -115,3 +112,6 @@
 [submodule "isomorphic/minimal-example-for-babel-plugin-webpack-loaders"]
 	path = isomorphic/minimal-example-for-babel-plugin-webpack-loaders
 	url = https://github.com/istarkov/minimal-example-for-babel-plugin-webpack-loaders
+[submodule "react/webpack-demo"]
+	path = react/webpack-demo
+	url = https://github.com/css-modules/webpack-demo
