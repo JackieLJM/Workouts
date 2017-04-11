@@ -115,3 +115,18 @@
 [submodule "react/webpack-demo"]
 	path = react/webpack-demo
 	url = https://github.com/css-modules/webpack-demo
+[submodule "isomorphic/React-News-Board"]
+	path = isomorphic/React-News-Board
+	url = https://github.com/ethan-funny/React-News-Board.git
+[submodule "react-native/noder-react-native"]
+	path = react-native/noder-react-native
+	url = https://github.com/soliury/noder-react-native.git
+[submodule "react/minimal-example-for-babel-plugin-webpack-loaders"]
+	path = react/minimal-example-for-babel-plugin-webpack-loaders
+	url = https://github.com/istarkov/minimal-example-for-babel-plugin-webpack-loaders.git
+[submodule "react-native/react-native-template-demo"]
+	path = react-native/react-native-template-demo
+	url = https://github.com/mkonicek/react-native-template-demo.git
+[submodule "react-native/pepperoni-app-kit"]
+	path = react-native/pepperoni-app-kit
+	url = https://github.com/futurice/pepperoni-app-kit.git
