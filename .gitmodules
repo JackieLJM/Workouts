@@ -130,3 +130,9 @@
 [submodule "react-native/pepperoni-app-kit"]
 	path = react-native/pepperoni-app-kit
 	url = https://github.com/futurice/pepperoni-app-kit.git
+[submodule "jsAnima/pro-css3-animation"]
+	path = jsAnima/pro-css3-animation
+	url = https://github.com/apress/pro-css3-animation.git
+[submodule "jsAnima/foundation-html5-animation-w-javascript"]
+	path = jsAnima/foundation-html5-animation-w-javascript
+	url = https://github.com/apress/foundation-html5-animation-w-javascript.git
