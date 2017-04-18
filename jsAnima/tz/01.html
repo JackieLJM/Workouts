@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+</head>
+
+<body style="margin:0; padding:0">
+	<div style="background:red; width:400px; height:300px">
+		<div style="border:1px solid blue; background:#ccc; width:300px; height:200px; position:absolute; z-index:100" id="dragdiv"></div>
+	</div>
+	<script>
+		$ = function (id) {
+			return document.getElementById(id);
+		}
+		var range = { x1: 0, x2: 400, y1: 0, y2: 300 };
+		var index = 100;
+		var DragDrop = function (obj) {
+			var me = this;
+			this.foo = (typeof obj == "string") ? $(obj) : obj;
+			this.foo.style.cursor = 'move';
+			this.follow = function () {
+				var x = this.foo.offsetLeft;
+				var y = this.foo.offsetTop;
+				var w = this.foo.offsetWidth;
+				var h = this.foo.offsetHeight;
+			};
+			this.foo.onmousedown = function (e) {
+				var foo = me.foo;
+				e = e || event;
+				foo.oOffset = (e.layerX) ? { x: e.layerX, y: e.layerY } : { x: e.offsetX, y: e.offsetY };
+				document.onmousemove = me.drag;
+				document.onmouseup = me.drop;
+				document.onselectstart = function () { return false; };
+			};
+			this.foo.onclick = function () {
+				index++;
+				this.style.zIndex = index;
+				return true;
+			};
+			this.drag = function (e) {
+				var foo = me.foo;
+				e = e || event;
+				var top = e.clientY - foo.oOffset.y + document.documentElement.scrollTop;
+				var left = e.clientX - foo.oOffset.x + document.body.scrollLeft;
+				if (me.range) {
+					top = (top < me.range.y1) ? (me.range.y1) : ((top > me.range.y2 - foo.offsetHeight) ? (me.range.y2 - foo.offsetHeight) : top);
+					left = (left < me.range.x1) ? (me.range.x1) : ((left > me.range.x2 - foo.offsetWidth) ? (me.range.x2 - foo.offsetWidth) : left);
+				}
+				foo.style.top = top + "px";
+				foo.style.left = left + "px";
+			};
+			this.drop = function () {
+				document.onmousemove = document.onmouseup = document.onselectstart = null;
+			};
+			this.range = range;
+			this.follow();
+		}
+		new DragDrop('dragdiv');
+
+	</script>
+</body>
+
+</html>
