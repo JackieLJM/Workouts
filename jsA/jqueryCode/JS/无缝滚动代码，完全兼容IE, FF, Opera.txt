@@ -1,0 +1,43 @@
+<html>
+<HEAD>
+<TITLE>标准之路</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+</HEAD>
+<body>
+<div id="demo" style="overflow:hidden;height:132px;width:500px; border:1px solid #dde5bc; overflow:hidden;">
+ <div id=demo1> 
+  <a href="http://www.aa25.cn">完全兼容IE, FF, Opera, 其它的还未经测试……</a><br>
+  <a href="http://www.aa25.cn">代码来自互联网，我只不过稍加整理，希望大家多提意件……</a><br>
+  <a href="http://www.aa25.cn">完全兼容IE, FF, Opera, 其它的还未经测试……</a><br>
+  <a href="http://www.aa25.cn">代码来自互联网，我只不过稍加整理，希望大家多提意件……</a><br>
+  <a href="#">完全兼容IE, FF, Opera, 其它的还未经测试……</a><br>
+  <a href="#">代码来自互联网，我只不过稍加整理，希望大家多提意件……</a><br>
+  <a href="#">完全兼容IE, FF, Opera, 其它的还未经测试……</a><br>
+  <a href="#">代码来自互联网，我只不过稍加整理，希望大家多提意件……</a><br>
+  <a href="#">完全兼容IE, FF, Opera, 其它的还未经测试……</a><br>
+  <a href="#">代码来自互联网，我只不过稍加整理，希望大家多提意件……</a><br>
+  <a href="#">完全兼容IE, FF, Opera, 其它的还未经测试……</a><br>
+  <a href="#">代码来自互联网，我只不过稍加整理，希望大家多提意件……</a><br>
+ </div>
+ <div id=demo2></div>
+</div>
+<script>
+var speed=40
+var demo=document.getElementById("demo");
+var demo2=document.getElementById("demo2");
+var demo1=document.getElementById("demo1");
+demo2.innerHTML=demo1.innerHTML
+function Marquee(){
+ if(demo2.offsetTop-demo.scrollTop<=0)
+  demo.scrollTop-=demo1.offsetHeight
+ else{
+  demo.scrollTop++
+ }
+}
+var MyMar=setInterval(Marquee,speed)
+demo.onmouseover=function() {clearInterval(MyMar)}
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+</script>
+</body>
+</html>
+文章出处：标准之路(http://www.aa25.cn/code/238.shtml)

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery导航菜单制作类似选项卡切换的侧边浮动导航条</title>
+<meta name="description" content="jquery导航菜单制作类似选项卡切换效果的侧边浮动层导航条，多种导航菜单点击slider滑动展示二级菜单。jquery下载。" />
+
+<style type="text/css">
+*{margin:0;padding:0;border-width:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/1.4 Helvetica, Verdana, Arial, sans-serif;text-align:center;}
+.demo{width:610px;margin:50px auto;text-align:left;}
+.demo h2{margin:20px 0;}
+/* tab-nav */
+.tab-nav{width:610px;position:relative;overflow:hidden;background:#ddd url(tab-slide.png) no-repeat 0 0;border:solid 1px #ddd;}
+.tab-nav ul{position:relative;float:left;width:1600px;margin-left:490px;display:inline;padding-left:0;background-color:#fff;}
+.tab-nav li{display:inline;float:left;clear:left;}
+.tab-nav a{display:block;width:120px;border-right:1px solid #ddd;height:25px;line-height:24px;float:left;text-align:center;text-decoration:none;color:#000;background:url(tab-slide.png) no-repeat 2px -187px;position:relative;}
+.tab-nav a.expanded{background-position:2px -238px;background:#ff6600;color:#fff;}
+.tab-nav ul ul{float:left;background-color:#333;width:auto;margin-left:0;}
+.tab-nav li li{clear:none;}
+.tab-nav li li a{color:#fff;width:120px;background-image:none;}
+</style>
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript" src="js/tab-nav.js"></script>
+</head>
+<body>
+
+<div class="demo">
+
+	<h2>演示 1: 基本的</h2>
+	<div id="tab-nav-1" class="tab-nav">
+		<ul>
+			<li>
+				<a href="javascript:void(0);" title="jquery图片特效">jquery图片特效</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/jquery/images/qh/" target="_blank" title="jquery图片切换">jquery图片切换</a></li>
+					<li><a href="http://www.jsfoot.com/jquery/images/hdp/" target="_blank" title="jquery幻灯片">jquery幻灯片</a></li>
+					<li><a href="http://www.jsfoot.com/jquery/images/cj/" target="_blank" title="jquery图片滚动">jquery图片滚动</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);" title="jquery导航菜单">jquery导航菜单</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/jquery/menu/dh/" target="_blank" title="jquery动画菜单">jquery动画菜单</a></li>
+					<li><a href="http://www.jsfoot.com/jquery/menu/sx/" target="_blank" title="jquery树形菜单">jquery树形菜单</a></li>
+					<li><a href="http://www.jsfoot.com/jquery/menu/xl/" target="_blank" title="jquery下拉菜单">jquery下拉菜单</a></li>
+					<li><a href="http://www.jsfoot.com/jquery/menu/yj/" target="_blank" title="jquery右键菜单">jquery右键菜单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);" title="jquery选项卡特效">jquery选项卡特效</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/jquery/xxk/qh/" target="_blank" title="jquery选项卡切换">jquery选项卡切换</a></li>
+					<li><a href="http://www.jsfoot.com/jquery/xxk/hd/" target="_blank" title="jquery滑动选项卡">jquery滑动选项卡</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<h2>演示 2: 一次一个</h2>
+	<div id="tab-nav-2" class="tab-nav">
+		<ul>
+			<li>
+				<a href="javascript:void(0);" title="js图片特效">js图片特效</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/js/images/qh/" target="_blank" title="js图片切换">js图片切换</a></li>
+					<li><a href="http://www.jsfoot.com/js/images/hdp/" target="_blank" title="js幻灯片">js幻灯片</a></li>
+					<li><a href="http://www.jsfoot.com/js/images/cj/" target="_blank" title="js图片滚动">js图片滚动</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);" title="js导航菜单">js导航菜单</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/js/menu/dh/" target="_blank" title="js动画菜单">js动画菜单</a></li>
+					<li><a href="http://www.jsfoot.com/js/menu/sx/" target="_blank" title="js树形菜单">js树形菜单</a></li>
+					<li><a href="http://www.jsfoot.com/js/menu/xl/" target="_blank" title="js下拉菜单">js下拉菜单</a></li>
+					<li><a href="http://www.jsfoot.com/js/menu/yj/" target="_blank" title="js右键菜单">js右键菜单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);" title="js选项卡特效">js选项卡特效</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/js/xxk/qh/" target="_blank" title="js选项卡切换">js选项卡切换</a></li>
+					<li><a href="http://www.jsfoot.com/js/xxk/hd/" target="_blank" title="js滑动选项卡">js滑动选项卡</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<h2>演示 3: 自动关闭</h2>
+	<div id="tab-nav-3" class="tab-nav">
+		<ul>
+			<li>
+				<a href="javascript:void(0);" title="js图片特效">js图片特效</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/js/images/qh/" target="_blank" title="js图片切换">js图片切换</a></li>
+					<li><a href="http://www.jsfoot.com/js/images/hdp/" target="_blank" title="js幻灯片">js幻灯片</a></li>
+					<li><a href="http://www.jsfoot.com/js/images/cj/" target="_blank" title="js图片滚动">js图片滚动</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);" title="js导航菜单">js导航菜单</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/js/menu/dh/" target="_blank" title="js动画菜单">js动画菜单</a></li>
+					<li><a href="http://www.jsfoot.com/js/menu/sx/" target="_blank" title="js树形菜单">js树形菜单</a></li>
+					<li><a href="http://www.jsfoot.com/js/menu/xl/" target="_blank" title="js下拉菜单">js下拉菜单</a></li>
+					<li><a href="http://www.jsfoot.com/js/menu/yj/" target="_blank" title="js右键菜单">js右键菜单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);" title="js选项卡特效">js选项卡特效</a>
+				<ul>
+					<li><a href="http://www.jsfoot.com/js/xxk/qh/" target="_blank" title="js选项卡切换">js选项卡切换</a></li>
+					<li><a href="http://www.jsfoot.com/js/xxk/hd/" target="_blank" title="js滑动选项卡">js滑动选项卡</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+</div>
+</body>
+</html>

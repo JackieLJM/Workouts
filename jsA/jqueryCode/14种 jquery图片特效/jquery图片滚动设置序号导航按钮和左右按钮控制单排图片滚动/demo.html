@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery图片滚动设置序号导航按钮和左右按钮控制单排图片滚动</title>
+<meta name="description" content="jquery图片滚动控制单排图片左右滚动，设置序号导航条按钮控制单排图片滚动，带左右按钮控制单排图片滚动。jquery下载,jquery 插件。" />
+
+<script type="text/javascript" src="http://www.jsfoot.com/skinnew/js/jquery-1.2.6.pack.js"></script>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font-size:0.8em;letter-spacing:1px;font-family:"微软雅黑";line-height:1.8em;}
+h1{font-size:1em;font-weight:normal;}
+h1 a{background:#CFF;padding:2px 3px;text-decoration:none;}
+h1 a:hover{background:#eee;text-decoration:underline;}
+h2,h3{font-size:1em;font-weight:normal;color:#a40000;margin:1em auto;position:relative;}
+h3{color:#888;font-weight:bold;}
+/* ibox */
+.ibox{width:850px;height:210px;background:#ddd;margin:1em auto;border:1em solid #ddd;position:relative;overflow:hidden;}
+.ibox .showbox{position:absolute;left:0;width:2550px;height:170px;background:#fff;}
+.ibox .showbox ul li{float:left;margin:7px;display:inline;}
+.ibox .showbox ul li a{display:block;width:156px;height:156px;overflow:hidden;}
+.ibox .showbox ul li a img{border:3px solid #a40000;}
+.ibox .showbox ul li a:hover img{border:solid 3px #3366cc;}
+.ibox .btnbox{height:34px;overflow:hidden;float:right;}
+.ibox span{padding:2px 5px;background:#fff;cursor:pointer;float:left;margin:0 5px;display:inline;height:20px;line-height:20px;}
+.ibox span.num{background:#ddd;line-height:18px;}
+.ibox span.num li{float:left;display:inline;margin:0 5px;padding:1px 5px;line-height:18px;}
+.ibox span.num .numcur{background:#a40000;color:#fff;}
+</style>
+<script type="text/javascript">
+$(function(){
+    //@Mr.Think***变量
+    var $cur = 1;//初始化显示的版面
+    var $i = 5;//每版显示数
+    var $len = $('.showbox>ul>li').length;//计算列表总长度(个数)
+    var $pages = Math.ceil($len / $i);//计算展示版面数量
+    var $w = $('.ibox').width();//取得展示区外围宽度
+    var $showbox = $('.showbox');
+    var $num = $('span.num li')
+    var $pre = $('span.pre')
+    var $next = $('span.next');
+    var $autoFun;
+    //@Mr.Think***调用自动滚动
+    autoSlide();
+    //@Mr.Think***向前滚动
+    $pre.click(function(){
+        if (!$showbox.is(':animated')) {  //判断展示区是否动画
+            if ($cur == 1) {   //在第一个版面时,再向前滚动到最后一个版面
+                $showbox.animate({
+                    left: '-=' + $w * ($pages - 1)
+                }, 500); //改变left值,切换显示版面,500(ms)为滚动时间,下同
+                $cur = $pages; //初始化版面为最后一个版面
+            }
+            else {
+                $showbox.animate({
+                    left: '+=' + $w
+                }, 500); //改变left值,切换显示版面
+                $cur--; //版面累减
+            }
+            $num.eq($cur - 1).addClass('numcur').siblings().removeClass('numcur'); //为对应的版面数字加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***向后滚动
+    $next.click(function(){
+        if (!$showbox.is(':animated')) { //判断展示区是否动画
+            if ($cur == $pages) {  //在最后一个版面时,再向后滚动到第一个版面
+                $showbox.animate({
+                    left: 0
+                }, 500); //改变left值,切换显示版面,500(ms)为滚动时间,下同
+                $cur = 1; //初始化版面为第一个版面
+            }
+            else {
+                $showbox.animate({
+                    left: '-=' + $w
+                }, 500);//改变left值,切换显示版面
+                $cur++; //版面数累加
+            }
+            $num.eq($cur - 1).addClass('numcur').siblings().removeClass('numcur'); //为对应的版面数字加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***数字点击事件
+    $num.click(function(){
+        if (!$showbox.is(':animated')) { //判断展示区是否动画
+            var $index = $num.index(this); //索引出当前点击在列表中的位置值
+            $showbox.animate({
+                left: '-' + ($w * $index)
+            }, 500); //改变left值,切换显示版面,500(ms)为滚动时间
+            $cur = $index + 1; //初始化版面值,这一句可避免当滚动到第三版时,点击向后按钮,出面空白版.index()取值是从0开始的,故加1
+            $(this).addClass('numcur').siblings().removeClass('numcur'); //为当前点击加上高亮样式,并移除同级元素的高亮样式
+        }
+    });
+    //@Mr.Think***停止滚动
+    clearFun($showbox);
+    clearFun($pre);
+    clearFun($next);
+    clearFun($num);
+    //@Mr.Think***事件划入时停止自动滚动
+    function clearFun(elem){
+        elem.hover(function(){
+            clearAuto();
+        }, function(){
+            autoSlide();
+        });
+    }
+    //@Mr.Think***自动滚动
+    function autoSlide(){
+        $next.trigger('click');
+        $autoFun = setTimeout(autoSlide, 5000);//此处不可使用setInterval,setInterval是重复执行传入函数,这会引起第二次划入时停止失效
+    }
+    //@Mr.Think***清除自动滚动
+    function clearAuto(){
+        clearTimeout($autoFun);
+    }
+});
+</script>
+</head>
+<body>
+<div class="ibox">
+	<div class="btnbox">
+		<span class="pre">&laquo;向左</span>
+		<span class="num">
+			<ol>
+				<li class="numcur">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ol>
+		</span>
+		<span class="next">向右&raquo;</span>
+	</div>
+	
+	<div style="clear:both;height:0;overflow:hidden;"></div>
+	
+    <div class="showbox">
+        <ul>
+            <li><a href="http://www.jsfoot.com/jquery/images/cj/2011-10-20/219.html" target="_blank"><img width="150" height="150" alt="jquery flow 图片切换滚动插件 带分页索引按钮控制图片左右滚动" src="http://www.jsfoot.com/d/file/jquery/items/2011-10-20/smalld120ac28adc7863174531e90ca30fb35.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/jquery/images/cj/2011-10-19/217.html" target="_blank"><img width="150" height="150" alt="jquery 图片滚动 xslider 插件 按钮控制自动图片左右滚动、上下滚动" src="http://www.jsfoot.com/d/file/jquery/items/2011-10-19/small861fb36ea5b2491877623752f84c1297.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/jquery/images/more/2011-09-22/201.html" target="_blank"><img width="150" height="150" alt="jquery 图片特效插件 异步读取图片TOP排行榜特效" src="http://www.jsfoot.com/d/file/jquery/items/2011-09-22/smalldb89cf912e07ed70f0c933c33e0cb976.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/jquery/images/qh/2011-09-20/191.html" target="_blank"><img width="150" height="150" alt="jquery soChange 切换插件 支持焦点图片切换 选项卡切换 带按钮与分页索引按钮切换" src="http://www.jsfoot.com/d/file/jquery/items/2011-09-20/small7ec25ef488c710d8d8ac3e5a33d6034b.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/jquery/images/more/2011-09-09/175.html" target="_blank"><img width="150" height="150" alt="jquery 图片特效 鼠标滑过图片显示文字与标题内容特效" src="http://www.jsfoot.com/d/file/jquery/items/2011-09-09/small3a1184db401138d6443a1b5f42cb289b.jpg" /></a></li>
+			<li><a href="http://www.jsfoot.com/jquery/images/hdp/2011-09-08/173.html" target="_blank"><img width="150" height="150" alt="jquery 幻灯片插件 canvas 3D旋转木马 图片立体展示 图片有大到小一次顺序排列" src="http://www.jsfoot.com/d/file/jquery/items/2011-09-08/small18129a189a8f547aba10fb10f91e6282.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/jquery/images/fdj/2011-08-28/151.html" target="_blank"><img width="150" height="150" alt="jquery 图片放大镜 图片类似放大镜效果鼠标滑过小图异步加载中图、大图" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-28/small598271bc3a3f325a0a1476b1ec18753d.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/jquery/images/qh/2011-08-26/147.html" target="_blank"><img width="150" height="150" alt="jquery Xslider 插件焦点图片特效图片淡隐淡现、图片上下滚动、图片左右滚动、选项卡" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-26/smallf16b49d4849ce225d66900ed23367f74.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/js/menu/sx/2012-03-25/502.html" target="_blank"><img width="150" height="150" alt="js树形导航菜单制作垂直js导航条特效" src="http://www.jsfoot.com/d/file/js/menu/sx/2012-03-25/small480f846f099a5892a0f1aee6170540ce.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/js/menu/xl/2012-03-15/430.html" target="_blank"><img width="150" height="150" alt="js导航菜单制作一个二级滑动导航菜单" src="http://www.jsfoot.com/d/file/js/menu/xl/2012-03-15/small209a4e7a24813bea36f5092164c96c4b.jpg" /></a></li>
+			<li><a href="http://www.jsfoot.com/js/menu/xl/2012-03-15/428.html" target="_blank"><img width="150" height="150" alt="js横向二级导航菜单slide往下滑动动画效果js代码下载" src="http://www.jsfoot.com/d/file/js/menu/xl/2012-03-15/smallbd4bf784c38259708f62cd168b297147.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/js/menu/xl/2012-03-15/426.html" target="_blank"><img width="150" height="150" alt="js导航菜单左侧竖纵向二级导航菜单可点击展开与收缩子菜单" src="http://www.jsfoot.com/d/file/js/menu/xl/2012-03-15/small00da066c77f0ac26ff5aec5e5018feb5.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/css3/layout/2012-03-12/392.html" target="_blank"><img width="150" height="150" alt="div+css布局控制div定位浮动层在背景图片上的半透明阴影效果" src="http://www.jsfoot.com/d/file/css3/layout/2012-03-12/smallc642558f13f52d555296b0f180e0f045.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/css3/layout/2012-03-11/390.html" target="_blank"><img width="150" height="150" alt="div+css教程网站建设门户网站和电子商务网站CSS样式表" src="http://www.jsfoot.com/d/file/css3/layout/2012-03-11/small376c7a03cb5dfb6f7435df7a9362dd7e.jpg" /></a></li>
+            <li><a href="http://www.jsfoot.com/css3/layout/2011-10-13/215.html" target="_blank"><img width="150" height="150" alt="div+css制作在IE6 上用absolute模拟fixed IE6浏览器定位层框不闪动" src="http://www.jsfoot.com/d/file/css3/items/2011-10-13/smalla4c7c67dec86de131924d9e69e745e18.jpg" /></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

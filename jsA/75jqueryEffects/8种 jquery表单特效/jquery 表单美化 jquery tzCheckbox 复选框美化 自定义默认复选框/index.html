@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 表单美化 jquery tzCheckbox 复选框美化 自定义默认复选框</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+body{font:13px/180% Arial, Helvetica, sans-serif;}
+a, a:visited {text-decoration:none;outline:none;color:#97cae6;}
+a:hover{text-decoration:underline;}
+#page{width:550px;margin: 150px auto 100px;}
+#page form ul{list-style:none;}
+#page form li{padding:15px;}
+#page form li:nth-child(odd){border:solid 1px #ddd;}
+#page form li.even{background:url('images/line_bg.png') repeat-y center center;}
+#page form label{width:370px;font-size:20px;color:#333;display: inline-block;}
+/* tzCheckBox */
+.tzCheckBox{background:url('images/background.gif') no-repeat right bottom;display:inline-block;min-width:60px;height:33px;white-space:nowrap;position:relative;cursor:pointer;margin-left:14px;}
+.tzCheckBox.checked{background-position:top left;margin:0 14px 0 0;}
+.tzCheckBox .tzCBContent{color:white;line-height:31px;padding-right:38px;text-align:right;}
+.tzCheckBox.checked .tzCBContent{text-align:left;padding:0 0 0 38px;}
+.tzCBPart{background:url('images/background.gif') no-repeat left bottom;width:14px;position:absolute;top:0;left:-14px;height:33px;overflow:hidden;}
+.tzCheckBox.checked .tzCBPart{background-position:top right;left:auto;right:-14px;}
+</style>
+</head>
+<body>
+
+<div id="page">
+
+<form method="get" action="./">
+	<ul>
+		<li><label for="ch_effects">显示效果: </label><input type="checkbox" id="ch_effects" name="ch_effects" data-on="显示效果" data-off="隐藏效果" checked="checked" /></li>
+		<li><label for="ch_location">使位置跟踪: </label><input type="checkbox" id="ch_location" name="ch_location" checked="checked" /></li>
+		<li><label for="ch_showsearch">包括我在搜索结果中: </label><input type="checkbox" id="ch_showsearch" name="ch_showsearch" disabled="disabled" /></li>
+		<li><label for="ch_emails">电子邮件通知: </label><input type="checkbox" id="ch_emails" name="ch_emails" data-on="打开" data-off="关闭" disabled="disabled" /></li>
+	</ul>
+</form>
+</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tzCheckbox.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['Enable','Disable']});
+
+	$("#page form li:odd").addClass("even");
+	
+});
+</script>
+</body>
+</html>

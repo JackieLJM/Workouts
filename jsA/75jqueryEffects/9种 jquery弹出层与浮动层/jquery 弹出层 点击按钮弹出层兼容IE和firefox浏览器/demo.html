@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 弹出层 点击按钮弹出层兼容IE和firefox浏览器</title>
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$(".showbox").click(function(){
+		$("#TB_overlayBG").css({
+			display:"block",height:$(document).height()
+		});
+		$(".box").css({
+			left:($("body").width()-$(".box").width())/2-20+"px",
+			top:($(window).height()-$(".box").height())/2+$(window).scrollTop()+"px",
+			display:"block"
+		});
+	});
+	
+	$(".close").click(function(){
+		$("#TB_overlayBG").css("display","none");
+		$(".box ").css("display","none");
+	});
+	
+})
+</script>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"宋体";}
+a,img{border:0;}
+a{color:#5e5e5e;text-decoration:none;}
+a:hover{color:#3366cc;text-decoration:underline;}
+/* box */
+.box{position:absolute;width:600px;left:50%;height:auto;z-index:100;background-color:#fff;border:1px #8FA4F5 solid;padding:1px;}
+.box h2{height:25px;font-size:14px;background-color:#3366cc;position:relative;padding-left:10px;line-height:25px;color:#fff;}
+.box h2 a{position:absolute;right:5px;font-size:12px;color:#fff;}
+.box .mainlist{padding:10px;}
+.box .mainlist li{height:24px;line-height:24px;}
+.box .mainlist li span{margin:0 5px 0 0;font-family:"宋体";font-size:12px;font-weight:400;color:#ddd;}
+#TB_overlayBG{background-color:#666;position:absolute;z-index:99;left:0;top:0;display:none;width:100%;height:100%;opacity:0.5;filter: alpha(opacity=50);-moz-opacity: 0.5;}
+</style>
+</head>
+
+<body>
+
+	<p align="center" style="font-size:18px;font-family:微软雅黑;margin:100px;"><a href="javascript:void(0);" class="showbox">jquery制作点击按钮弹出层</a></p>
+
+	<div id="TB_overlayBG"></div>
+	<div class="box" style="display:none">
+		<h2>jquery 特效列表<a href="#" class="close">关闭</a></h2>
+		<div class="mainlist">
+			<ul>
+				<li><span>▪</span><a href="/jquery/items/2011-09-20/193.html" title="jquery 导航插件 一个动画导航下拉菜单Apycom软件的Java下拉菜单">jquery 导航插件 一个动画导航下拉菜单Apycom软件的Java下拉菜单</a></li>
+				<li><span>▪</span><a href="/jquery/items/2011-09-20/191.html" title="jquery soChange 切换插件 支持焦点图片切换 选项卡切换 带按钮与分页索引按钮切换">jquery soChange 切换插件 支持焦点图片切换 选项卡切换 带按钮与分页索引按钮切换</a></li>
+				<li><span>▪</span><a href="/jquery/items/2011-09-18/189.html" title="jquery 图片切换特效 鼠标点击左右按钮焦点图切换滚动">jquery 图片切换特效 鼠标点击左右按钮焦点图切换滚动</a></li>
+				<li><span>▪</span><a href="/jquery/items/2011-09-18/187.html" title="jquery 分享代码在线制作鼠标一键复制url路径功能与分享信息">jquery 分享代码在线制作鼠标一键复制url路径功能与分享信息</a></li>
+				<li><span>▪</span><a href="/jquery/items/2011-09-18/185.html" title="jquery 制作鼠标点击描点a标签返回顶部">jquery 制作鼠标点击描点a标签返回顶部</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

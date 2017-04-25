@@ -1,0 +1,973 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+
+        <title>jTeaser Test Page</title>
+
+        <!-- jquery library -->
+        <script language="JavaScript" type="text/javascript" src="js/jquery/jquery-1.4.2.js"></script>
+        <!-- /jquery library -->
+
+        <script language="JavaScript" type="text/javascript" src="js/jquery.jTeaser.min.js"></script>
+
+        <script language="JavaScript" type="text/javascript">
+            <!--
+
+                var $jq = jQuery.noConflict();
+
+                $jq(document).ready(function() {
+
+                    var teasers0 = [
+                        {
+                            "title": "Blakes 7 : shades of gray",
+                            "text": "Science fiction tv series<br/>1978-1981<br/>52 episodes<br/>2 January 1978 (UK)",
+                            "textMagnifier": "Blake and his gang of rebels cruised space in their hugely advanced space craft, the Liberator.",
+                            "image": "images/1_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=1"
+                        },
+                        {
+                            "title": "Space 1999",
+                            "text": "Science fiction tv series<br/>1975-1977<br/>48 episodes<br/>5 September 1975 (USA)",
+                            "textMagnifier": "The crew of Moonbase Alpha must struggle to survive when a massive explosion throws the Moon from orbit into deep space.",
+                            "image": "images/2_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=2"
+                        },
+                        {
+                            "title": "U.F.O.",
+                            "text": "Science fiction tv series<br/>1970-1971<br/>26 episodes<br/>16 September 1970 (UK)",
+                            "textMagnifier": "A highly secret military organization is set up in the hope of defending the Earth from this alien threat. This organization is named SHADO.",
+                            "image": "images/3_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=3"},
+                        {
+                            "title": "Battlestar Galactica",
+                            "text": "Science fiction tv series<br/>1978-1979<br/>24 episodes<br/>17 September 1978 (USA)",
+                            "textMagnifier": "The last major Colonial fighter carrier leads a makeshift fleet of human refugees on a desperate search for the legendary planet Earth.",
+                            "image": "images/4_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=4"
+                        },
+                        {
+                            "title": "Six million dollar man",
+                            "text": "Science fiction tv series<br/>1974-1978<br/>98 episodes<br/>18 January 1974 (USA)",
+                            "textMagnifier": "After a crippled test pilot is rebuilt with nuclear powered limbs and implants, he serves as a unique intelligence agent.",
+                            "image": "images/5_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=5"
+                        }
+                    ];
+
+                    var teasers1 = [
+                        {
+                            "title": "Papillon tout en art!",
+                            "text": "Evelyn est une pro de l'infographisme.",
+                            "image": "images/brown-350x252/beautiful-butterfly-brown-pattern.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=1"
+                        },
+                        {
+                            "title": "Le papillon à l'honneur au biodôme!",
+                            "text": "Visitez et observez les coléopthères.",
+                            "image": "images/brown-350x252/butterfly-brown.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=2"
+                        },
+                        {
+                            "title": "Au confin de l'univers!",
+                            "text": "Naine brune et son disque d'acrétion.",
+                            "image": "images/brown-350x252/brownDwarf.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=3"
+                        },
+                        {
+                            "title": "Les moeurs des chats!",
+                            "text": "Les chats ont des effets thérapeutique. Qu'en est-il?",
+                            "image": "images/brown-350x252/Contemplative_Brown_Kitty.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=4"
+                        }
+                    ];
+
+                    var teasers2 = [
+                        {
+                            "title": "Online Store",
+                            "text": "Official Launch",
+                            "image": "images/blue-440x320/store.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=en&noArt=1"
+                        },
+                        {
+                            "title": "Jean-Pierre Bélanger Award",
+                            "text": "Herstreet Wins",
+                            "image": "images/blue-440x320/award.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=en&noArt=2"
+                        },
+                        {
+                            "title": "Homelessness",
+                            "text": "White paper presentation",
+                            "image": "images/blue-440x320/hands-in-sand.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=en&noArt=3"
+                        },
+                        {
+                            "title": "Shulamit Leitman",
+                            "text": "Death of Social Worker",
+                            "image": "images/blue-440x320/social_worker.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=en&noArt=4"
+                        }
+                    ];
+
+                    var teasers3 = [
+                        {
+                            "title": "Une programmation riche et variée à l'approche de Noël",
+                            "text": "",
+                            "image": "images/492x250/1_fr.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=1"
+                        },
+                        {
+                            "title": "Ce qu'on a failli voir à la télé, selon Louise Cousineau",
+                            "text": "",
+                            "image": "images/492x250/2_fr.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=2"
+                        },
+                        {
+                            "title": "Les animateurs de «La série Montréal-Québec» annoncés",
+                            "text": "",
+                            "image": "images/492x250/3_fr.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=3"},
+                        {
+                            "title": "Facebook: des vedettes victimes d'un imposteur",
+                            "text": "",
+                            "image": "images/492x250/4_fr.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=4"
+                        },
+                        {
+                            "title": "Yvon Deschamps fête Noël à «En direct de l'univers»",
+                            "text": "",
+                            "image": "images/492x250/5_fr.jpg",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=5"
+                        }
+                    ];
+
+                    var teasers4 = [
+                        {
+                            "title": "Blakes 7 : shades of gray",
+                            "text": "Science fiction tv series<br/>1978-1981<br/>52 episodes<br/>2 January 1978 (UK)",
+                            "textMagnifier": "Blake and his gang of rebels cruised space in their hugely advanced space craft, the Liberator.",
+                            "image": "images/1_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=1"
+                        },
+                        {
+                            "title": "Space 1999",
+                            "text": "Science fiction tv series<br/>1975-1977<br/>48 episodes<br/>5 September 1975 (USA)",
+                            "textMagnifier": "The crew of Moonbase Alpha must struggle to survive when a massive explosion throws the Moon from orbit into deep space.",
+                            "image": "images/2_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=2"
+                        },
+                        {
+                            "title": "U.F.O.",
+                            "text": "Science fiction tv series<br/>1970-1971<br/>26 episodes<br/>16 September 1970 (UK)",
+                            "textMagnifier": "A highly secret military organization is set up in the hope of defending the Earth from this alien threat. This organization is named SHADO.",
+                            "image": "images/3_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=3"},
+                        {
+                            "title": "Battlestar Galactica",
+                            "text": "Science fiction tv series<br/>1978-1979<br/>24 episodes<br/>17 September 1978 (USA)",
+                            "textMagnifier": "The last major Colonial fighter carrier leads a makeshift fleet of human refugees on a desperate search for the legendary planet Earth.",
+                            "image": "images/4_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=4"
+                        },
+                        {
+                            "title": "Six million dollar man",
+                            "text": "Science fiction tv series<br/>1974-1978<br/>98 episodes<br/>18 January 1974 (USA)",
+                            "textMagnifier": "After a crippled test pilot is rebuilt with nuclear powered limbs and implants, he serves as a unique intelligence agent.",
+                            "image": "images/5_fr.gif",
+                            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=5"
+                        }
+                    ];
+
+                    $jq('#teaser0').jTeaser({
+                       teasers : teasers0,
+                       border: '1px solid #633f1c'
+                    });
+
+                    $jq('#teaser1').jTeaser({
+                        teasers : teasers1,
+                        loop: 'once',
+                        border: '1px solid #633f1c',
+                        //message: 'Click on the image or the moving magnifier to access content!',
+                        message: "Clicker sur l'image ou sur la loupe pour accéder au contenue!",
+                        style: {
+                            buttons: {
+                                background: '#633f1c',
+                                title: {
+                                    color: 'rgb(204, 179, 154)'
+                                },
+                                text: {
+                                    color: 'rgb(204, 179, 154)'
+                                }
+                            },
+                            magnifier: {
+                                background: '#633f1c',
+                                title: {
+                                    color: 'rgb(204, 179, 154)'
+                                },
+                                text: {
+                                    color: 'rgb(204, 179, 154)'
+                                }
+                            }
+                        }
+                    });
+
+                    $jq('#teaser2').jTeaser({
+                        teasers : teasers2,
+                        mode: 'slide',
+                        loop: 'none',
+                        layout: {
+                            // viewer width = imageWidth + buttonWidth
+                            // viewer height = nbButtons * buttonHeight
+                            // image width = imageWidth
+                            // image height = nbButtons * buttonHeight
+                            nbButtons: 4,
+                            buttonWidth: 250,
+                            buttonHeight: 80,
+                            imageWidth: 440
+                        },
+                        style: {
+                            buttons: {
+                                background: '#616D7E',
+                                title: {
+                                    color: 'rgb(166, 177, 191)',
+                                    fontFamily: 'Tahoma',
+                                    fontSize: '13px',
+                                    lineHeight: '13px'
+                                },
+                                text: {
+                                    color: 'rgb(166, 177, 191)',
+                                    fontFamily: 'Tahoma',
+                                    fontSize: '11px',
+                                    lineHeight: '11px'
+                                }
+                            },
+                            magnifier: {
+                                background: '#616D7E',
+                                title: {
+                                    color: 'rgb(166, 177, 191)',
+                                    fontFamily: 'Tahoma',
+                                    fontSize: '16px',
+                                    lineHeight: '16px'
+                                },
+                                text: {
+                                    color: 'rgb(166, 177, 191)',
+                                    fontFamily: 'Tahoma',
+                                    fontSize: '13px',
+                                    lineHeight: '13px'
+                                }
+                            }
+                        }
+                    });
+
+                    $jq('#teaser3').jTeaser({
+                        teasers : teasers3,
+                        loop: 'infinite',
+                        showText: false,
+                        layout: {
+                            // viewer width = imageWidth + buttonWidth
+                            // viewer height = nbButtons * buttonHeight
+                            // image width = imageWidth
+                            // image height = nbButtons * buttonHeight
+                            nbButtons: 5,
+                            buttonWidth: 183,
+                            buttonHeight: 49,
+                            imageWidth: 492
+                        },
+                        style: {
+                            buttons: {
+                                background: "url('images/buttons/example3-1.jpg') no-repeat left top" /*"#2c2c2c"*/,
+                                title: {
+                                    color: '#FFFFFF'
+                                }
+                            },
+                            magnifier: {
+                                background: "url('images/buttons/example3-2.gif') no-repeat left top",
+                                title: {
+                                    color: '#FFFFFF'
+                                }
+                            }
+                        }
+                    });
+
+                    $jq('#teaser4').jTeaser({
+                        teasers : teasers4,
+                        loop: 'once',
+                        layout: {
+                            nbButtons: 5,
+                            buttonWidth: 200,
+                            buttonHeight: 80,
+                            imageWidth: 440
+                        },
+                        style: {
+                            buttons: {
+                                title: {
+                                    fontFamily: 'Tahoma, Arial, sans-serif',
+                                    fontSize: '13px',
+                                    lineHeight: '15px'
+                                },
+                                text: {
+                                    color: '#CCAA88',
+                                    fontFamily: 'verdana, Arial, sans-serif',
+                                    fontSize: '9px',
+                                    lineHeight: '9px'
+                                }
+                            },
+                            magnifier: {
+                                title: {
+                                    fontFamily: 'Tahoma, Arial, sans-serif',
+                                    fontSize: '16px',
+                                    lineHeight: '18px'
+                                },
+                                text: {
+                                    fontFamily: 'verdana, Arial, sans-serif',
+                                    fontSize: '10px',
+                                    lineHeight: '10px'
+                                }
+                            }
+                        }
+                    });
+
+                    $jq('#teaser5').jTeaser({
+                        teasers : null, // component will look for markup data
+                        layout: {
+                            nbButtons: 5,
+                            buttonWidth: 150,
+                            buttonHeight: 63,
+                            imageWidth: 350
+                        },
+                        loop: 'none',
+                        showText: false, // no effect !
+                        style: {
+                        }
+                    });
+
+                });
+
+            //-->
+        </script>
+
+        <link href="css/cascadeStyleSheet.css" rel="stylesheet" type="text/css" />
+        <link href="css/jTeaser.css" rel="stylesheet" type="text/css" />
+
+        <style type="text/css">
+
+            .teaser, .magnifier {
+                margin: 0px;
+                padding: 5px;
+                font-family: Tahoma, Arial, sans-serif;
+                font-size: 12px;
+                color: #666666;
+            }
+
+            .teaser {
+                width: 140px;
+                height: 53px;
+                padding: 10px;
+                background: #f7f3ed url('images/buttons/example5-1.jpg') no-repeat 0px 0px;
+            }
+
+            .teaser-content {
+                width: 140px;
+                height: 53px;
+            }
+
+            .magnifier {
+                font-size: 16px;
+                width: 190px;
+                height: 53px;
+                
+            }
+
+            .teaser B {
+                color: #997755;
+            }
+
+            .magnifier B {
+                color: #997755;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="content_container" class="content_container_class">
+
+            <div class="banner">
+                <div style="padding: 20px 0px 0px 150px;">SoundWave's jQuery plugin vault</div>
+            </div>
+
+            <span class="title">jTeaser Jquery Plugin</span>
+
+            <span class="title2">What is jTeaser</span>
+            <div class="section">
+                <p><img src="images/jTeaser2.jpg" class="left" border="0" alt="jTeaser"/>Have you ever wished to have a nice javascript component to spice up your web site that enables you to highlight some content of your web site with an image and text teaser (small image, a teaser text and link to your HTML content). With jTeaser, that becomes true for you if you cannot get a flash component. This feature is often needed for many sites.</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+
+            <span class="title2">Features</span>
+            <div class="section">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="150">
+                                <img alt="leafs" src="images/leafs.jpg" class="transparent">
+                            </td>
+                            <td align="left" valign="top">
+
+                                <p>The jTeaser jquery plugin features :</p>
+                                <ul class="list">
+                                    <li>Teaser text with image to spice up your web front page;</li>
+                                    <li>Loop's once or infinitly or not at all;</li>
+                                    <li>Multiple jTeaser on the same page;</li>
+                                    <li>Build on jQuery 1.4.2;</li>
+                                </ul>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span class="title">jTeaser de-mystified</span>
+            <span class="title2">The component</span>
+            <div class="section">
+                <p>The component is devised into three sub-components:</p>
+                <ul class="list">
+                    <li>The image viewer : the view to yours images;</li>
+                    <li>The buttons: the buttons which can display custom HTML, or a title & a subtitle as text;</li>
+                    <li>The magnifier: highlight content of one button.</li>
+                </ul>
+                <span class="title3">The image viewer</span>
+                <p>For each button, you must provide one image. The image is displayed when you click on a button.</p>
+                <span class="title3">The buttons</span>
+                <p>The buttons are rectangle shaped and contains some HTML content, or a default title and text string. The buttons are always placed on the right side of the component.</p>
+                <span class="title3">The magnifier</span>
+                <p>The buttons are highlighted with a magnifier, which can either display alternate content for the button, or display's the same content, but magnified. You can click on the magnifier, or the image, to access to the specified content using url's.</p>
+            </div>
+
+            <script language="JavaScript" type="text/javascript">
+                <!--
+
+                    var $jq = jQuery.noConflict();
+
+                    /*
+                     * function calculate
+                     *
+                     */
+                    function calculate() {
+
+                        var calculator = $jq('#calculator');
+                        var results = $jq('#results');
+                        var choice = $jq("input[@name='format']:checked").val();
+
+                        var paddings = 5;
+                        var nbButtons = Number(calculator.find('#nbButtons').val());
+                        var btnWidth = Number(calculator.find('#btnWidth').val());
+                        var btnHeight = Number(calculator.find('#btnHeight').val());
+                        var imgWidth = Number(calculator.find('#imgWidth').val());
+
+                        var height = (choice=='text')?((nbButtons * btnHeight)-1):(nbButtons * btnHeight);
+                        var width = imgWidth + btnWidth;
+                        var loupeWidth = btnWidth + 50;
+                        var loupeHeight = btnHeight;
+                        var imageHeight = height;
+
+                        results.find('#compWidth').text(width + " px");
+                        results.find('#compHeight').text(height + " px");
+                        results.find('#btnWidth').text(btnWidth + " px");
+                        results.find('#btnHeight').text(btnHeight + " px");
+                        results.find('#loupeWidth').text(loupeWidth + " px");
+                        results.find('#loupeHeight').text(loupeHeight + " px");
+                        results.find('#imgWidth').text(imgWidth + " px");
+                        results.find('#imgHeight').text(imageHeight + " px");
+
+                        var bw = (choice=='text')?(btnWidth - (paddings * 2)):btnWidth;
+                        var bh = (choice=='text')?(btnHeight - (paddings*2) - 1):btnHeight;
+                        var lw = (choice=='text')?(loupeWidth - (paddings * 2)):loupeWidth;
+                        var lh = (choice=='text')?(loupeHeight - (paddings*2)) - 1:btnHeight;
+
+                        results.find('#btnWidth2').text(bw + " px");
+                        results.find('#btnHeight2').text(bh + " px");
+                        results.find('#loupeWidth2').text(lw + " px");
+                        results.find('#loupeHeight2').text(lh + " px");
+
+                    }
+
+                    $jq(document).ready(function() {
+
+                        $rows = $jq('#calculator, #results').find('tr');
+
+                        $rows.mouseover(function(event) {
+                            $jq(event.currentTarget).css({background: 'silver'});
+                        }).mouseout(function(event) {
+                            $jq(event.currentTarget).css({background: 'white'});
+                        });
+
+                        $jq("input[name='format']").click(function() {
+                            calculate();
+                        });
+
+                        calculate();
+
+                    });
+
+                //-->
+            </script>
+
+            <span class="title3">Calculating the total size of the component</span>
+            <div class="section">
+
+                <p>As you don't want to rely on the default size, it is possible for you to adjust the dimension for this component. To do so, you will need to set one or all of theses elements: </p>
+
+                <ul class="list">
+                    <li>nbButtons : the number of buttons you want displayed in the component;</li>
+                    <li>buttonWidth : the button width in pixels of the buttons;</li>
+                    <li>buttonHeight : the height in pixels of the buttons;</li>
+                    <li>imageWidth : the width in pixels of the images.</li>
+                </ul>
+
+                <p>Thus, you can set the width and height of the component by providing your own layout settings for nbButtons, buttonWidth, buttonHeight, imageWidth.</p>
+
+                <p><b>Calculate dimension for a component and sub-components</b></p>
+
+                <table class="operator" border="0" cellpadding="0" cellspacing="10">
+                    <tbody>
+                        <tr>
+                            <td style="width: 350px; border-left: 1px dotted silver;">
+
+                                <table id="calculator" class="calculator" border="0" cellpadding="5" cellspacing="0" style="width: 350px;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="padding:10px 0px 10px 0px; font-size: 12px; text-align: center; border-bottom: 1px dotted silver;"><span>Calculator</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px;"><label>Content format</label></td>
+                                            <td>
+                                                <label>Text</label><input type="radio" name="format" value="text" checked />
+                                                <label>Html</label><input type="radio" name="format" value="html" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;"><label>Number of buttons</label></td>
+                                            <td><input type="text" id="nbButtons" name="nbButtons" value="4" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;"><label>Button width</label></td>
+                                            <td><input type="text" id="btnWidth" name="btnWidth" value="150" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;"><label>Buttons height</label></td>
+                                            <td><input type="text" id="btnHeight" name="btnHeight" value="63" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 150px;"><label>Image width</label></td>
+                                            <td><input type="text" id="imgWidth" name="imgWidth" value="350" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" align="right" valign="middle">
+                                                <input type="button" value="Calculate" id="calcutator" name="calcutator" onclick="calculate();" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                            <td align="left" valign="top" style="border-left: 1px dotted silver;">
+
+                                <table id="results" class="results" border="0" cellpadding="5" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="5" style="padding:10px 0px 10px 0px;font-size: 12px; text-align: center; border-bottom: 1px dotted silver;"><span>Results</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style=" height: 16px;">
+                                            <td style="width: 75px;">&nbsp;</td>
+                                            <td style="width: 50px;" colspan="2" align="center"><label>Info</label></td>
+                                            <td style="width: 50px;" colspan="2" align="center"><label>Computed</label></td>
+                                        </tr>
+                                        <tr style=" height: 16px;">
+                                            <td style="width: 75px;">&nbsp;</td>
+                                            <td style="width: 50px;"><label>Width</label></td>
+                                            <td style="width: 50px;"><label>Height</label></td>
+                                            <td style="width: 50px;"><label>Width</label></td>
+                                            <td style="width: 50px;"><label>Height</label></td>
+                                        </tr>
+                                        <tr style=" height: 16px;">
+                                            <td style="width: 75px;"><label>Component</label></td>
+                                            <td><span id="compWidth">-</span></td>
+                                            <td><span id="compHeight">-</span></td>
+                                            <td><span id="compWidth2">-</span></td>
+                                            <td><span id="compHeight2">-</span></td>
+                                        </tr>
+                                        <tr style=" height: 16px;">
+                                            <td style="width: 75px;"><label>Image</label></td>
+                                            <td><span id="imgWidth">-</span></td>
+                                            <td><span id="imgHeight">-</span></td>
+                                            <td><span id="imgWidth2">-</span></td>
+                                            <td><span id="imgHeight2">-</span></td>
+                                        </tr>
+                                        <tr style=" height: 16px;">
+                                            <td style="width: 75px;"><label>Button</label></td>
+                                            <td><span id="btnWidth">-</span></td>
+                                            <td><span id="btnHeight">-</span></td>
+                                            <td><span id="btnWidth2">-</span></td>
+                                            <td><span id="btnHeight2">-</span></td>
+                                        </tr>
+                                        <tr style=" height: 16px;">
+                                            <td style="width: 75px;"><label>Loupe</label></td>
+                                            <td><span id="loupeWidth">-</span></td>
+                                            <td><span id="loupeHeight">-</span></td>
+                                            <td><span id="loupeWidth2">-</span></td>
+                                            <td><span id="loupeHeight2">-</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <span class="title2">Javascript inclusions</span>
+            <div class="section">
+                <p>To make jTeaser work, you must include these HTML markups:</p>
+                <p>&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery/jquery-1.4.2.js&quot;&gt;&lt;/script&gt;<br/>&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery.jTeaser.min.js&quot;&gt;&lt;/script&gt;</p>
+            </div>
+
+            <span class="title2">The component html markup</span>
+            <div class="section">
+                <code>&lt;div id=&quot;teaser0&quot;&gt;&lt;/div&gt;<br/>or<br/>&lt;div id=&quot;teaser0&quot;/&gt;</code>
+                <p>In this example, if you do not provide HTML content to the component buttons and magnifier, you just have to insert a DIV element with an unique ID. There is no other restriction.</p>
+            </div>
+
+            <span class="title2">The component instantiation</span>
+            <div class="section">
+                
+<pre name="code" class="javascript">
+
+    var teasers0 = [
+        {
+            "title": "Papillon tout en art!",
+            "text": "Evelyn est une pro de l'infographisme.",
+            "image": "images/brown-350x252/beautiful-butterfly-brown-pattern.jpg",
+            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=1"
+        },
+        {
+            "title": "Le papillon à l'honneur au biodôme!",
+            "text": "Visitez et observez les coléopthères.",
+            "image": "images/brown-350x252/butterfly-brown.jpg",
+            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=2"
+        },
+        {
+            "title": "Au confin de l'univers!",
+            "text": "Naine brune et son disque d'acrétion.",
+            "image": "images/brown-350x252/brownDwarf.jpg",
+            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=3"
+        },
+        {
+            "title": "Les moeurs des chats!",
+            "text": "Les chats ont des effets thérapeutique. Qu'en est-il?",
+            "image": "images/brown-350x252/Contemplative_Brown_Kitty.jpg",
+            "url": "http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=4"
+        }
+    ];
+
+    $jq('#teaser0').jTeaser({
+       teasers : teasers0,
+       border: '1px solid #633f1c'
+    });
+
+</pre>
+                <p>Where #teaser0 is the DIV id which will be our jTeaser component, teasers0 is the array of teaser data, which both are mandatory.</p>
+            </div>
+
+            <span class="title2">The component teaser data - the javascript way</span>
+            <div class="section">
+                <p>One must initialize the component with data, called teaser data. There is also an alternative way to provide the data using HTML, called HTML markup teaser data. The teaser data consists of an array of objects.</p>
+                <ul>
+                    <li>The <b>teaser data object</b> consists of theses properties :
+                        <ul>
+                            <li><b>title</b> [mandatory]: The title for both the button and magnifier.</li>
+                            <li><b>text</b> [mandatory]: The text for both the button and magnifier.</li>
+                            <li><b>textMagnifier</b> [optional]: If provided, the text for the magnifier, overriding the text property;</li>
+                            <li><b>image</b> [mandatory]: The image url;</li>
+                            <li><b>url</b> [mandatory]: The url to a html content;</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>You will need one teaser data for each teaser. The array must be of the same length of nbButtons, which is by default of 4; the component will display 4 teasers. Thus, in this case, you must provide an array of teaser data object of length 4.</p>
+            </div>
+
+            <span class="title2">The component initialisation upon instantiation</span>
+            <div class="section">
+                <p>Here is the javascript default options that is passed to jTeaser() and that you can modify to your convinience.</p>
+
+<!-- CODE SOURCE -->
+<pre name="code" class="javascript">
+{
+    debug: false, // The debug fag for this component
+    mode: 'display', // [display|slide]
+    orientation: 'horizontal', // if (mode=='slide') [vertical|horizontal]
+    teasers: null, // The teasers data
+    layout: {
+        nbButtons: 4, // the number of buttons
+        buttonWidth: 150, // the width of the buttons in pixels
+        buttonHeight: 63, // the height of the buttons in pixels
+        imageWidth: 350 // The width of the image in pixels
+    },
+    loop: 'once', // [none|once|infinite]loop the magnifier once or infinitly
+    loopPause: 5000, // while looping, the magnifier pause for each button
+    showText: true, // shows text in buttons, if not, only the titles are displayed
+    intro: true, // slide the magnifier from left to right as introduction
+    message: null,
+    style: { // auto explanatory
+        border : '1px solid silver', // css border for the component
+        separatorColor: '#FFFFFF', // separator color between buttons for the component
+        buttons: {
+            background: '#F7F3EC',
+            title: {
+                fontFamily: 'Arial, Verdana, Helvetica',
+                fontSize: '11px',
+                lineHeight: '12px',
+                fontWeight: 'bold',
+                color: '#997755'
+            },
+            text: {
+                fontFamily: 'Arial, Verdana, Helvetica',
+                fontSize: '9px',
+                lineHeight: '10px',
+                color: '#997755'
+            }
+        },
+        magnifier: {
+            background: '#F7F3EC',
+            title: {
+                fontFamily: 'Arial, Verdana, Helvetica',
+                fontSize: '11px',
+                lineHeight: '12px',
+                fontWeight: 'bold',
+                color: '#997755'
+            },
+            text: {
+                fontFamily: 'Arial, Verdana, Helvetica',
+                fontSize: '9px',
+                lineHeight: '10px',
+                color: '#997755'
+            }
+        }
+    }
+}
+</pre>
+            <span class="title2">The component teaser data - the HTML markup way</span>
+            <div class="section">
+                <p>If the teaser data is set to null, the component will look for HTML markup teaser data within the targeted element. With this technique, you have full control of what is shown since you provide HTML content for both the buttons and the magnifier, instead of using the default behaviour. Thus, you wont have to provide a style object option to the component. In this case, you must set the teasers option to null and the style is simply overridden.</p>
+                <p>With this technique, you thus setup teaser data with the HTML markup, and also, you control the layout & the styling with the HTML markup, and this for both the buttons and the magnifier.</p>
+                
+                
+<pre name="code" class="html">
+&lt;div id=&quot;teaser5&quot; style=&quot;display: none; &quot;&gt;
+  &lt;div id=&quot;teasers&quot;&gt;
+    &lt;div id=&quot;teaser1&quot; data-image=&quot;&quot; data-url=&quot;&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;teaser2&quot; data-image=&quot;&quot; data-url=&quot;&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;teaser3&quot; data-image=&quot;&quot; data-url=&quot;&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;teaser4&quot; data-image=&quot;&quot; data-url=&quot;&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;teaser5&quot; data-image=&quot;&quot; data-url=&quot;&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;magnifier1&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;magnifier2&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;magnifier3&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;magnifier4&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;magnifier5&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <p>@see Example 5 source code for usage in this page.</p>
+            </div>
+<!-- /CODE SOURCE -->
+
+            </div>
+
+            <span class="title">Examples</span>
+            <span class="title2">jTeaser Jquery Plugin default example</span>
+            <table width="250" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="10" height="10"><img src="images/box/topLeft.jpg" width="10" height="10" alt="topLeft"/></td>
+                    <td style="background-image: url('images/box/top.jpg');"></td>
+                    <td width="14" height="10"><img src="images/box/topRight.jpg" width="14" height="10" alt="topRight"/></td>
+                </tr>
+                <tr>
+                    <td width="10" style="background-image: url('images/box/left.jpg');"></td>
+                    <td style="background-image: url(images/box/center.jpg);"><div id="teaser0"></div></td>
+                    <td width="14" style="background-image: url('images/box/right.jpg');"></td>
+                </tr>
+                <tr>
+                    <td width="10" height="12"><img src="images/box/bottomLeft.jpg" width="10" height="12" alt="bottomLeft"/></td>
+                    <td style="background-image: url('images/box/bottom.jpg');"></td>
+                    <td width="14" height="12"><img src="images/box/bottomRight.jpg" width="14" height="12" alt="bottomRight"/></td>
+                </tr>
+            </table>
+
+            <span class="title2">jTeaser Jquery Plugin example 1</span>
+            <span class="title3">A simple viewer with text in french</span>
+
+            <div class="section">
+                <div id="teaser1"></div>
+            </div>
+
+            <span class="title2">jTeaser Jquery Plugin example 2 &amp; alternate dimension</span>
+            <span class="title3">A simple viewer with text in english</span>
+
+            <div class="section">
+                <div id="teaser2"></div>
+            </div>
+
+            <span class="title2">jTeaser Jquery Plugin example 3</span>
+            <span class="title3">A simple viewer with text in french &amp; with title only (no button text)</span>
+
+            <div class="section">
+                <div id="teaser3"></div>
+            </div>
+
+            <span class="title2">jTeaser Jquery Plugin example 4</span>
+            <span class="title3">A simple viewer with text in french &amp; with title only (no button text) &amp; alternate dimension</span>
+            <div class="section">
+                <div id="teaser4"></div>
+            </div>
+
+            <span class="title2">jTeaser Jquery Plugin example 5</span>
+            <span class="title3">A simple viewer with custom HTML content &amp; alternate dimension</span>
+            <div class="section">
+                <p>In this example, HTML content for the buttons is provided via HTML markup, not via Javascript upon instantiaon and initialisation. Thus, instead of using default layout, you may provide your own layout with HTML markup.</p>
+                <div id="teaser5" style="display: none; ">
+                    <div id="teasers">
+                        <div id="teaser1" data-image="images/1_fr.gif" data-url="http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=1">
+                            <div class="teaser"><div class="teaser-content"><b>Justine Bateman</b><br/><small>The girl next door.</small></div></div>
+                        </div>
+                        <div id="teaser2" data-image="images/2_fr.gif" data-url="http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=2">
+                            <div class="teaser"><div class="teaser-content"><b>Samantha Carter</b><br/><small>A brilliant woman with no fear.</small></div></div>
+                        </div>
+                        <div id="teaser3" data-image="images/3_fr.gif" data-url="http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=3">
+                            <div class="teaser"><div class="teaser-content"><b>Doctor Who</b><br/><small>Travels thru time and space and beyond imagination.</small></div></div>
+                        </div>
+                        <div id="teaser4" data-image="images/4_fr.gif" data-url="http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=4">
+                            <div class="teaser"><div class="teaser-content"><b>Tron Legacy</b><br/><small>The manifestations of god and devil.</small></div></div>
+                        </div>
+                        <div id="teaser5" data-image="images/5_fr.gif" data-url="http://127.0.0.1/index2.php?ref=articles&language=fr&noArt=5">
+                            <div class="teaser"><div class="teaser-content"><b>Space seed</b><br/><small>Star Trek adventure thru the stars.</small></div></div>
+                        </div>
+                        <div id="magnifier1">
+                            <div class="magnifier">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 190px; height: 53px;padding: 0px;margin: 0px">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" valign="top" style="width: 37px; height: 41px;">
+                                                <img src="images/icons/FavsAlt.png" border="0" width="32" height="32" alt="FavsAlt"/>
+                                            </td>
+                                            <td align="left" valign="top"><b>Justine Bateman</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="magnifier2">
+                            <div class="magnifier">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 190px; height: 53px;padding: 0px;margin: 0px">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" valign="top" style="width: 37px; height: 41px;">
+                                                <img src="images/icons/Favs.png" border="0" width="32" height="32" alt="FavsAlt"/>
+                                            </td>
+                                            <td align="left" valign="top"><b>Samantha Carter</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="magnifier3">
+                            <div class="magnifier">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 190px; height: 53px;padding: 0px;margin: 0px">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" valign="top" style="width: 37px; height: 41px;">
+                                                <img src="images/icons/Library.png" border="0" width="32" height="32" alt="FavsAlt"/>
+                                            </td>
+                                            <td align="left" valign="top"><b>Doctor Who</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="magnifier4">
+                            <div class="magnifier">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 190px; height: 53px;padding: 0px;margin: 0px">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" valign="top" style="width: 37px; height: 41px;">
+                                                <img src="images/icons/LibraryAlt.png" border="0" width="32" height="32" alt="FavsAlt"/>
+                                            </td>
+                                            <td align="left" valign="top"><b>Tron Legacy</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="magnifier5">
+                            <div class="magnifier">
+                                <table border="0" cellpadding="0" cellspacing="0" style="width: 190px; height: 53px;padding: 0px;margin: 0px">
+                                    <tbody>
+                                        <tr>
+                                            <td align="left" valign="top" style="width: 37px; height: 41px;">
+                                                <img src="images/icons/iDisk.png" border="0" width="32" height="32" alt="FavsAlt"/>
+                                            </td>
+                                            <td align="left" valign="top"><b>Space seed</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEST
+            <div class="section">
+                <table width="840" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align='left' valign='center'>
+                            <img src="images/jQuery_UI_logo_bw.jpg" alt="jQuery user interface" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <table width="250" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="10" height="10"><img src="images/box/topLeft.jpg" width="10" height="10" alt="topLeft"/></td>
+                    <td style="background-image: url('images/box/top.jpg');"></td>
+                    <td width="14" height="10"><img src="images/box/topRight.jpg" width="14" height="10" alt="topRight"/></td>
+                </tr>
+                <tr>
+                    <td width="10" style="background-image: url('images/box/left.jpg');"></td>
+                    <td height="150" style="background-image: url(images/box/center.jpg);">Test Box Shadow</td>
+                    <td width="14" style="background-image: url('images/box/right.jpg');"></td>
+                </tr>
+                <tr>
+                    <td width="10" height="12"><img src="images/box/bottomLeft.jpg" width="10" height="12" alt="bottomLeft"/></td>
+                    <td style="background-image: url('images/box/bottom.jpg');"></td>
+                    <td width="14" height="12"><img src="images/box/bottomRight.jpg" width="14" height="12" alt="bottomRight"/></td>
+                </tr>
+            </table>
+            -->
+
+        </div>
+
+    </body>
+
+</html>

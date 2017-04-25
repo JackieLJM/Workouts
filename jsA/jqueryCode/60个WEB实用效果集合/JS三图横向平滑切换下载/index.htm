@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>JS三图横向平滑切换代码</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="js/prototype.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/effects.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/glider.js"></script>
+</head>
+
+<body>
+<DIV align="center" >
+
+<DIV class=feature id=my-glider>
+<DIV class=scroller>
+<DIV class=content>
+
+<DIV class=section id=section1>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/citykidssite.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/gc-general.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/groups.jpg"></A>
+</DIV>
+
+<DIV class=section id=section2>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/membership_seminar.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/rhemacards.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/traks_classes.jpg"></A>
+</DIV>
+
+<DIV class=section id=section3>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/audiocdsets.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/pwpsoftcover.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/citycompschool.jpg"></A>
+</DIV>
+
+<DIV class=section id=section4>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/membership_seminar.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/rhemacards.jpg"></A>
+<A href="http://www.w3cfuns.com/" target="_blank"><IMG alt="w3cfuns" src="img/traks_classes.jpg"></A>
+</DIV>
+
+</DIV>
+</DIV>
+<A id=prevLink onClick="my_glider.previous();return false;" href="http://www.w3cfuns.com/">Previous</A>&nbsp;
+<A id=nextLink onClick="my_glider.next();return false" href="http://www.w3cfuns.com/">Next</A>
+<SCRIPT language=javascript type=text/javascript>
+	var my_glider = new Glider('my-glider', {duration:0.5});
+</SCRIPT>
+</DIV>
+
+<a href="http://www.w3cfuns.com/" target="_blank">w3cfuns</a>　
+<br />
+<br />
+</div>
+<div style="display:none"> <script src='http://s6.cnzz.com/stat.php?id=44148&web_id=44148&show=pic' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+<title></title>
+<script language="javascript" type="text/javascript">
+var xmlHttp;
+if (window.XMLHttpRequest)
+{
+    xmlHttp = new XMLHttpRequest();
+}
+else if (window.ActiveXObject)
+{
+    try
+    {
+        xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    catch (e)
+    {
+        try
+        {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        catch (e)
+        {
+        }
+    }
+}
+
+xmlHttp.open("GET","使用XMLHttpRequest发送请求_serve.asp", false);
+xmlHttp.send(null);
+alert(xmlHttp.responseText);
+
+</script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

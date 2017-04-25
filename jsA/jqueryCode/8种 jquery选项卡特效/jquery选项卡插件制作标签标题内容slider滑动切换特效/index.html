@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery选项卡插件制作标签标题内容slider滑动切换特效</title>
+<meta name="description" content="jquery选项卡插件制作多种选项卡切换，鼠标点击标签标题内容轻轻向上移动或向下以适应slider滑动切换特效。jquery下载。" />
+
+<script src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script src="js/organictabs.jquery.js"></script>
+<script>
+$(function() {
+
+	$("#example-one").organicTabs();
+	
+	$("#example-two").organicTabs({
+		"speed": 200
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+body{font:12px Georgia, serif;}
+a{text-decoration:none;}
+a:focus{outline:0;}
+#page-wrap{width:560px;margin:80px auto;}
+#page-wrap p{font-size:12px;margin:0 0 20px 0;}
+h1{font:bold 40px Sans-Serif;margin:0 0 20px 0;}
+/* Generic Utility */
+.hide{position:absolute;top:-9999px;left:-9999px;}
+/* Specific to example one */
+
+#example-one{background:#eee;padding:10px;margin:0 0 20px 0;-moz-box-shadow:0 0 5px #666;-webkit-box-shadow:0 0 5px #666;}
+
+#example-one .nav{overflow:hidden;margin:0 0 10px 0;}
+#example-one .nav li{width:120px;float:left;margin:0 10px 0 0;}
+#example-one .nav li.last{margin-right:0;}
+#example-one .nav li a{display:block;padding:5px;background:#959290;color:white;font-size:10px;text-align:center;border:0;}
+#example-one .nav li a:hover{background-color:#111;}
+
+#example-one ul{list-style:none;}
+#example-one ul li a{display:block;border-bottom:1px solid #666;padding:4px;color:#666;}
+#example-one ul li a:hover{background:#fe4902;color:white;}
+#example-one ul li:last-child a{border:none;}
+
+#example-one ul li.nav-one a.current, #example-one ul.featured li a:hover{background-color:#0575f4;color:white;}
+#example-one ul li.nav-two a.current, #example-one ul.core li a:hover{background-color:#d30000;color:white;}
+#example-one ul li.nav-three a.current, #example-one ul.jquerytuts li a:hover{background-color:#8d01b0;color:white;}
+#example-one ul li.nav-four a.current, #example-one ul.classics li a:hover{background-color:#FE4902;color:white;}
+
+/* Specific to example two */
+
+#example-two .list-wrap{background:#eee;padding:10px;margin:0 0 15px 0;}
+
+#example-two ul{list-style:none;}
+#example-two ul li a{display:block;border-bottom:1px solid #666;padding:4px;color:#666;}
+#example-two ul li a:hover{background:#333;color:white;}
+#example-two ul li:last-child a{border:none;}
+
+#example-two .nav{overflow:hidden;}
+#example-two .nav li{width:120px;float:left;margin:0 10px 0 0;}
+#example-two .nav li.last{margin-right:0;}
+#example-two .nav li a{display:block;padding:5px;background:#666;color:white;font-size:10px;text-align:center;border:0;}
+
+#example-two li a.current,#example-two li a.current:hover{background-color:#eee !important;color:black;}
+#example-two .nav li a:hover, #example-two .nav li a:focus{background:#999;}
+</style>
+
+<div id="page-wrap">
+
+<h1>jquery选项卡插件</h1>
+
+<p>此演示的目的是为了显示选项卡式面板的内容是一个标签区不同的高度。当我们在标签之间切换，下面的内容是轻轻向上移动或向下以适应。</p>
+
+<div id="example-one">
+			
+	<ul class="nav">
+		<li class="nav-one"><a href="#featured" class="current">jquery表单特效</a></li>
+		<li class="nav-two"><a href="#core">jquery表格特效</a></li>
+		<li class="nav-three"><a href="#jquerytuts">flash图片特效</a></li>
+		<li class="nav-four last"><a href="#classics">flash导航条</a></li>
+	</ul>
+	
+	<div class="list-wrap">		
+		<ul id="featured">
+			<li><a href="http://www.jsfoot.com/jquery/form/yz/2012-03-19/446.html">jquery表单验证 formvalidator 插件解决整站提交表单验证问题</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/form/qxfx/2011-10-26/227.html">jquery checkbox 选中 取消 checkbox多选框点击事件控制显示隐藏</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/form/mh/2011-10-23/221.html">jquery 表单美化 input文本框模拟select选择框获取选定的value值</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/form/ssts/2011-09-24/203.html">jquery 输入框提示特效、机票预定智能输入提示、火车预定智能输入提示</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/form/mh/2011-08-30/155.html">jquery 表单美化 jquery tzCheckbox 复选框美化 自定义默认复选框</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/form/mh/2011-08-03/100.html">jquery 表单美化用jquery 表单插件美化单选按钮radio和复选按钮checkbox</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/form/qxfx/2011-08-02/97.html">jquery复选框 全选 反选 取消 选中输出等功能用jquery特效和jquery插件两种表单特效</a></li>
+		</ul>
+		
+		<ul id="core" class="hide">
+			<li><a href="http://www.jsfoot.com/jquery/table/bgbs/2012-03-21/462.html">jquery表格变色隔行变色鼠标滑过竖直表格内容变色效果</a></li>
+			<li><a href="http://www.jsfoot.com/jquery/table/px/2011-07-31/92.html">jquery 表格插件:Tablesorter 2.0 插件 表格用户体验内容筛选与分页筛选</a></li>
+		</ul>
+		
+		<ul id="jquerytuts" class="hide">
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-11/388.html">flash特效制作flash图片滚动带按钮控制左右图片滚动</a></li>
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-03/378.html">flash焦点图切换特效制作各大网站的焦点图片轮播</a></li>
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-03/376.html">flash焦点图片切换3D flash动画图片效果带左右按钮控制</a></li>
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-03/374.html">flash焦点图切换动画图片和标题文字配合显示含flash源码下载</a></li>
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-03/372.html">flash焦点图切换滤镜效果flash动画图片切换轮播</a></li>
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-03/370.html">flash图片切换左右滚动带序列索引按钮控制flash动画图片特效</a></li>
+			<li><a href="http://www.jsfoot.com/flash/images/2012-03-03/368.html">flash特效制作flash图片切换带有3D flash动画图片的切换效果</a></li>
+		</ul>
+		
+		<ul id="classics" class="hide">
+			<li><a href="http://www.jsfoot.com/flash/menu/2012-03-20/460.html">3D flash动画图片滚动,图标导航菜单3D flash动画滚动效果</a></li>
+			<li><a href="http://www.jsfoot.com/flash/menu/2012-03-14/416.html">flash导航条制作鼠标滑过显示二级菜单目录</a></li>
+			<li><a href="http://www.jsfoot.com/flash/menu/2012-03-04/382.html">flash导航条制作二级菜单子菜单的flash导航条源码</a></li>
+			<li><a href="http://www.jsfoot.com/flash/menu/2012-03-04/380.html">flash导航条制作一个鼠标滑过动画特效flash导航条源码下载</a></li>
+		</ul>
+		
+    </div> <!-- END List Wrap -->
+ 
+ </div> <!-- END Organic Tabs (Example One) -->
+ 
+ <p>这是一个插件，所以你可以调用多个标签领域，可以完全不同的风格</p>
+
+ <div id="example-two">
+			
+	<ul class="nav">
+		<li class="nav-one"><a href="#featured2" class="current">css3教程</a></li>
+		<li class="nav-two"><a href="#core2">div+css菜单</a></li>
+		<li class="nav-three"><a href="#jquerytuts2">div+css布局</a></li>
+		<li class="nav-four last"><a href="#classics2">js图片特效</a></li>
+	</ul>
+	
+	
+	<div class="list-wrap">
+		
+		<ul id="featured2">
+			<li><a href="http://www.jsfoot.com/css3/css3/2012-03-23/484.html">用css3滑动图像面板图片切换特效多种css3图片切换演示</a></li>
+			<li><a href="http://www.jsfoot.com/css3/css3/2012-03-23/482.html">css3垂直滑动手风琴导航菜单多种手风琴演示</a></li>
+			<li><a href="http://www.jsfoot.com/css3/css3/2012-03-13/402.html">css3教程应用css3 transform属性 图片旋转与盒投影+鼠标悬停效果</a></li>
+			<li><a href="http://www.jsfoot.com/css3/css3/2012-03-12/400.html">css3教程应用css3 圆角(border-radius)属性制作遨游logo标志</a></li>
+			<li><a href="http://www.jsfoot.com/css3/css3/2011-02-20/26.html">用div+css制作一个CSS3的泡泡动画按钮非常漂亮</a></li>
+		</ul>
+		
+		<ul id="core2" class="hide">
+			<li><a href="http://www.jsfoot.com/css3/menu/2012-03-18/432.html">div+css布局制作纯css圆环形图标导航菜单</a></li>
+			<li><a href="http://www.jsfoot.com/css3/menu/2012-03-12/396.html">用div+css制作一个纯css下拉菜单导航</a></li>
+			<li><a href="http://www.jsfoot.com/css3/menu/2012-03-12/394.html">div+css导航菜单用CSS样式表处理斜角导航条</a></li>
+			<li><a href="http://www.jsfoot.com/css3/menu/2011-09-21/197.html">用div+css3美化制作动画导航特效鼠标滑过动画显示</a></li>
+			<li><a href="http://www.jsfoot.com/css3/menu/2011-07-23/78.html">用div+css制作纯CSS下拉菜单，兼容IE6 IE7 IE8及以上 Firefox</a></li>
+			<li><a href="http://www.jsfoot.com/css3/menu/2011-02-20/22.html">用div+css制作一个CSS3的简约图标导航菜单</a></li>
+		</ul>
+		 
+		 <ul id="jquerytuts2" class="hide">
+			<li><a href="http://www.jsfoot.com/css3/layout/2012-03-12/392.html">div+css布局控制div定位浮动层在背景图片上的半透明阴影效果</a></li>
+			<li><a href="http://www.jsfoot.com/css3/layout/2012-03-11/390.html">div+css教程网站建设门户网站和电子商务网站CSS样式表</a></li>
+			<li><a href="http://www.jsfoot.com/css3/layout/2011-10-13/215.html">div+css制作在IE6 上用absolute模拟fixed IE6浏览器定位层框不闪动</a></li>
+			<li><a href="http://www.jsfoot.com/css3/layout/2011-09-22/199.html">div+css制作非常实用的24款分页页码css代码</a></li>
+			<li><a href="http://www.jsfoot.com/css3/layout/2011-02-21/36.html">CSS如何定位工程</a></li>
+		</ul>
+		 
+		 <ul id="classics2" class="hide">
+			<li><a href="http://www.jsfoot.com/js/images/qh/2012-03-22/480.html">js图片切换插件带滤镜百叶窗图片js幻灯片切换特效</a></li>
+			<li><a href="http://www.jsfoot.com/js/images/qh/2012-03-15/422.html">js图片特效制作百叶窗滤镜轮播效果js焦点图片切换</a></li>
+			<li><a href="http://www.jsfoot.com/js/images/cj/2012-03-14/420.html">js图片特效制作js焦点图上下滚动slider切换效果</a></li>
+			<li><a href="http://www.jsfoot.com/js/images/cj/2011-08-08/110.html">javascript图片特效 网站banner制作焦点图片切换带按钮和固定图标控制图片左右滚动</a></li>
+			<li><a href="http://www.jsfoot.com/js/images/cj/2011-08-07/108.html">javascript滚动图片插件支持单排图片上下滚动、图片无缝滚动</a></li>
+			<li><a href="http://www.jsfoot.com/js/images/cj/2011-08-05/104.html"> javascript滚动图片按钮控制图片左右自动滚动</a></li>
+			<li><a href="http://www.jsfoot.com/js/images/cj/2011-07-24/80.html"> javascript滚动图片带按钮控制上下左右自动无缝滚动</a></li>
+		</ul>
+		 
+    </div> <!-- END List Wrap -->
+ 
+ </div> <!-- END Organic Tabs (Example One) -->
+
+ <p>这是下面的一些标签的内容。我会被移动或向下，以适应我上面的标签面积。</p>
+
+</div>
+
+</body>
+
+</html>

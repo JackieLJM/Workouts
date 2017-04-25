@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery菜单特效 鼠标滑过菜单区域图标和文本类似flash动画酷炫移动展示</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:#f7f7f7 url(images/pattern.png) repeat top left;color:#000;font-family:'Georgia', 'Trebuchet MS', serif;font-size:12px;}
+a{color:#000;text-decoration:none;}
+.clr{clear:both;}
+.container {width:100%;position:relative;z-index:100;margin:0 auto;}
+.header{padding-top:40px;}
+.content {width:1000px;margin:0 auto;}
+.titles{margin:10px 0 0px 20px;font-size:40px;color:#000;text-shadow:1px 1px 1px #fff;font-family: 'Wire One', arial, serif;text-align:center;}
+.titles span{font-size:22px;text-transform:uppercase;}
+.titlesh2{text-align:center;font-family:Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;font-size:26px;color:#333;margin:20px 0 0 0;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/stimenu.css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Wire+One&v1' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.iconmenu.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="titles">8种动画文本和图标菜单<span>jQuery 特效</span></div>
+	
+	<h2 class="titlesh2">1、图标与文本同时向下连贯移动到界面</h2>
+	<ul id="sti-menu-01" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-01').iconmenu();
+	});
+	</script>
+
+	
+	
+	<h2 class="titlesh2">2、图标与文本向下连贯移动到界面 图标延迟移动到界面</h2>
+	<ul id="sti-menu-02" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-02').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
+				'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
+				'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
+				'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
+				'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
+			}
+		});
+	});
+	</script>
+	
+	
+	<h2 class="titlesh2">3、图标与文本非常快速向下连贯移动到界面</h2>
+	<ul id="sti-menu-03" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-03').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 150, easing : 'jswing', delay : 0, dir : 1},
+				'sText' : {speed : 150, easing : 'jswing', delay : 0, dir : 1},
+				'icon'  : {speed : 150, easing : 'jswing', delay : 0, dir : 1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 100, easing : 'jswing', delay : 0, dir : 1},
+				'sText' : {speed : 100, easing : 'jswing', delay : 0, dir : 1},
+				'icon'  : {speed : 100, easing : 'jswing', delay : 0, dir : 1}
+			},
+			boxAnimSpeed: 0
+		});
+	});
+	</script>
+
+	
+	<h2 class="titlesh2">4、图标与文本按顺序向下移动到界面</h2>
+	<ul id="sti-menu-04" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-04').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 200, easing : 'easeOutExpo', delay : 250, dir : 1},
+				'sText' : {speed : 200, easing : 'easeOutExpo', delay : 0, dir : 1},
+				'icon'  : {speed : 200, easing : 'easeOutExpo', delay : 500, dir : 1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 200, easing : 'easeInExpo', delay : 250, dir : 1},
+				'sText' : {speed : 200, easing : 'easeInExpo', delay : 500, dir : 1},
+				'icon'  : {speed : 200, easing : 'easeInExpo', delay : 0, dir : 1}
+			}
+		});
+	});
+	</script>
+	
+	
+	<h2 class="titlesh2">5、图标与文本按顺序向下移动到界面 小标题延迟移动</h2>
+	<ul id="sti-menu-05" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-05').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 200, easing : 'easeOutExpo', delay : 0, dir : 1},
+				'sText' : {speed : 600, easing : 'easeOutExpo', delay : 400, dir : 1},
+				'icon'  : {speed : 200, easing : 'easeOutExpo', delay : 0, dir : 1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 200, easing : 'easeInExpo', delay : 150, dir : 1},
+				'sText' : {speed : 200, easing : 'easeInExpo', delay : 0, dir : 1},
+				'icon'  : {speed : 200, easing : 'easeInExpo', delay : 300, dir : 1}
+			}
+		});
+	});
+	</script>
+	
+	<h2 class="titlesh2">6、图标与文本按顺序向上移动到界面 往下移动消失效果</h2>
+	<ul id="sti-menu-06" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-06').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : -1},
+				'sText' : {speed : 400, easing : 'easeOutExpo', delay : 280, dir : -1},
+				'icon'  : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : -1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : -1},
+				'sText' : {speed : 400, easing : 'easeInExpo', delay : 0, dir : -1},
+				'icon'  : {speed : 400, easing : 'easeInExpo', delay : 280, dir : -1}
+			}
+		});
+	});
+	</script>
+	
+	
+	<h2 class="titlesh2">7、图标与文本按顺序向上移动到界面 往上移动消失效果</h2>
+	<ul id="sti-menu-07" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-07').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 400, easing : 'easeOutBack', delay : 200, dir : -1},
+				'sText' : {speed : 400, easing : 'easeOutBack', delay : 400, dir : -1},
+				'icon'  : {speed : 400, easing : 'easeOutBack', delay : 0, dir : -1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 200, easing : 'easeInExpo', delay : 150, dir : 1},
+				'sText' : {speed : 200, easing : 'easeInExpo', delay : 300, dir : 1},
+				'icon'  : {speed : 200, easing : 'easeInExpo', delay : 0, dir : 1}
+			}
+		});
+	});
+	</script>
+	
+	
+	<h2 class="titlesh2">8、图标向下移动、文本向上移动出现  图片向下、文本向上移动消失</h2>
+	<ul id="sti-menu-08" class="sti-menu">
+		<li data-hovercolor="#37c5e9">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进的病人护理</h2>
+				<h3 data-type="sText" class="sti-item">个性化您的需求</h3>
+				<span data-type="icon" class="sti-icon sti-icon-care sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ff395e">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">非传统医学</h2>
+				<h3 data-type="sText" class="sti-item">整体的途径</h3>
+				<span data-type="icon" class="sti-icon sti-icon-alternative sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#57e676">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">现代信息中心</h2>
+				<h3 data-type="sText" class="sti-item">教育你</h3>
+				<span data-type="icon" class="sti-icon sti-icon-info sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#d869b2">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">未来的计划生育</h2>
+				<h3 data-type="sText" class="sti-item">为一个更健康的未来</h3>
+				<span data-type="icon" class="sti-icon sti-icon-family sti-item"></span>
+			</a>
+		</li>
+		<li data-hovercolor="#ffdd3f">
+			<a href="#">
+				<h2 data-type="mText" class="sti-item">先进技术</h2>
+				<h3 data-type="sText" class="sti-item">从最新的研究</h3>
+				<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+			</a>
+		</li>
+	</ul>
+	
+	<div class="clr"></div>
+	
+	<script type="text/javascript">
+	$(function() {
+		$('#sti-menu-08').iconmenu({
+			animMouseenter	: {
+				'mText' : {speed : 500, easing : 'easeOutExpo', delay : 200, dir : -1},
+				'sText' : {speed : 500, easing : 'easeOutExpo', delay : 200, dir : -1},
+				'icon'  : {speed : 700, easing : 'easeOutBounce', delay : 0, dir : 1}
+			},
+			animMouseleave	: {
+				'mText' : {speed : 400, easing : 'easeInExpo', delay : 0, dir : -1},
+				'sText' : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1},
+				'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : -1}
+			}
+		});
+	});
+	</script>
+	
+</div>
+</body>
+</html>

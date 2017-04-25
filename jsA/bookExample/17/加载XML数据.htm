@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+<title>加载XML数据</title>
+
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+
+function xmlDom(){
+    var a = [
+        "MSXML2.DOMDocument.5.0",
+        "MSXML2.DOMDocument.4.0",
+        "MSXML2.DOMDocument.3.0",
+        "MSXML2.DOMDocument",
+        "Microsoft.XmlDom"
+    ] 
+    for(var i = 0 ; i < a.length; i++){
+        try{
+            var o = new ActiveXObject(a[i]);
+            return o;
+        }
+        catch(e)
+        {}
+    }
+    throw new Error("浏览器不支持MSXML组件");
+}
+
+var o = xmlDom();
+var s = "<recordset><record><ProductID>1</ProductID><ProductName>苹果汁</ProductName></record></recordset>"
+o.loadXML(s);
+
+
+
+
+</script>
+</body>
+
+</html>

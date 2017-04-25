@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 图片特效插件 异步读取图片TOP排行榜特效</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"宋体";}
+a{color:#5e5e5e;text-decoration:none;}
+a:hover{color:#990000;text-decoration:underline;}
+/* tabcon */
+.tabcon .p-name,.tabcon .p-name .num{background-image:url(images/TOPbg.png);background-repeat:no-repeat;}
+.rank{width:237px;height:236px;overflow:hidden;border:1px solid #ddd;}
+.tabcon .p-img{display:none;}
+.tabcon .p-name{padding:5px 8px 0 5px;background-position:0 0;height:24px;overflow:hidden;}
+.tabcon .p-name .num{width:16px;height:16px;line-height:16px;overflow:hidden;font-size:12px;text-align:center;color:#fff;font-weight:800;float:left;margin:2px 15px 0 0;background-position:-558px 0;display:inline-block;}
+.tabcon .current{height:149px;overflow:hidden;}
+.tabcon .current .p-name{background-position:-237px 0;}
+.tabcon .current .p-name a{color:#990000;}
+.tabcon .current .p-img{display:block;}
+.tabcon .current .p-img img{border:1px solid #fff;}
+</style>
+</head>
+
+<body>
+	<div class="rank">
+		<ul class="tabcon">
+			<li class="current">
+				<div class="p-name">
+					<span class="num">1</span>
+					<a href="#">天戈遥控直升机直降330元</a>
+				</div>
+				<div class="p-img">
+					<a href="#"><img src='http://www.mailuke.com/Upload/company/2011/6/2618194963d.jpg' width='235' height='118' /></a>
+				</div>
+			</li>
+			<li>
+				<div class="p-name">
+					<span class="num">2</span>
+					<a href="#">京商系列遥控三角翼仅售240元</a>
+				</div>
+				<div class="p-img">
+					<a href="#"><img src2='http://www.mailuke.com/Upload/company/2011/6/261829325e0.jpg' width='235' height='118' /></a>
+				</div>
+			</li>
+			<li>
+				<div class="p-name">
+					<span class="num">3</span>
+					<a href="#">俏高领个性短袖送性感腰带54</a>
+				</div>
+				<div class="p-img">
+					<a href="#"><img src2='http://www.mailuke.com/Upload/company/2011/6/26184952f4b.jpg' width='235' height='118' /></a>
+				</div>
+			</li>
+			<li>
+				<div class="p-name">
+					<span class="num">4</span>
+					<a href="#">闪亮蜕变火热销售中</a>
+				</div>
+				<div class="p-img">
+					<a href="#"><img src2='http://www.mailuke.com/Upload/company/2011/4/03162949be7.jpg' width='235' height='118' /></a>
+				</div>
+			</li>
+		</ul>
+	</div><!--rank end-->
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript">
+// TOP焦点图片
+$.fn.Sonny = function(option, callback){
+	if(typeof option == "function"){
+		callback = option;
+		option = {};
+	};
+	var s = $.extend({delay:50,index:0}, option || {});
+	var _this = this;
+	var timer = null;
+	$.each(this, function(n){
+		$(this).bind("mouseover", function(){
+			if(timer != null)
+				clearTimeout(timer);
+			var obj = $(this);
+			timer = setTimeout(function(){
+				_this.eq(s.index).removeClass(s.current);
+				s.index = n;
+				_this.eq(s.index).addClass(s.current);
+				if(callback){
+					callback(obj);
+				}
+			}, s.delay);
+		});
+	});
+}
+
+$(".rank .tabcon").eq(0).find("li").Sonny({current:"current"},function(object){
+    object.find("img").each(function(){
+        var src2 = $(this).attr("src2");
+        $(this).attr("src", src2);
+        $(this).removeAttr("src2");
+    });
+});
+
+/* $(".rank .tabcon").eq(0).find("li").Sonny({current:"current"}) 调通方法 */
+
+/*,function(object){
+    object.find("img").each(function(){
+        var src2 = $(this).attr("src2");
+        $(this).attr("src", src2);
+        $(this).removeAttr("src2");
+    });
+}  图片加载方法 */
+
+</script>
+</body>
+</html>

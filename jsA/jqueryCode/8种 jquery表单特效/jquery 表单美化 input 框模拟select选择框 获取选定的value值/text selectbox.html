@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 表单美化 input 框模拟select选择框 获取选定的value值</title>
+</head>
+
+<body>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:none;}
+body{font:12px/180% Arial, Helvetica, sans-serif,"宋体";}
+/* searchbox */
+.searchbox{background:url(images/sreachbox.png) no-repeat;width:295px;padding:0 1px;height:30px;margin:0 auto;}
+.searchbox #inputbox{float:left;margin:4px 6px 0 4px;_margin:6px 6px 0 4px;display:inline;}
+.searchbox #inputbox input{background:none;padding:2px;height:20px;line-height:normal;width:138px;border:none;font-size:12px;font-family:"宋体";color:#999;}
+.searchbox #inputbox input.focus_text{color:#333;}
+.searchbox #inputbox input.blur_text{color:#999;}
+.searchbox .sreachbtn{width:64px;_width:60px;height:28px;line-height:28px;overflow:hidden;cursor:pointer;padding:0;border:none;background:none;font-size:14px;color:#990000;font-weight:800;}
+/* options */
+#options{float:left;width:79px;height:28px;color:#333;}
+#options dl{position:relative;z-index:4;width:79px;}
+#options dt{overflow:hidden;width:70px;height:28px;padding:0px 0px 0px 9px;background:none;}
+#options dt b{width:0px;height:0px;overflow:hidden;line-height:0px;font-size:0px;border-width:5px;border-style:solid solid solid solid;border-color:#ccc #fff #fff #fff;}
+#options dt b{position:absolute;right:6px;top:11px;zoom:1;_position:relative;_left:53px;_top:-18px;}
+#options dt input{width:60px;height:26px;line-height:26px;margin:1px 6px 0px 0px;border:0px;font-size:12px;background:none;color:#555;}
+#options dd{display:none;width:77px;line-height:22px;padding:0px 0px 1px 1px;font-size:12px;}
+#options.hover dl{position:relative;cursor:pointer;width:76px;}
+#options.hover dt b{border-color:#fff #fff #ccc #fff;top:6px;_top:-24px;}
+#options.hover dd{display:block;_position:relative;color:#666;margin-left:-1px;border-style:solid;border-color:#DD8C31;border-width:0px 1px 1px 1px;background:#fff;}
+#options dd div{display:block;zoom:1;padding-left:9px;}
+#options div.hover{background:#f5f5f5;color:#333;}
+</style>
+<script type="text/javascript" src="http://www.mailuke.com/js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//select 模拟框
+	$("#options").hover(function(){
+		$("#options dd,#options b").show();
+	}, function() {
+		$("#options dd").hide();
+	});
+	
+	$("#options ,#options div").hover(function(){
+		$(this).addClass("hover");
+	},function(){
+		$(this).removeClass("hover");
+	});
+	
+	$("#keyType").val(this.id);
+	
+	$("#options div").click(function(){
+		$("#text").val($(this).html());
+		$("#keyType").val(this.id);
+		$("#text").val($("#").html());
+		$("#options dd").hide();
+	});
+	
+	//keywords text
+	var keyword = "请输入关键词";
+    $(".birds").val(keyword).bind("focus",function(){
+		if(this.value == keyword){
+			this.value = "";
+			this.className = "focus_text"
+		}
+	}).bind("blur",function(){
+		if(this.value == ""){
+			this.value = keyword;
+			this.className = "blur_text"
+		}
+	});
+	
+});
+
+//最后获取 text 文本框的值
+$("#text").val($("#").html());
+</script>
+<form method="get" action="" name="searchForm">
+<div class="searchbox">
+	<div id="options">
+		<dl>
+			<dt>
+				<input type="text" value="全　部" name="sm.keyTypeStr" id="text" />
+				<input id="keyType" type="hidden" value="" name="sm.keyType" />
+				<b></b>
+			</dt>
+			<dd>
+				<div id="1">全　部</div>
+				<div id="2">jquery 特效</div>
+				<div id="3">js 特效</div>
+				<div id="4">css 教程</div>
+				<div id="5">HTML5 教程</div>
+			</dd>
+		</dl>
+	</div><!--options end-->
+	<div id="inputbox"><input type="text" name="" value="请输入关键词" class="birds" /></div>
+	<input type="submit" id="" value="搜 索" name="" class="sreachbtn" />
+</div><!--searchbox end-->
+</form>
+</body>
+</html>

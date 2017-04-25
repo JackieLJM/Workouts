@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+<title>简洁Tab</title>
+<style type="text/css">
+<!--
+body{ padding:0;font:12px "宋体";  }
+/*选项卡1*/
+#lib_Tab1_sx{width:500px;margin:0px;padding:0px;margin-bottom:15px; overflow:hidden;}
+
+/*菜单class*/
+.lib_tabborder_sx{border:1px solid #95C9E1;}
+.lib_Menubox_sx {line-height:28px;position:relative; float:left; width:130px; height:240px;border-right:1px solid #95C9E1;}
+
+.lib_Menubox_sx ul{margin:0px;padding:0px;list-style:none; position:absolute; top:15px; left:5px; margin-left:10px; height:25px;text-align:center;}
+.lib_Menubox_sx li{display:block;cursor:pointer;width:114px;color:#949694;font-weight:bold; margin-bottom:5px;height:25px;line-height:25px; background-color:#E4F2FD}
+.lib_Menubox_sx li.hover{padding:0px;background:#fff;width:116px;border:1px solid #95C9E1; border-right:0;
+color:#739242;height:25px;line-height:25px;}
+.lib_Contentbox_sx{margin-top:0px; border-top:none;padding:20px; border-left:0; margin-left:130px;}
+-->
+</style>
+<script>
+<!--
+function setTab(name,cursel,n){
+ for(i=1;i<=n;i++){
+  var menu=document.getElementById(name+i);
+  var con=document.getElementById("con_"+name+"_"+i);
+  menu.className=i==cursel?"hover":"";
+  con.style.display=i==cursel?"block":"none";
+ }
+}
+//-->
+</script>
+</head>
+<body>
+<div id="lib_Tab1_sx" class="lib_tabborder_sx">
+<div class="lib_Menubox_sx ">
+<ul>
+   <li id="one1" onclick="setTab('one',1,5)" class="hover">新闻1</li>
+   <li id="one2" onclick="setTab('one',2,5)" >新闻2</li>
+   <li id="one3" onclick="setTab('one',3,5)">新闻3</li>   
+   <li id="one4" onclick="setTab('one',4,5)">新闻4</li>
+   <li id="one5" onclick="setTab('one',5,5)">新闻5</li>
+</ul>
+</div>
+ <div class="lib_Contentbox_sx ">  
+   <div id="con_one_1" >新闻列表1</div>
+   <div id="con_one_2" style="display:none">新闻列表2歌手介绍：
+英文名字：Celine Dion
+出生地：加拿大，魁北克，Charlemagne
+星座与生肖：白羊座、猴
+婚姻状况：与ReneAngelil结婚
+歌手介绍：
+英文名字：Celine Dion
+出生地：加拿大，魁北克，Charlemagne
+星座与生肖：白羊座、猴
+婚姻状况：与ReneAngelil结婚
+歌手介绍：
+英文名字：Celine Dion
+出生地：加拿大，魁北克，Charlemagne
+星座与生肖：白羊座、猴
+婚姻状况：与ReneAngelil结婚
+歌手介绍：
+英文名字：Celine Dion
+出生地：加拿大，魁北克，Charlemagne
+星座与生肖：白羊座、猴
+婚姻状况：与ReneAngelil结婚
+歌手介绍：
+英文名字：Celine Dion
+
+</div>
+   <div id="con_one_3" style="display:none">新闻列表3</div>
+   <div id="con_one_4" style="display:none">新闻列表4</div> 
+   <div id="con_one_5" style="display:none">新闻列表5</div> 
+ </div>
+</div>
+
+
+<bR />
+
+</body>
+</html>
+<!--一个页面中如果使用多个TAB，就把上面的two复制,把two改成three,或任何一个不同名的id.
+-->

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+	<title>jqueryTableRowCheckboxToggle pure-essence.net</title>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta http-equiv="content-style-type" content="text/css">
+	<meta http-equiv="content-language" content="en-gb">
+	<meta http-equiv="imagetoolbar" content="no" />
+	<link rel="stylesheet" href="css/dataTable.css" media="screen">
+	<style type="text/css">
+	body,th,td {
+		font-family: Arial, Verdana, sans-serif;
+		font-size: 0.9em;
+	}
+	a:link, a:visited  {
+		color: #59B337;
+	}
+
+	a:hover, a:active, a:focus {
+		color: #000000;
+	}
+	table.dataTable tr.marked {
+		background-color: #FFD900;
+	}
+	</style>
+	<!-- jquery packed -->
+	<script type="text/javascript" src="js/jquery-1.2.3.pack.js"></script>
+	<!-- tableRowCheckboxToggle -->
+	<script type="text/javascript" src="js/tableRowCheckboxToggle.js"></script>
+</head>
+
+<h1>tableRowCheckboxToggle</h1>
+<ul>
+<li>Written for <a href="http://jquery.com/">jQuery 1.2.3</a> (should continue to work for any newer versions)</li>
+<li>Click on any row, it will toggle the state of the applicable checkboxes</li>
+<li>On page load, it also labels the last row with the appropriate css class since it contains checked applicable checkboxes</li>
+<li>View source to get the gist of its usage</li>
+<li>You may customize it by changing the variable values at the beginning of the <a href="js/tableRowCheckboxToggle.js">tableRowCheckboxToggle.js</a></li>
+<li>On this demo page, there are checkboxes that are excluded from the script i.e. checkbox with name <b>testName</b>, id <b>checkme100</b> & <b>checkme101</b>, and class <b>testClass</b></li>
+<li><a href="http://pure-essence.net/2008/02/26/jquery-plugin-tablerowcheckboxtoggle/">Project page</a></li>
+</ul>
+  
+<table border="0" cellspacing="0" cellpadding="0" class="dataTable">
+<thead>
+<tr>
+<th class="dataTableHeader"></th>
+<th class="dataTableHeader">Error Summary</th>
+<th class="dataTableHeader">Error Date</th>
+<th class="dataTableHeader" style="white-space: nowrap">Failed XML Message</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd_row">
+<td><input type="checkbox" id="checkme1" /></td>
+<td>java.lang.NullPointerException<input type="checkbox" class="testClass" /></td>
+<td style="white-space: nowrap">02/15/2008 15:23</td>
+<td><a href="#">View &amp; Edit Message</a></td>
+</tr>
+<tr class="even_row">
+<td><input type="checkbox" id="checkme2" /></td>
+<td>Error Retrieving Agent Information</td>
+
+<td style="white-space: nowrap">02/14/2008 07:01<input type="checkbox" checked="true" id="checkme101" /></td>
+<td><a href="#">View &amp; Edit Message</a></td>
+</tr>
+<tr class="odd_row">
+<td><input type="checkbox" id="checkme3" /></td>
+<td>Error occurred when retrieving agent information for agent number blah blah</td>
+<td style="white-space: nowrap">02/14/2008 07:01</td>
+<td><a href="#">View &amp; Edit Message</a><input type="checkbox" checked="true" id="checkme100" disabled /></td>
+
+</tr>
+<tr class="even_row">
+<td><input type="checkbox" id="checkme4" /></td>
+<td>Error Retrieving Agent Information</td>
+<td style="white-space: nowrap">02/13/2008 23:11</td>
+<td><input type="checkbox" name="testName" /><a href="#">View &amp; Edit Message</a></td>
+</tr>
+
+</tr>
+<tr class="odd_row">
+<td><input type="checkbox" checked="true" id="checkme5" /></td>
+<td>Error Retrieving Agent Information</td>
+<td style="white-space: nowrap">02/13/2008 23:11</td>
+<td><input type="checkbox" name="somethingElse" /><a href="#">View &amp; Edit Message</a></td>
+</tr>
+</tbody>
+</table>
+
+<div id="index"></div>
+<div id="excludeCheckboxesWithName"></div>
+<div id="excludeCheckboxesWithId"></div>
+<div id="excludeCheckboxesWithClass"></div>
+
+ </BODY>
+</HTML>

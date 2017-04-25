@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery筛选器选项卡 css3制作一个漂亮的HTML5筛选容器选项卡</title>
+<!-- Our CSS stylesheet file -->
+<style type="text/css">
+/*-------------------------Simple reset--------------------------*/
+*{margin:0;padding:0;}
+/*-------------------------General Styles--------------------------*/
+html{background:url('img/bg_tile.jpg') #18222b;}
+body{color:#fcfcfc;font:14px/1.3 'Segoe UI',Arial, sans-serif;min-height:930px;background:url('img/bg_center.jpg') center 240px no-repeat;}
+a, a:visited {text-decoration:none;outline:none;color:#54a6de;}
+a:hover{text-decoration:underline;}
+/*----------------------------Headers & Footers-----------------------------*/
+header{background:url('img/header.png') repeat-x;display:block;height:220px;padding:10px;}
+header h1{background:url('img/logo.png') no-repeat center center;height:80px;margin:75px auto;overflow:hidden;text-align:center;text-indent:-99999px;}/*----------------------------Green filter bar-----------------------------*/
+#filter {background:url("img/bar.png") repeat-x 0 -94px;display:block;height:39px;margin:55px auto;position:relative;width:600px;text-align:center;-moz-box-shadow:0 4px 4px #000;-webkit-box-shadow:0 4px 4px #000;box-shadow:0 4px 4px #000;}
+#filter:before, #filter:after {background:url("img/bar.png") no-repeat;height:43px;position:absolute;top:0;width:78px;content:'';-moz-box-shadow:0 2px 0 rgba(0,0,0,0.4);-webkit-box-shadow:0 2px 0 rgba(0,0,0,0.4);box-shadow:0 2px 0 rgba(0,0,0,0.4);}
+#filter:before {background-position:0 -47px;left:-78px;}
+#filter:after {background-position:0 0;right:-78px;}
+#filter a{color:#FFFFFF;display:inline-block;height:39px;line-height:37px;padding:0 15px;text-shadow:1px 1px 1px #315218;}
+#filter a:hover{text-decoration:none;}
+#filter a.active{background:url("img/bar.png") repeat-x 0 -138px;box-shadow:1px 0 0 rgba(255, 255, 255, 0.2),-1px 0 0 rgba(255, 255, 255, 0.2),1px 0 1px rgba(0,0,0,0.2) inset,-1px 0 1px rgba(0,0,0,0.2) inset;}
+/*----------------------------Content area-----------------------------*/
+#container{display:block;overflow:hidden;width:830px;margin:0 auto;}
+#container li{float:left;height:96px;list-style:none outside none;margin:6px;position:relative;width:125px;-moz-box-shadow:0 0 5px #000;-webkit-box-shadow:0 0 5px #000;box-shadow:0 0 5px #000;}
+#container ul{overflow:hidden;}
+#container ul.hidden{display:none;}
+</style>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+
+<header>
+	<h1>我的 文件夹</h1>
+</header>
+
+<nav id="filter"></nav>
+
+<section id="container">
+	<ul id="stage">
+		<li data-tags="印刷设计"><img src="img/shots/1.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计,印刷设计"><img src="img/shots/2.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,商标设计"><img src="img/shots/3.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,印刷设计"><img src="img/shots/4.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计"><img src="img/shots/5.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,商标设计,印刷设计"><img src="img/shots/6.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计,印刷设计"><img src="img/shots/7.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计"><img src="img/shots/8.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,商标设计"><img src="img/shots/9.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计"><img src="img/shots/10.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计,印刷设计"><img src="img/shots/11.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计,印刷设计"><img src="img/shots/12.jpg" alt="Illustration" /></li>
+		<li data-tags="印刷设计"><img src="img/shots/13.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,商标设计"><img src="img/shots/14.jpg" alt="Illustration" /></li>
+		<li data-tags="印刷设计"><img src="img/shots/15.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计"><img src="img/shots/16.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,商标设计,印刷设计"><img src="img/shots/17.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计"><img src="img/shots/18.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,印刷设计"><img src="img/shots/19.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计,印刷设计"><img src="img/shots/20.jpg" alt="Illustration" /></li>
+		<li data-tags="网站设计,商标设计"><img src="img/shots/21.jpg" alt="Illustration" /></li>
+		<li data-tags="印刷设计"><img src="img/shots/22.jpg" alt="Illustration" /></li>
+		<li data-tags="商标设计,印刷设计"><img src="img/shots/23.jpg" alt="Illustration" /></li>
+	</ul>
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="js/jquery.quicksand.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var items = $('#stage li'),
+		itemsByTags = {};
+	
+	// Looping though all the li items:
+	
+	items.each(function(i){
+		var elem = $(this),
+			tags = elem.data('tags').split(',');
+		
+		// Adding a data-id attribute. Required by the Quicksand plugin:
+		elem.attr('data-id',i);
+		
+		$.each(tags,function(key,value){
+			
+			// Removing extra whitespace:
+			value = $.trim(value);
+			
+			if(!(value in itemsByTags)){
+				// Create an empty array to hold this item:
+				itemsByTags[value] = [];
+			}
+			
+			// Each item is added to one array per tag:
+			itemsByTags[value].push(elem);
+		});
+		
+	});
+
+	// Creating the "Everything" option in the menu:
+	createList('所有分类',items);
+
+	// Looping though the arrays in itemsByTags:
+	$.each(itemsByTags,function(k,v){
+		createList(k,v);
+	});
+	
+	$('#filter a').live('click',function(e){
+		var link = $(this);
+		
+		link.addClass('active').siblings().removeClass('active');
+		
+		// Using the Quicksand plugin to animate the li items.
+		// It uses data('list') defined by our createList function:
+		
+		$('#stage').quicksand(link.data('list').find('li'));
+		e.preventDefault();
+	});
+	
+	$('#filter a:first').click();
+	
+	function createList(text,items){
+		
+		// This is a helper function that takes the
+		// text of a menu button and array of li items
+		
+		// Creating an empty unordered list:
+		var ul = $('<ul>',{'class':'hidden'});
+		
+		$.each(items,function(){
+			// Creating a copy of each li item
+			// and adding it to the list:
+			
+			$(this).clone().appendTo(ul);
+		});
+
+		ul.appendTo('#container');
+
+		// Creating a menu item. The unordered list is added
+		// as a data parameter (available via .data('list'):
+		
+		var a = $('<a>',{
+			html: text,
+			href:'#',
+			data: {list:ul}
+		}).appendTo('#filter');
+	}
+});
+</script>
+</body>
+</html>

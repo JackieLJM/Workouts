@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 文字连续滚动 节奏感十足的齿轮式滚动图片展示与文字内容特效展示</title>
+</head>
+
+<body>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a{color:#666;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.demobox{width:660px;margin:0 auto;padding:40px 0 0 0;}
+/* do_ta */
+.do_ta{border:1px solid #e4e4e4;font-size:12px;width:280px;float:left;margin:0 24px;display:inline;}
+.do_ta .ta_ta{height:28px;line-height:28px;background:#F5F5F5;border-bottom:solid 1px #ddd;padding:0 10px;font-weight:800;font-size:12px;}
+.do_ta .ta_tc{margin:10px;padding:0;line-height:20px;height:61px;overflow:hidden;}
+.do_ta .ta_tc li{border-bottom:1px dashed #e4e4e4;padding:0;margin:0;color:#666;height:60px;overflow:hidden;}
+.do_ta .ta_tc li p{line-height:30px;}
+.do_ta .ta_tc li a{color:#1a69de;}
+.do_ta .ta_tc li .time{color:#999;line-height:24px;}
+.do_ta .ta_tc li .time a{color:#ff6600;font-weight:800;}
+.do_ta .dota_d{text-align:center;padding:5px 0 15px 0;}
+.do_ta .dota_d a{color:#666;text-decoration:underline;}
+</style>
+
+<div class="demobox">
+
+<div class="do_ta" id="dota1">
+        	<h2 class="ta_ta">节奏感十足的齿轮式的文字滚动</h2>
+			<ul class="ta_tc">
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/jquery/items/">jquery 特效</a></p>
+					<p><a href="http://www.jsfoot.com/jquery/items/2011-08-24/143.html">jquery cycle 循环幻灯片插件多功能幻灯片插件支持多种幻灯片特效</a></p>	
+				</li>
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/js/items/">javascript 特效</a></p>
+					<p><a href="http://www.jsfoot.com/js/items/2011-08-07/108.html">javascript滚动图片插件支持单排图片上下滚动、图片无缝滚动</a></p>				
+				</li>
+			</ul>
+			<ul class="ta_tc">
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/css3/items/">CSS 特效</a></p>
+					<p><a href="http://www.jsfoot.com/css3/items/2011-02-20/26.html">用div+css制作一个CSS3的泡泡动画按钮非常漂亮</a></p>	
+				</li>
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/html5/items/">HTML5 特效</a></p>
+					<p><a href="http://www.jsfoot.com/html5/items/2011-03-01/66.html">制作CSS3和HTML5的一个单页网站模板</a></p>				
+				</li>
+			</ul>
+			<ul class="ta_tc">
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/jquery/items/">jquery 特效</a></p>
+					<p><a href="http://www.jsfoot.com/jquery/items/2011-08-24/143.html">jquery cycle 循环幻灯片插件多功能幻灯片插件支持多种幻灯片特效</a></p>	
+				</li>
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/js/items/">javascript 特效</a></p>
+					<p><a href="http://www.jsfoot.com/js/items/2011-08-07/108.html">javascript滚动图片插件支持单排图片上下滚动、图片无缝滚动</a></p>				
+				</li>
+			</ul>
+			<ul class="ta_tc">
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/css3/items/">CSS 特效</a></p>
+					<p><a href="http://www.jsfoot.com/css3/items/2011-02-20/26.html">用div+css制作一个CSS3的泡泡动画按钮非常漂亮</a></p>	
+				</li>
+				<li>
+					<p class="time"><a href="http://www.jsfoot.com/html5/items/">HTML5 特效</a></p>
+					<p><a href="http://www.jsfoot.com/html5/items/2011-03-01/66.html">制作CSS3和HTML5的一个单页网站模板</a></p>				
+				</li>
+			</ul>
+			<div class="dota_d"><a href="http://www.jsfoot.com/jquery/items/">jquery 特效&gt;&gt;</a></div>
+        </div><!--do_ta end-->
+		
+		
+		<div class="do_ta" id="dota2">
+        	<p class="ta_ta">节奏感十足的齿轮式的图片滚动</p>
+			<ul class="ta_tc">
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-22/139.html"><img width="260" height="60" alt="jquery菜单特效 鼠标滑过菜单区域图标和文本类似flash动画酷炫移动展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-22/7ddbab9b843720f72356b9782146345a.jpg" /></a></li>
+				<li><a href="http://www.jsfoot.com/jquery/items/index_2.html"><img width="260" height="60" alt="jquery评论星星打分特效、鼠标滑过星星显示评论信息" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-17/9fae30738c94fb8e47dd2ba3e6003290.jpg" /></a></li>
+			</ul>
+			<ul class="ta_tc">
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-14/122.html"><img width="260" height="60" alt="jquery筛选器插件选项卡 css3制作一个漂亮的HTML5筛选容器插件选项卡" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-14/37fdab052bf9fbcbcfa2d4eb41f1f169.jpg" /></a></li>
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-09/112.html"><img width="260" height="60" alt="基于jquery 选项卡插件jquery tab选项卡支持垂直选项卡滚动、水平选项卡滚动、自动选项卡切换等。" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-09/ba66cb66d48ae5d3afd6567bde85a8c6.jpg" /></a></li>
+			</ul>
+			<ul class="ta_tc">
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-10/114.html"><img width="260" height="60" alt="jquery 图片滚动类似flash动画图片滚动，带停止和开始按钮控制图片特效" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-10/738b62bf7e690edfb856ac1366bb2e50.jpg" /></a></li>
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-04/102.html"><img width="260" height="60" alt="jquery 图片切换插件制作banner图片滚动播放、按钮控制图片滚动、选项卡等基于多功能jquery slide插件" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-04/93f0fbcca20b400dfab9522431cc9de0.jpg" /></a></li>
+			</ul>
+			<ul class="ta_tc">
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-10/114.html"><img width="260" height="60" alt="jquery 弹出层插件FancyBox弹出层演示支持图片、文章内容、flash swf弹出层等" src="http://www.jsfoot.com/d/file/jquery/items/2011-07-30/4b62e9d33fe3d1ff4764b5c76c4fbb31.jpg" /></a></li>
+				<li><a href="http://www.jsfoot.com/jquery/items/2011-08-04/102.html"><img width="260" height="60" alt="jquery 表单验证插件Validform插件制作一行代码搞定整站的jquery表单验证" src="http://www.jsfoot.com/d/file/jquery/items/2011-07-29/b50d9142bb49dc3c6f12d51a5eba58bb.jpg" /></a></li>
+			</ul>
+			<div class="dota_d"><a href="http://www.jsfoot.com/js/items/">javascript 特效&gt;&gt;</a></div>
+        </div><!--do_ta end-->
+
+</div>
+
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript">
+/*新发布和中标信息滚动*/
+(function(){
+    var dota1=$("#dota1"), dota2=$("#dota2"), ta_tc1=dota1.find("ul"), ta_tc2=dota2.find("ul");
+    if(dota1.size()==0 ||dota2.size()==0 ){return false;}
+    var scroll=function(uls){
+        //复制一次内部的li
+        var li_h=uls.eq(0).find("li").outerHeight();
+        this.copy=function(){
+            uls.each(function(){
+                var lis=$(this).find("li");
+                $(this).append(lis.clone());
+                $(this).attr("li_s",lis.size()*2);
+                $(this).attr("cur_li",lis.size()*2-1);
+            });
+        }
+        this.copy();
+        //移动到最下边的li
+        this.toLast=function(){
+            uls.each(function(){
+                $(this).scrollTop(10000);
+            });
+        }
+        this.toLast();
+
+        var timer=null;//滚动的超时时间
+        var i=0;
+        //开始滚动ul数组
+        function start(i)
+        {
+            var cur_ul=uls.eq(i);
+            if(cur_ul){
+                cur_ul.animate({scrollTop:cur_ul.scrollTop()-li_h},function(){
+                    var cur_li=parseInt(cur_ul.attr("cur_li"));
+                    var li_s=parseInt(cur_ul.attr("li_s"));
+                    cur_li--;
+                    if((li_s/2-1)==cur_li)
+                    {
+                        cur_ul.attr("cur_li",li_s-1);
+                        $(this).scrollTop(10000);
+                    }else{
+                        cur_ul.attr("cur_li",cur_li);
+                    }
+                    start(++i);
+                });
+            };
+        }
+        timer=setInterval(function(){ start(i);},7000);
+    }
+    scroll(ta_tc1);
+    scroll(ta_tc2);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="JS代码,焦点图,JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为有时间线的BANNER焦点图代码，属于站长常用代码。" />
+<title>有时间线的BANNER焦点图代码</title>
+<LINK rel=stylesheet type=text/css href="css/css.css" media=all>
+<SCRIPT type=text/javascript src="js/jz123.js"></SCRIPT>
+<SCRIPT type=text/javascript src="js/jquery.tooltip.pack.js"></SCRIPT>
+<SCRIPT type=text/javascript src="js/player.js"></SCRIPT>
+<SCRIPT type=text/javascript>
+$(document).ready(function() {
+  slideshow_data["1"] = new views_slideshow_data(10, 5000, 1, true, "slow", 0.25);
+  views_slideshow_timer("1", true);
+  $("#views_slideshow_main_1").hover(
+    function() {
+      views_slideshow_pause("1");
+    },
+    function() {
+      views_slideshow_resume("1");
+    });
+});
+</SCRIPT>
+</head>
+<BODY class="front" style="text-align:center">
+<br /><br />
+
+<DIV id=wrapper>
+<DIV id=container>
+<DIV id=introBoxes>
+<DIV id=introWelcome class=introPart><a href="http://www.w3cfuns.com/" target="_blank"><img src="images/01.jpg" width="970" height="287" border="0" /></a></DIV>
+<DIV id=introAccessibility class=introPart><a href="http://www.w3cfuns.com/" target="_blank"><img src="images/02.jpg" width="970" height="287" /></a></DIV>
+<DIV id=introPerformance class=introPart><a href="http://www.w3cfuns.com/" target="_blank"><img src="images/03.jpg" width="970" height="287" /></a></DIV>
+<DIV id=introFeatured class=introPart><a href="http://www.w3cfuns.com/" target="_blank"><img src="images/04.jpg" width="970" height="287" /></a></DIV>
+<DIV id=introCommunity class=introPart><a href="http://www.w3cfuns.com/" target="_blank"><img src="images/05.jpg" width="970" height="287" /></a></DIV>
+</DIV><!--introBoxes-->
+<DIV id=introNav>
+<UL id=playback>
+  <LI class=prev><A href="#">Previous</A></LI>
+  <LI class=play><A href="#">Play</A> </LI>
+  <LI class=pause><A href="#">Pause</A></LI>
+  <LI class=next><A href="#">Next</A> </LI>
+ </UL>
+<DIV id=timeline><DIV class=inside></DIV></DIV>
+<UL class=nav>
+  <LI class="p1 active"><A href="#">Welcome to CKEditor 
+  <SPAN class="point p1"></SPAN></A></LI>
+  <LI class=p2><A href="#">Full Accessibility <SPAN 
+  class="point p2"></SPAN></A></LI>
+  <LI class=p3><A href="#">Amazing Performance <SPAN 
+  class="point p3"></SPAN></A></LI>
+  <LI class=p4><A href="#">Full Featured <SPAN 
+  class="point p4"></SPAN></A></LI>
+  <LI class=p5><A href="#">Great Community <SPAN 
+  class="point p5"></SPAN></A></LI>
+</UL>
+</DIV><!--introNav-->
+</DIV><!--container-->
+</DIV><!--wrapper-->
+  
+<div style="display:none"> <script src='http://s6.cnzz.com/stat.php?id=44148&web_id=44148&show=pic' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

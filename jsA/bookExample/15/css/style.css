@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	padding:0;
+	margin:0;
+	background:url(../images/bg1.jpg) no-repeat center top;
+}
+h1 {
+	font-family:"黑体";
+	font-size:40px;
+	color:#006;
+	margin:36px 0 50px 1em;
+	height:58px;
+	line-height:70px;
+	padding-left:240px;
+	background:url(../images/jquery.jpg) no-repeat left 40%;
+}
+h2 {
+	font-size:30px;
+	color:#006;
+	margin:0 0 0 2em;
+	padding-left:1.3em;
+	background:url(../images/1023.png) no-repeat left 40%;
+	height:50px;
+	line-height:50px;
+}
+h3 {
+	font-size:20px;
+	color:#006;
+	margin:1em 0 0 6em;
+	padding-left:1.6em;
+	height:50px;
+	line-height:50px;
+	background:url(../images/1024.png) no-repeat left 30%;
+}
+.li {
+	font-family:"黑体";
+	font-size:40px;
+	color:#006;
+	margin:30px 1em;
+}
+p {
+	margin:1em 4em;
+	font-size:16px;
+	font-weight:bold;
+	padding:1em 1em;
+	border:solid 1px #fff;
+}
+.p1 {
+	margin:1em 4em;
+	font-size:16px;
+	font-weight:bold;
+	padding:1em 1em;
+	border:solid 1px #fff;
+}
+.p {
+	position:absolute;
+	bottom:12px;
+	right:12px;
+	border:none;
+}

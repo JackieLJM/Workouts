@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title></title>
+<link href="lib/styles/style.css" rel="stylesheet" type="text/css" />
+<script src="lib/scripts/jquery-1.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/scripts/jquery.uiSelect.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushBash.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushCSharp.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushDelphi.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushDiff.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushGroovy.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushJava.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushPython.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushRuby.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushScala.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushSql.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushVb.js"></script>
+<script type="text/javascript" src="lib/jquery.syntaxhighlighter/scripts/shBrushXml.js"></script>
+<link type="text/css" rel="stylesheet" href="lib/jquery.syntaxhighlighter/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="lib/jquery.syntaxhighlighter/styles/shThemeDefault.css"/>
+<script type="text/javascript">
+	SyntaxHighlighter.config.clipboardSwf = 'lib/jquery.syntaxhighlighter/scripts/clipboard.swf';
+	SyntaxHighlighter.all();
+</script>
+
+</head>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		//This uiSelect Plugin takes 3 parameters
+		//First Param  - (object) for the left and top offsets - must be a numerical value
+		//Second Param - (String) ID of the <div> containing your menu items
+		//Third Param  - (String) ID of the <input> which will hold the value selected
+		
+		$('#selectMenu').uiSelect({leftOffset: -10, topOffset: 0},'uiList','uiInput');
+	});
+</script>
+<style>
+input, select{margin: 5px 0px; width: 200px;}
+.uiSelect { width: 245px; height: 302px; padding: 65px 40px 85px 35px; color: #393939; background: url(images/select-bkgd.png) no-repeat 0px 0px;}
+.uiSelect ul li a,.uiSelect ul li a:link,.uiSelect ul li a:active{ display: block; color: #333; width: 235px; height: 20px; padding: 2px 5px; line-height: 20px; background: none;}
+.uiSelect ul li a:hover{background: #333; color:#fff; text-decoration: none; display: block;width: 235px; height: 20px; padding: 2px 5px; line-height: 20px;}
+#uiInput {height: 20px; background: #333; color : #fff;}
+</style>
+<body>
+<!-- Remove if transparent pngs aren't used -->
+<!--[if IE 6]>
+<script src="lib/scripts/DD_belatedPNG.js"></script>
+<script>
+    DD_belatedPNG.fix('.pngFix,.uiSelect');
+</script>
+<![endif]-->
+<div id="container">
+    <div id="bodyContainer">
+		<h1 style="margin: 0px 0px 20px 0px;">jQuery.uiSelect 1.0</h1><br />
+		<br style="clear: both;" />
+		<h2 style="margin: 0px 0px 10px 0px;">Description</h2>
+		<a href="http://www.adamleder.com/sandbox/jquery.uiSelect.1.0/">http://www.adamleder.com/sandbox/jquery.uiSelect.1.0/</a>
+		<p style="margin: 0px 0px 20px 0px;"><strong>uiSelect</strong> allows you to easily style all elements of form select menus. </p>
+
+		<h2 style="margin: 0px 0px 10px 0px;">uiSelect Plugin takes 3 parameters</h2>
+		<p style="margin: 0px 0px 20px 0px;">
+		<strong>First Param</strong>  (object) - for the left and top offsets - must be a numerical value<br />
+		<strong>Second Param</strong> (String) - ID of the &lt;div&gt; containing your menu items<br />
+		<strong>Third Param</strong> (String) - ID of the &lt;input&gt; which will hold the value selected<br />
+		<br />
+		$('#selectMenu').uiSelect({leftOffset: -10, topOffset: 0},'uiList','uiInput');
+		</p>
+		
+		<h2 style="margin: 0px 0px 10px 0px;">Example</h2>
+		<br style="clear: both;" />
+    	<form method="post" action="#" style="clear: both; margin: 0px 0px 20px 0px;">
+		<p>This is an example of a select menu <strong>without</strong> the uiSelect plugin applied</p>
+		<select name="selectMenu2" id="selectMenu2" size="1">
+			<option value="option1">item1</option>
+			<option value="option2">item2</option>
+			<option value="option3">item3</option>
+			<option value="option4">item4</option>
+			<option value="option5">item5</option>
+			<option value="option6">item6</option>
+		</select><br/>
+		<p>This is an example of a select menu with the uiSelect plugin applied</p>
+		<select name="selectMenu" id="selectMenu" size="1">
+			<option value="option1">option1</option>
+			<option value="option2">option2</option>
+			<option value="option3">option3</option>
+			<option value="option4">option4</option>
+			<option value="option5">option5</option>
+			<option value="option6">option6</option>
+		</select><br/>
+		</form>
+		<h2>HTML</h2>
+		<br style="clear: both;" />
+		<pre class="brush: html;">
+&lt;select name=&quot;selectMenu&quot; id=&quot;selectMenu&quot; size=&quot;1&quot;&gt;
+	&lt;option value=&quot;option1&quot;&gt;option1&lt;/option&gt;
+	&lt;option value=&quot;option2&quot;&gt;option2&lt;/option&gt;
+	&lt;option value=&quot;option3&quot;&gt;option3&lt;/option&gt;
+	&lt;option value=&quot;option4&quot;&gt;option4&lt;/option&gt;
+	&lt;option value=&quot;option5&quot;&gt;option5&lt;/option&gt;
+	&lt;option value=&quot;option6&quot;&gt;option6&lt;/option&gt;
+&lt;/select&gt;</pre>
+<h2>CSS</h2>
+	<pre class="brush: css;">input, select{
+	margin: 5px 0px; 
+	width: 200px;
+}
+.uiSelect { 
+	width: 245px; 
+	height: 302px; 
+	padding: 65px 40px 85px 35px; 
+	color: #393939; 
+	background: url(images/select-bkgd.png) no-repeat 0px 0px;
+}
+.uiSelect ul li a,.uiSelect ul li a:link,.uiSelect ul li a:active{ 
+	display: block; 
+	color: #333; 
+	width: 235px; 
+	height: 20px; 
+	padding: 2px 5px; 
+	line-height: 20px; 
+	background: none;}
+.uiSelect ul li a:hover{
+	background: #333; 
+	color:#fff; 
+	text-decoration: none; 
+	display: block;
+	width: 235px; 
+	height: 20px; 
+	padding: 2px 5px; 
+	line-height: 20px;
+}
+#uiInput {
+	height: 20px; 
+	background: #333; 
+	color : #fff;
+}</pre>
+<h2>jQuery</h2>
+	<pre class="brush: javascript;">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+	$(function(){
+		//This uiSelect Plugin takes 3 parameters
+		//First Param  - (object) for the left and top offsets - must be a numerical value
+		//Second Param - (String) ID of the &lt;div&gt; containing your menu items
+		//Third Param  - (String) ID of the &lt;input&gt; which will hold the value selected
+
+		$(&#39;#selectMenu&#39;).uiSelect({leftOffset: -10, topOffset: 0},&#39;uiList&#39;,&#39;uiInput&#39;);
+	});
+&lt;/script&gt;</pre>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AnythingSlider</title>
+<link href="images/style.css" rel="stylesheet" type="text/css" media="all" />
+<link type="text/css" href="images/anythingslider.css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="jquery/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="plugins/jquery.anythingslider.js"></script>
+<script type="text/javascript">
+$(function () {
+	$('#slider1').anythingSlider({
+		width          : 400,
+		height         : 300,
+		startStopped   : true,
+		toggleControls : true,
+		theme          : 'metallic',
+	}); 
+});
+</script>
+<!-- Optional -->
+<script type="text/javascript" src="plugins/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="plugins/swfobject.js"></script>
+</head>
+<body>
+<h1>开发者提高之路</h1>
+<h2>导航开发（Navigation、Menus）</h2>
+<hr />
+<h3>AnythingSlider预览导航</h3>
+<ul id="slider1">
+    <li><img src="images/pic2.jpg" /></li>
+    <li><img src="images/pic3.jpg" /></li>
+    <li><img src="images/pic4.jpg" /></li>
+    <li><img src="images/pic5.jpg" /></li>
+</ul>
+</body>
+</html>
