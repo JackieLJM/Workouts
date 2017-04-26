@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li><span>1</span>
+            <a href=""></a>
+        </li>
+        <li><span>2</span>
+            <a href=""></a>
+        </li>
+        <li><span>3</span>
+            <a href=""></a>
+        </li>
+        <li><span>4</span>
+            <a href=""></a>
+        </li>
+    </ul>
+    <button>Click Me!</button>
+    <div id="a">
+        <a href=""></a>
+    </div>
+
+    <script>
+        // DOM对象和Jquery对象转换
+        window.onload = function () {
+            var li = $("li");
+            var liSecond = li[1];
+            var ul = $("ul");
+            console.log(ul);
+            console.log(li);
+            console.log(li.get(1));
+            console.log(liSecond.childNodes[0]);
+            console.log($("*"));
+
+            var liDomSecond = document.getElementsByTagName("li")[1];
+            console.log(liDomSecond);
+            // alert(liDomSecond);
+            var obj = { one: 1, two: 2, three: 3 };
+            // each(obj, function (key, val) {
+            //     alert(key);
+            //     alert(val);
+            // });
+            console.log(document.getElementById("a").childNodes);
+        }
+
+        // each方法
+        $(document).ready(function () {
+            var Tabs = {
+                0: "page1.html",
+                1: "page2.html",
+                2: "page3.html"
+            };
+            //  console.log(Tabs[0]);
+            $.each(Tabs, function (key,val) {
+                console.log(Tabs[key]);
+            });
+            $("a").each(function(i){
+                $(this).attr("href",Tabs[i]);
+            });
+            console.log($("a"));
+        })
+
+        // $.ready比window.onload先执行
+    </script>
+</body>
+
+</html>

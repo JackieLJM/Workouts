@@ -1,44 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>无标题文档</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mouseDragDrop</title>
 </head>
 
 <body style="margin:0; padding:0">
-	<div style="background:red; width:400px; height:300px">
-		<div style="border:1px solid blue; background:#ccc; width:300px; height:200px; position:absolute; z-index:100" id="dragdiv"></div>
-	</div>
+	<!--<div style="background:red; width:400px; height:300px">-->
+	<div style="border:1px solid blue; background:#ccc; width:300px; height:200px; position:absolute; z-index:100" id="dragdiv"></div>
+	<!--</div>-->
 	<script>
-		$ = function (id) {
-			return document.getElementById(id);
-		}
-		var range = { x1: 0, x2: 400, y1: 0, y2: 300 };
-		var index = 100;
-		var DragDrop = function (obj) {
+		// $ = function (id) {
+		// 	return document.getElementById(id);
+		// }
+		var range = { x1: 0, x2: document.body.scrollWidth, y1: 0, y2: document.body.scrollHeight };
+		// var index = 100;
+		(function DragDrop (obj) {
 			var me = this;
-			this.foo = (typeof obj == "string") ? $(obj) : obj;
-			this.foo.style.cursor = 'move';
-			this.follow = function () {
-				var x = this.foo.offsetLeft;
-				var y = this.foo.offsetTop;
-				var w = this.foo.offsetWidth;
-				var h = this.foo.offsetHeight;
-			};
+			console.log(this);
+			// this.foo = (typeof obj == "string") ? $(obj) : obj;
+			this.foo = document.getElementById(obj);
+			// this.foo.style.cursor = 'move';
+			// this.follow = function () {
+			// 	var x = this.foo.offsetLeft;
+			// 	var y = this.foo.offsetTop;
+			// 	var w = this.foo.offsetWidth;
+			// 	var h = this.foo.offsetHeight;
+			// };
 			this.foo.onmousedown = function (e) {
 				var foo = me.foo;
 				e = e || event;
 				foo.oOffset = (e.layerX) ? { x: e.layerX, y: e.layerY } : { x: e.offsetX, y: e.offsetY };
 				document.onmousemove = me.drag;
 				document.onmouseup = me.drop;
-				document.onselectstart = function () { return false; };
+				// document.onselectstart = function () { return false; };
 			};
-			this.foo.onclick = function () {
-				index++;
-				this.style.zIndex = index;
-				return true;
-			};
+			// this.foo.onclick = function () {
+			// 	index++;
+			// 	this.style.zIndex = index;
+			// 	return true;
+			// };
 			this.drag = function (e) {
 				var foo = me.foo;
 				e = e || event;
@@ -52,13 +56,13 @@
 				foo.style.left = left + "px";
 			};
 			this.drop = function () {
-				document.onmousemove = document.onmouseup = document.onselectstart = null;
+				document.onmousemove = document.onmouseup = null;
 			};
 			this.range = range;
-			this.follow();
-		}
-		new DragDrop('dragdiv');
-
+			// this.follow();
+		})("dragdiv")
+		// new DragDrop("dragdiv");
+		// setInterval("console.log(.foo.offsetWidth)", 1000);
 	</script>
 </body>
 

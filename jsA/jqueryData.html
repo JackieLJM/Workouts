@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=" utf-8">
+    <meta name="author">
+    <title>data()函数-脚本之家</title>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#add").click(function () {
+                $("div").data("mydata", "脚本之家欢迎您");
+            })
+            $("#show").click(function () {
+                $("div").text($("div").data("mydata"));
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <button id="add">向元素添加数据</button>
+    <button id="show">显示添加的数据</button>
+</body>
+<script>
+    document.addEventListener("click", function () {
+        console.log(document.getElementsByTagName("div"));
+        alert(document.getElementsByTagName("div"));
+    }, false)
+
+</script>
+
+</html>
