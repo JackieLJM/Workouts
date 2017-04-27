@@ -18,11 +18,14 @@
 		// }
 		var range = { x1: 0, x2: document.body.scrollWidth, y1: 0, y2: document.body.scrollHeight };
 		// var index = 100;
+		// console.log(this);
 		(function DragDrop (obj) {
 			var me = this;
 			console.log(this);
 			// this.foo = (typeof obj == "string") ? $(obj) : obj;
 			this.foo = document.getElementById(obj);
+			// this.foo.prototype
+			// console.log(this.foo);
 			// this.foo.style.cursor = 'move';
 			// this.follow = function () {
 			// 	var x = this.foo.offsetLeft;
@@ -31,6 +34,7 @@
 			// 	var h = this.foo.offsetHeight;
 			// };
 			this.foo.onmousedown = function (e) {
+				console.log(this);
 				var foo = me.foo;
 				e = e || event;
 				foo.oOffset = (e.layerX) ? { x: e.layerX, y: e.layerY } : { x: e.offsetX, y: e.offsetY };
@@ -44,6 +48,7 @@
 			// 	return true;
 			// };
 			this.drag = function (e) {
+				// console.log(this);
 				var foo = me.foo;
 				e = e || event;
 				var top = e.clientY - foo.oOffset.y + document.documentElement.scrollTop;

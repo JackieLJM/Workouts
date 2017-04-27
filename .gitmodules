@@ -133,3 +133,9 @@
 [submodule "jsA/Snap.svg"]
 	path = jsA/Snap.svg
 	url = https://github.com/adobe-webplatform/Snap.svg
+[submodule "jsA/html5-boilerplate"]
+	path = jsA/html5-boilerplate
+	url = https://github.com/h5bp/html5-boilerplate.git
+[submodule "isomorphic/js-stack-from-scratch"]
+	path = isomorphic/js-stack-from-scratch
+	url = https://github.com/verekia/js-stack-from-scratch.git
