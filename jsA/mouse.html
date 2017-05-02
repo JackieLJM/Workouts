@@ -19,13 +19,15 @@
             // var index = 100;
             this.foo.onmousedown = function (event) {
                 var foo = that.foo;
+                console.log(event.offsetX);
                 foo.offset = (event.layerX) ? { x: event.layerX, y: event.layerY } : { x: event.offsetX, y: event.offsetY };
                 document.onmousemove = function (event) {
                     // console.log(foo);
+                    // console.log(event.offsetX);
                     var doc = document.documentElement,
                         body = document.body;
                     var Left = event.clientX + doc.scrollLeft - foo.offset.x;
-                    var Top = event.clientY + body.scrollTop - foo.offset.y;
+                    var Top = event.clientY + body.scrollTop- foo.offset.y;
                     if (that.range) {
                         Top = (Top < that.range.y1) ? (that.range.y1) : ((Top > that.range.y2 - foo.offsetHeight) ? (that.range.y2 - foo.offsetHeight) : Top);
                         Left = (Left < that.range.x1) ? (that.range.x1) : ((Left > that.range.x2 - foo.offsetWidth) ? (that.range.x2 - foo.offsetWidth) : Left);

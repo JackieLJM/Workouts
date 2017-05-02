@@ -38,10 +38,11 @@
             console.log(ul);
             console.log(li);
             console.log(li.get(1));
-            console.log(liSecond.childNodes[0]);
+            console.log(liSecond);
+            console.log(liSecond.childNodes);
             console.log($("*"));
 
-            var liDomSecond = document.getElementsByTagName("li")[1];
+            var liDomSecond = document.getElementsByTagName("li");
             console.log(liDomSecond);
             // alert(liDomSecond);
             var obj = { one: 1, two: 2, three: 3 };
@@ -49,7 +50,18 @@
             //     alert(key);
             //     alert(val);
             // });
+            console.log(obj);
             console.log(document.getElementById("a").childNodes);
+            function nodeListToArray(NodeList){
+                var arr=[];
+                for(var i=0;i<NodeList.length;i++){
+                    arr.push(NodeList[i]);
+                }
+                return arr;
+            }
+            console.log(Array.prototype.slice.call(liDomSecond));
+            console.log(Array.prototype.slice.call(liSecond.childNodes));
+            console.log(nodeListToArray(liSecond.childNodes));
         }
 
         // each方法
@@ -57,8 +69,10 @@
             var Tabs = {
                 0: "page1.html",
                 1: "page2.html",
-                2: "page3.html"
+                2: "page3.html",
+                length:3
             };
+            
             //  console.log(Tabs[0]);
             $.each(Tabs, function (key,val) {
                 console.log(Tabs[key]);
@@ -69,7 +83,7 @@
             console.log($("a"));
         })
 
-        // $.ready比window.onload先执行
+        // $.ready比window.onload先执行，因为$.ready是DOMContentLoaded的封装
     </script>
 </body>
 

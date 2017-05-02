@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>第一名</li>
+        <li>第二名</li>
+        <li>第三名</li>
+    </ul>
+    <div>
+        奔跑
+    </div>
+    <div style="display:none;">
+        吧！
+    </div>
+    <div style="display:none;">
+        阿信。
+    </div>
+    <script>
+        var li = document.getElementsByTagName("li");
+        var div = document.getElementsByTagName("div");
+        for (var i = 0; i < li.length; i++) {
+            (function (m) {
+                li[m].onclick = function () {
+                    div[m].style.display = "block";
+                    div.prototype=Array.prototype;
+                };
+            })(i)
+        };
+        console.log(li);
+    </script>
+</body>
+
+</html>
