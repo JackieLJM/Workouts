@@ -1,9 +1,3 @@
-[submodule "leaderboard"]
-	path = leaderboard
-	url = https://github.com/meteor/leaderboard
-[submodule "react/fully-reactive-react-example"]
-	path = react/fully-reactive-react-example
-	url = https://github.com/belfz/fully-reactive-react-example
 [submodule "react/react-hot-boilerplate"]
 	path = react/react-hot-boilerplate
 	url = https://github.com/gaearon/react-hot-boilerplate.git
@@ -109,9 +103,6 @@
 [submodule "react/css-modules-demos"]
 	path = react/css-modules-demos
 	url = https://github.com/ruanyf/css-modules-demos.git
-[submodule "isomorphic-react-redux/minimal-example-for-babel-plugin-webpack-loaders"]
-	path = isomorphic-react-redux/minimal-example-for-babel-plugin-webpack-loaders
-	url = https://github.com/istarkov/minimal-example-for-babel-plugin-webpack-loaders
 [submodule "react/webpack-demo"]
 	path = react/webpack-demo
 	url = https://github.com/css-modules/webpack-demo
@@ -139,3 +130,7 @@
 [submodule "isomorphic-react-redux/js-stack-from-scratch"]
 	path = isomorphic-react-redux/js-stack-from-scratch
 	url = https://github.com/verekia/js-stack-from-scratch.git
+[submodule "jsA/fastclick"]
+	path = jsA/fastclick
+	url = https://github.com/ftlabs/fastclick.git
+	
