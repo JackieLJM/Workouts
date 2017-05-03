@@ -10,26 +10,26 @@
 [submodule "react/react-tutorial"]
 	path = react/react-tutorial
 	url = https://github.com/reactjs/react-tutorial.git
-[submodule "isomorphic/isomorphic-redux-app"]
-	path = isomorphic/isomorphic-redux-app
+[submodule "isomorphic-react-redux/isomorphic-redux-app"]
+	path = isomorphic-react-redux/isomorphic-redux-app
 	url = https://github.com/caljrimmer/isomorphic-redux-app.git
-[submodule "isomorphic/redux-tutorial"]
-	path = isomorphic/redux-tutorial
+[submodule "isomorphic-react-redux/redux-tutorial"]
+	path = isomorphic-react-redux/redux-tutorial
 	url = https://github.com/happypoulp/redux-tutorial.git
-[submodule "isomorphic/simplest-redux-example"]
-	path = isomorphic/simplest-redux-example
+[submodule "isomorphic-react-redux/simplest-redux-example"]
+	path = isomorphic-react-redux/simplest-redux-example
 	url = https://github.com/jackielii/simplest-redux-example.git
 [submodule "react/react-router-tutorial"]
 	path = react/react-router-tutorial
 	url = https://github.com/reactjs/react-router-tutorial
-[submodule "isomorphic/koa-react-full-example"]
-	path = isomorphic/koa-react-full-example
+[submodule "isomorphic-react-redux/koa-react-full-example"]
+	path = isomorphic-react-redux/koa-react-full-example
 	url = https://github.com/dozoisch/koa-react-full-example
 [submodule "react/react-router"]
 	path = react/react-router
 	url = http://github.com/ReactTraining/react-router.git
-[submodule "isomorphic/electron-react-boilerplate"]
-	path = isomorphic/electron-react-boilerplate
+[submodule "combination/electron-react-boilerplate"]
+	path = combination/electron-react-boilerplate
 	url = https://github.com/chentsulin/electron-react-boilerplate
 [submodule "visual/recharts"]
 	path = visual/recharts
@@ -43,23 +43,23 @@
 [submodule "react/react-simple-pwa"]
 	path = react/react-simple-pwa
 	url = https://github.com/BosNaufal/react-simple-pwa.git
-[submodule "isomorphic/message-board"]
-	path = isomorphic/message-board
+[submodule "isomorphic-react-redux/message-board"]
+	path = isomorphic-react-redux/message-board
 	url = https://github.com/defshine/message-board.git
 [submodule "react-native/navigation"]
 	path = react-native/navigation
 	url = https://github.com/mozillo/navigation.git
-[submodule "isomorphic/react-native-meteor-boilerplate"]
-	path = isomorphic/react-native-meteor-boilerplate
+[submodule "combination/react-native-meteor-boilerplate"]
+	path = combination/react-native-meteor-boilerplate
 	url = https://github.com/spencercarli/react-native-meteor-boilerplate.git
-[submodule "isomorphic/react-redux-universal-hot-example"]
-	path = isomorphic/react-redux-universal-hot-example
+[submodule "isomorphic-react-redux/react-redux-universal-hot-example"]
+	path = isomorphic-react-redux/react-redux-universal-hot-example
 	url = https://github.com/erikras/react-redux-universal-hot-example.git
-[submodule "isomorphic/redux"]
-	path = isomorphic/redux
+[submodule "isomorphic-react-redux/redux"]
+	path = isomorphic-react-redux/redux
 	url = https://github.com/reactjs/redux.git
-[submodule "isomorphic/react-redux"]
-	path = isomorphic/react-redux
+[submodule "isomorphic-react-redux/react-redux"]
+	path = isomorphic-react-redux/react-redux
 	url = https://github.com/reactjs/react-redux.git
 [submodule "react-native/example-react-native-redux"]
 	path = react-native/example-react-native-redux
@@ -70,8 +70,8 @@
 [submodule "react-native/react-native-one"]
 	path = react-native/react-native-one
 	url = https://github.com/wutongke/react-native-one.git
-[submodule "isomorphic/Webpack2-React-Redux-Boilerplate"]
-	path = isomorphic/Webpack2-React-Redux-Boilerplate
+[submodule "isomorphic-react-redux/Webpack2-React-Redux-Boilerplate"]
+	path = isomorphic-react-redux/Webpack2-React-Redux-Boilerplate
 	url = https://github.com/wxyyxc1992/Webpack2-React-Redux-Boilerplate.git
 [submodule "react-native/react-native-firebase-starter"]
 	path = react-native/react-native-firebase-starter
@@ -79,20 +79,20 @@
 [submodule "react-native/react-native-hot-redux-starter"]
 	path = react-native/react-native-hot-redux-starter
 	url = https://github.com/adampash/react-native-hot-redux-starter
-[submodule "isomorphic/react-server"]
-	path = isomorphic/react-server
+[submodule "isomorphic-react-redux/react-server"]
+	path = isomorphic-react-redux/react-server
 	url = https://github.com/huqingliang/react-server.git
-[submodule "isomorphic/react-isomorph-demo"]
-	path = isomorphic/react-isomorph-demo
+[submodule "isomorphic-react-redux/react-isomorph-demo"]
+	path = isomorphic-react-redux/react-isomorph-demo
 	url = https://github.com/larry011/react-isomorph-demo.git
 [submodule "react-native/react-native-redux"]
 	path = react-native/react-native-redux
 	url = https://github.com/sibelius/react-native-redux.git
-[submodule "isomorphic/redux-saga"]
-	path = isomorphic/redux-saga
+[submodule "isomorphic-react-redux/redux-saga"]
+	path = isomorphic-react-redux/redux-saga
 	url = https://github.com/redux-saga/redux-saga.git
-[submodule "isomorphic/redux-saga-beginner-tutorial"]
-	path = isomorphic/redux-saga-beginner-tutorial
+[submodule "isomorphic-react-redux/redux-saga-beginner-tutorial"]
+	path = isomorphic-react-redux/redux-saga-beginner-tutorial
 	url = https://github.com/redux-saga/redux-saga-beginner-tutorial
 [submodule "react-native/reading"]
 	path = react-native/reading
@@ -103,20 +103,20 @@
 [submodule "mern-starter"]
 	path = mern-starter
 	url = https://github.com/Hashnode/mern-starter.git
-[submodule "isomorphic/webpack-react-redux-es6-boilerplate"]
-	path = isomorphic/webpack-react-redux-es6-boilerplate
+[submodule "isomorphic-react-redux/webpack-react-redux-es6-boilerplate"]
+	path = isomorphic-react-redux/webpack-react-redux-es6-boilerplate
 	url = https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate
 [submodule "react/css-modules-demos"]
 	path = react/css-modules-demos
 	url = https://github.com/ruanyf/css-modules-demos.git
-[submodule "isomorphic/minimal-example-for-babel-plugin-webpack-loaders"]
-	path = isomorphic/minimal-example-for-babel-plugin-webpack-loaders
+[submodule "isomorphic-react-redux/minimal-example-for-babel-plugin-webpack-loaders"]
+	path = isomorphic-react-redux/minimal-example-for-babel-plugin-webpack-loaders
 	url = https://github.com/istarkov/minimal-example-for-babel-plugin-webpack-loaders
 [submodule "react/webpack-demo"]
 	path = react/webpack-demo
 	url = https://github.com/css-modules/webpack-demo
-[submodule "isomorphic/React-News-Board"]
-	path = isomorphic/React-News-Board
+[submodule "isomorphic-react-redux/React-News-Board"]
+	path = isomorphic-react-redux/React-News-Board
 	url = https://github.com/ethan-funny/React-News-Board.git
 [submodule "react-native/noder-react-native"]
 	path = react-native/noder-react-native
@@ -136,6 +136,6 @@
 [submodule "jsA/html5-boilerplate"]
 	path = jsA/html5-boilerplate
 	url = https://github.com/h5bp/html5-boilerplate.git
-[submodule "isomorphic/js-stack-from-scratch"]
-	path = isomorphic/js-stack-from-scratch
+[submodule "isomorphic-react-redux/js-stack-from-scratch"]
+	path = isomorphic-react-redux/js-stack-from-scratch
 	url = https://github.com/verekia/js-stack-from-scratch.git

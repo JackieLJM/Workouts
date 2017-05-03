@@ -26,11 +26,11 @@
     <script>
         var li = document.getElementsByTagName("li");
         var div = document.getElementsByTagName("div");
-        for (var i = 0; i < li.length; i++) {
+        for (var i = 0, len = li.length; i < len; i++) {
             (function (m) {
                 li[m].onclick = function () {
                     div[m].style.display = "block";
-                    div.prototype=Array.prototype;
+                    div.prototype = Array.prototype;
                 };
             })(i)
         };
