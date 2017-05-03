@@ -21,7 +21,7 @@
 	url = https://github.com/dozoisch/koa-react-full-example
 [submodule "react/react-router"]
 	path = react/react-router
-	url = http://github.com/ReactTraining/react-router.git
+	url = https://github.com/ReactTraining/react-router.git
 [submodule "combination/electron-react-boilerplate"]
 	path = combination/electron-react-boilerplate
 	url = https://github.com/chentsulin/electron-react-boilerplate
