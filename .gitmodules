@@ -133,4 +133,3 @@
 [submodule "jsA/fastclick"]
 	path = jsA/fastclick
 	url = https://github.com/ftlabs/fastclick.git
-	

@@ -12,7 +12,7 @@
     <div style="background-color:gray;width:200px;height:200px;position:absolute;" id="drag"></div>
     <script>
         var range = { x1: 0, x2: document.body.scrollWidth, y1: 0, y2: document.body.scrollHeight };
-        (function dragDrop() {
+        function dragDrop() {
             var that = this;
             this.range = range;
             this.foo = document.getElementById("drag");
@@ -46,7 +46,10 @@
             //     this.style.zIndex = index;
             //     return true;
             // };
-        })();
+        }
+        // new dragDrop();
+        // console.log(new dragDrop());
+        // console.log(dragDrop());
     </script>
 </body>
 
