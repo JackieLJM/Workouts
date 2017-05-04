@@ -133,3 +133,12 @@
 [submodule "jsA/fastclick"]
 	path = jsA/fastclick
 	url = https://github.com/ftlabs/fastclick.git
+[submodule "isomorphic-react-redux/react-slingshot"]
+	path = isomorphic-react-redux/react-slingshot
+	url = https://github.com/coryhouse/react-slingshot.git
+[submodule "jsA/jquery-ui"]
+	path = jsA/jquery-ui
+	url = https://github.com/jquery/jquery-ui.git
+[submodule "isomorphic-react-redux/react-starter-kit"]
+	path = isomorphic-react-redux/react-starter-kit
+	url = https://github.com/kriasoft/react-starter-kit.git
