@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        div {
+            font-size: 25em;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,10 +35,32 @@
             (function (m) {
                 li[m].onclick = function () {
                     div[m].style.display = "block";
-                    div.prototype = Array.prototype;
+                    for (var i = 0; i < div.length; i++) {
+                        if (i == m) {
+                            continue
+                        }
+                        div[i].style.display = "none";
+                    };
                 };
             })(i)
         };
+        var j = 0;
+        setInterval("dotCircle(j)", 3000);
+        function dotCircle() {
+            div[j].style.display = "block";
+            for (var m = 0; m < div.length; m++) {
+                if (j == m) {
+                    continue
+                }
+                div[m].style.display = "none";
+            }
+            j++;
+            if(j==div.length){
+                j=0;
+            }
+        }
+        
+
         console.log(li);
     </script>
 </body>
