@@ -34,3 +34,16 @@ if (!Function.prototype.bind) {
         };
     };
 }
+//object create方法
+Object.create = function (o) {
+    var F = function () {};
+    F.prototype = o;
+    return new F();
+}
+//给所有对象添加方法，通过扩展Object实现，下面通过调用a.method('name',function(){})实现参数里的方法定义到Object的方法,下面定义的方法能进行链式调用
+Object.prototype.method = function (name, fun) {
+    this.prototype[name] = fun;
+    return this;
+}
+// reduce方法,acc cur,index,array为每次默认自动传入的值，此时arr的增删元素不会传给callback
+arr.reduce(callback(accumulator,currentValue,currentIndex,array),[initialValue])
