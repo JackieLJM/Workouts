@@ -1,2 +1,0 @@
-<img src="none.gif" onerror="this.src='/uploadfile/200806/17/2B175735485.png'">
-文章出处：标准之路(http://www.aa25.cn/code/195.shtml)

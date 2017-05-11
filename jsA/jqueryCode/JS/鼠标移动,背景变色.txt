@@ -1,7 +1,0 @@
-<style>
-.first {background:#666;}
-.gray {background:red;}
-</style>
-<div class="first" onmouseover="this.className='gray'" onmouseout="this.className='first'">
-www.aa25.cn
-</div>

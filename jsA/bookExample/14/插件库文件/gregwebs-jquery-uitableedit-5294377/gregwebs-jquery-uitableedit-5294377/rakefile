@@ -1,9 +1,0 @@
-require 'tasks/helpers'
-SAFARI = '/Applications/Safari.app/Contents/MacOS/Safari'
-JQUERY_PROJECT = 'uiTableEdit'
-
-desc "run test"
-task :test do
-  system("#{ENV['BROWSER'] || 'konqueror'} test/suite.html") || 
-    run( "#{SAFARI} #{test_files}" )
-end

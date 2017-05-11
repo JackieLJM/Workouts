@@ -1,3 +1,0 @@
-<input onClick="location.href='/reg.asp';" name="button2" type="button" id="button2" value="在本窗口打开页面" />
-<input onClick="window.open('/reg.asp')" name="button1" type="button" id="button1" value="在新窗口打开页面" />
-文章出处：标准之路(http://www.aa25.cn/code/241.shtml)
