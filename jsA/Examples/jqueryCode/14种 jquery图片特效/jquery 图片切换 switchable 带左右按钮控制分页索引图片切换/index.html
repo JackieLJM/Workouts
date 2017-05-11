@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery 图片切换 switchable 带左右按钮控制索引图片切换</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif;}
+/* featured */
+#featured{overflow:hidden;width:620px;position:relative;height:340px;border:solid 1px #ddd;}
+#featured .word{z-index:10;background:#222;left:0;width:610px;color:#fff;bottom:0;position:absolute;height:32px;line-height:16px;padding:5px;}
+#featured .word h3{font-size:13px;height:16px;overflow:hidden;}
+#thumbs{width:620px;height:28px;}
+*html #thumbs{height:100%;}
+#thumbs li{display:inline;float:left;width:72px;margin-right:4px;height:24px;}
+#thumbs ul{margin-top:3px;}
+#thumbs li.last_img{margin-right:4px;}
+#thumbs li.first{width:20px;cursor:pointer;height:13px;margin:15px 10px 0 15px;}
+#thumbs li.last{width:20px;cursor:pointer;height:13px;margin:15px 12px 0 8px;}
+#thumbs li a{border:#9c9c9c 2px solid;display:block;}
+#thumbs li a:hover{border:#9C3 2px solid;}
+#thumbs li a.current{border:#ff6600 2px solid;}
+</style>
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript">
+// 幻灯片切换功能
+var timer = null;
+var offset = 5000;
+var index = 6;/* 控制图片播放位置 */
+
+//大图交替轮换
+function slideImage(i){
+	var id = 'image_'+ target[i];
+		$('#'+ id).animate({opacity: 1}, 800, function(){
+			$(this).find('.word').animate({height: 'show'}, 'slow');
+		}).show().siblings(':visible').find('.word').animate({height: 'hide'},'fast',function(){
+			$(this).parent().animate({opacity: 0}, 800).hide();
+	});
+}
+//bind thumb a
+function hookThumb(){    
+	$('#thumbs li a').bind('click', function(){
+		if(timer){
+			clearTimeout(timer);
+		}                
+		var id = this.id;            
+		index = getIndex(id.substr(6));
+		rechange(index);
+		slideImage(index); 
+		timer = window.setTimeout(auto, offset);  
+		this.blur();            
+		return false;
+	});
+}
+//bind next/prev img
+function hookBtn(){
+	$('#thumbs li img').filter('#play_prev,#play_next').bind('click', function(){
+		if(timer){
+			clearTimeout(timer);
+		}
+		var id = this.id;
+		if(id == 'play_prev'){
+			index--;
+			if(index < 0) index = 6;
+		}else{
+			index++;
+			if(index > 6) index = 0;
+		}
+		rechange(index);
+		slideImage(index);
+		timer = window.setTimeout(auto, offset);
+	});
+}
+//得到指标
+function getIndex(v){
+	for(var i=0; i < target.length; i++){
+		if(target[i] == v)
+		return i;
+	}
+}
+function rechange(loop){
+    var id = 'thumb_'+ target[loop];
+    $('#thumbs li a.current').removeClass('current');
+    $('#'+ id).addClass('current');
+}
+function auto(){
+    index++;
+    if (index > 6){
+        index = 0;
+    }
+    rechange(index);
+    slideImage(index);
+    timer = window.setTimeout(auto, offset);
+}
+$(function(){    
+    //change opacity
+    $('div.word').css({opacity: 0.85});
+    auto();  
+    hookThumb(); 
+    hookBtn();
+    
+});
+
+var target = ["xixi-01","xixi-02","xixi-03","xixi-04","xixi-05","xixi-06","xixi-07"];
+
+</script>
+</head>
+<body>
+
+<div id="featured">
+
+	<div class="items" id="image_xixi-01">
+		<a title="jquery HTML5 幻灯片插件 用 Canvas 制作类似百叶窗拍摄快门摄影拍摄效果" href="http://www.jsfoot.com/html5/items/2011-08-29/153.html"><img width="620" height="340" alt="jquery HTML5 幻灯片插件 用 Canvas 制作类似百叶窗拍摄快门摄影拍摄效果" src="http://www.jsfoot.com/d/file/html5/items/2011-08-29/8937f779ac932d157fe04fe463b083d4.jpg" /></a>
+		<div class="word">
+			<h3>jquery HTML5 幻灯片插件 用 Canvas 制作类似百叶窗拍摄快门摄影拍摄效果</h3>
+			<p>用Canvas和HTML5制作类似百叶窗照相机拍摄快门拍摄效果、是一种非常逼真酷炫的jquery HTML5 图片幻灯片</p>
+		</div>
+	</div>
+	
+	<div class="items" id="image_xixi-02">
+		<a title="jquery 图片放大镜 图片类似放大镜效果鼠标滑过小图异步加载中图、大图" href="http://www.jsfoot.com/jquery/items/2011-08-28/151.html"><img width="620" height="340" alt="jquery 图片放大镜 图片类似放大镜效果鼠标滑过小图异步加载中图、大图" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-28/598271bc3a3f325a0a1476b1ec18753d.jpg" /></a>
+		<div class="word">
+			<h3>jquery 图片放大镜 图片类似放大镜效果鼠标滑过小图异步加载中图、大图</h3>
+			<p>各大商城详细页面产品图片特效展示，鼠标滑过小图显示中图，鼠标滑过中图显示大图展示，jquery放大镜效果图片类似图片放大镜展示</p>
+		</div>
+	</div>
+	
+	<div class="items" id="image_xixi-03">
+		<a title="jquery cycle 循环幻灯片插件多功能幻灯片插件支持多种幻灯片特效" href="http://www.jsfoot.com/jquery/items/2011-08-24/143.html"><img width="620" height="340" alt="jquery cycle 循环幻灯片插件多功能幻灯片插件支持多种幻灯片特效" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-24/1f3f7ebf6b65079c036f52349807a702.jpg" /></a>
+		<div class="word">
+			<h3>jquery cycle 循环幻灯片插件多功能幻灯片插件支持多种幻灯片特效</h3>
+			<p>用jquery 幻灯片插件制作多种图片与文本幻灯片特效，jquery cycle 循环 幻灯片插件支持幻灯片放大缩小、幻灯片上下滚动</p>
+		</div>
+	</div>
+	
+	<div class="items" id="image_xixi-04">
+		<a title="jquery菜单特效 鼠标滑过菜单区域图标和文本类似flash动画酷炫移动展示" href="http://www.jsfoot.com/jquery/items/2011-08-22/139.html"><img width="620" height="340" alt="jquery菜单特效 鼠标滑过菜单区域图标和文本类似flash动画酷炫移动展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-22/7ddbab9b843720f72356b9782146345a.jpg" /></a>
+		<div class="word">
+			<h3>jquery菜单特效 鼠标滑过菜单区域图标和文本类似flash动画酷炫移动展示</h3>
+			<p>jquery iconmenu 插件制作用图标和文本建立jquery菜单特效，当鼠标滑过菜单区域图标与文本以酷炫的flash动画移动展示</p>
+		</div>
+	</div>
+	
+	<div class="items" id="image_xixi-05">
+		<a title="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示" href="http://www.jsfoot.com/jquery/items/2011-08-13/120.html"><img width="620" height="340" alt="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-13/323ce4b13f72648e096bd1a86cba762a.jpg"></a>
+		<div class="word">
+			<h3>jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示</h3>
+			<p>今天做一个非常有趣的，并建立“纺纱报纸”带有古典场景，CSS3、HTML5、jQuery、canvas元素制作报纸缩小到放大翻转图片展示</p>
+		</div>
+	</div>
+	
+	<div class="items" id="image_xixi-06">
+		<a title="jquery 图片切换插件制作banner图片滚动播放、按钮控制图片滚动、选项卡等基于多功能jquery slide插件" href="http://www.jsfoot.com/jquery/items/2011-08-04/102.html"><img width="620" height="340" alt="jquery 图片切换插件制作banner图片滚动播放、按钮控制图片滚动、选项卡等基于多功能jquery slide插件" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-04/93f0fbcca20b400dfab9522431cc9de0.jpg" /></a>
+		<div class="word">
+			<h3>jquery 图片切换插件制作banner图片滚动播放、按钮控制图片滚动、选项卡等基于多功能jquery slide插件</h3>
+			<p>jquery特效的slide 插件制作多功能按钮控制图片左右滚动、banner图片滚动播放、多功能选择卡等，且代码少是一款非常不错</p>
+		</div>
+	</div>
+	
+	<div class="items" id="image_xixi-07">
+		<a title="javascript滚动图片按钮控制图片左右自动滚动" href="http://www.jsfoot.com/js/items/2011-08-05/104.html"><img width="620" height="340" alt=" javascript滚动图片按钮控制图片左右自动滚动" src="http://www.jsfoot.com/d/file/js/items/2011-08-05/6ae21c4c44285e9a58afd5c3f42ae36f.jpg" /></a>
+		<div class="word">
+			<h3>javascript滚动图片按钮控制图片左右自动滚动</h3>
+			<p>javascript特效用按钮控制图片内容左右自动滚动、这款特效是纯javascript制作的，代码简约，是一款不可多的图片滚动特效。</p>
+		</div>
+	</div>
+
+</div><!--featured end-->
+
+<div id="thumbs">
+	<ul>
+		<li class="first btnPrev"><img id="play_prev" src="images/btn_prev.gif" width="20" height="13" alt="上一个" /></li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-01" href="#image_xixi-01"><img width="68" height="40" alt="jquery HTML5 幻灯片插件 用 Canvas 制作类似百叶窗拍摄快门摄影拍摄效果" src="http://www.jsfoot.com/d/file/html5/items/2011-08-29/8937f779ac932d157fe04fe463b083d4.jpg" /></a>
+		</li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-02" href="#image_xixi-02"><img width="68" height="40" alt="jquery 图片放大镜 图片类似放大镜效果鼠标滑过小图异步加载中图、大图" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-28/598271bc3a3f325a0a1476b1ec18753d.jpg" /></a>
+		</li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-03" href="#image_xixi-03"><img width="68" height="40" alt="jquery cycle 循环幻灯片插件多功能幻灯片插件支持多种幻灯片特效" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-24/1f3f7ebf6b65079c036f52349807a702.jpg" /></a>
+		</li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-04" href="#image_xixi-04"><img width="68" height="40" alt="jquery菜单特效 鼠标滑过菜单区域图标和文本类似flash动画酷炫移动展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-22/7ddbab9b843720f72356b9782146345a.jpg" /></a>
+		</li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-05" href="#image_xixi-05"><img width="68" height="40" alt="jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-13/323ce4b13f72648e096bd1a86cba762a.jpg"></a>
+		</li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-06" href="#image_xixi-06"><img width="68" height="40" alt="jquery 图片切换插件制作banner图片滚动播放、按钮控制图片滚动、选项卡等基于多功能jquery slide插件" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-04/93f0fbcca20b400dfab9522431cc9de0.jpg" /></a>
+		</li>
+		<li class="slideshowItem">
+			<a id="thumb_xixi-07" href="#image_xixi-07"><img width="68" height="40" alt=" javascript滚动图片按钮控制图片左右自动滚动" src="http://www.jsfoot.com/d/file/js/items/2011-08-05/6ae21c4c44285e9a58afd5c3f42ae36f.jpg" /></a>
+		</li>
+		<li class="last btnNext"><img id="play_next" src="images/btn_next.gif" width="20" height="13" alt="下一个" /></li>
+	</ul>
+</div><!--thumbs end-->
+</body>
+</html>

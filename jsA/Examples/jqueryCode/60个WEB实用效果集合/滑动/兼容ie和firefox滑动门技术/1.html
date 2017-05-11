@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>滑动门-download by http://www.codefans.net</title>
+<style>
+*{margin:0px; 
+	padding:0px;}
+#tab{width:400px;
+	height:auto;
+	margin:0 auto;	 
+}
+  ul{list-style:none; margin-left:20px;}
+li{ float:left;height:30px;background:url(15.jpg);margin:0 5px;text-align:center;line-height:30px;color:#293863;width:60px; position:relative;
+		 bottom:-3px;}/*margin;那里调节各个li之间的距离,position是保证下边框的出现*/
+ 
+.dise{display:block;}
+.undise{display:none;}
+.fff{background:
+	url(3.jpg);}
+#all{clear:left; width:400px;}
+#all div{width:400px;background-color:#F2F5FA;text-align:left;line-height:20px; height:200px;
+         border:1px #CCCDCD solid; }/*一定要设border*/
+
+}
+</style>
+</head>
+<script  language="javascript" src="1.js"></script>
+<body>
+	<div div id="tab">
+		<ul>
+		<li id="li1" class="fff"><span onmouseover="showdiv(1)">1111</span></li>
+		<li id="li2"><span onmouseover="showdiv(2)">2222</span></li>
+		<li id="li3"><span href="#" onmouseover="showdiv(3)">3333</span></li>
+		</ul>
+	
+	<div id="all">
+		<div id="div1" class="dise">ada</div>
+		<div id="div2" class="undise">b</div>
+		<div id="div3" class="undise">c</div> 
+	</div>
+    </div>
+</body>
+</html>

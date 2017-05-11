@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="http://i3.sinaimg.cn/travel/jquery-1.5.2.min.js"></script>
+<script type="text/javascript">
+//ACC
+$(function(){
+	var index=0;
+	$("dl.ac dt").eq(index).css("width","620px");
+	$("dl.ac dd").eq(index).css("backgroundPosition",(-35)*index+"px -340px");
+	$("dl.ac dd").mouseover(function(){
+		if($("dl.ac dt").eq(index).css("width")!="620px")return false;
+		i=$("dl.ac dd").index(this);
+		if(i==index)return false;
+		$("dl.ac dd").eq(index).css("backgroundPosition",(-35)*index+"px 0px");
+		$(this).css("backgroundPosition",(-35)*i+"px -340px");
+		$("dl.ac dt").eq(index).animate({width:0},200); 
+		$(this).next().animate({width:620},200); 
+		index=i;
+	});
+	
+	/*MyTime =setInterval(function(){
+		$("dl.ac dd").eq(index).trigger("mouseover");
+	 }, 100);*/
+	 
+});
+
+</script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+
+.accordioCon{width:795px;height:340px;overflow:hidden;background-color:#fffde6;margin:20px auto;}
+.acc dl dd,.acc dl dt{ float:left;display:inline;padding:0;margin:0;}img{ border:none;}
+.acc dl dt{ width:0px;overflow:hidden;}
+.acc dl dd{ width:35px;height:340px;cursor:pointer;}
+/* 2011-08-15 modify */
+dd.d1,dd.d2,dd.d3,dd.d4,dd.d5{ background-image:url(images/titilebg.png);background-repeat:no-repeat;}
+dd.d1{ background-position:0 0;}
+dd.d2{ background-position:-35px 0;}
+dd.d3{ background-position:-70px 0;}
+dd.d4{ background-position:-105px 0;}
+dd.d5{ background-position:-140px 0;}
+</style>
+</head>
+
+<body>
+
+	<div class="accordioCon clearfix">
+		<div class="acc clearfix">
+			<dl class="ac">
+				<dd class="d1"></dd>
+				<dt class="d1"><a href="http://www.jsfoot.com/jquery/items/2011-08-14/122.html"><img width="620" height="340" alt="jquery筛选器插件选项卡 css3制作一个漂亮的HTML5筛选容器插件选项卡" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-14/37fdab052bf9fbcbcfa2d4eb41f1f169.jpg"></a></dt>
+				<dd class="d2"></dd>
+				<dt class="d2"><a href="http://www.jsfoot.com/jquery/items/2011-08-09/112.html"><img width="620" height="340" alt="基于jquery 选项卡插件jquery tab选项卡支持垂直选项卡滚动、水平选项卡滚动、自动选项卡切换等。" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-09/ba66cb66d48ae5d3afd6567bde85a8c6.jpg"></a></dt>
+				<dd class="d3"></dd>
+				<dt class="d3"><a href="http://www.jsfoot.com/html5/items/2011-02-21/42.html"><img width="620" height="340" alt="jquery 幻灯片切换应用一个HTML5的幻灯片" src="http://www.jsfoot.com/d/file/html5/items/2011-02-21/5be1afce8d42e773d6eceba386d7189e.jpg"></a></dt>
+				<dd class="d4"></dd>
+				<dt class="d4"><a href="http://www.jsfoot.com/js/items/2011-07-24/80.html"><img width="620" height="340" alt=" javascript滚动图片带按钮控制上下左右自动无缝滚动" src="http://www.jsfoot.com/d/file/js/items/2011-07-24/5cad424bb2358cf602f6ecd991bf0870.jpg"></a></dt>
+				<dd class="d5"></dd>
+				<dt class="d5"><a href="http://www.jsfoot.com/css3/items/2011-02-20/26.html"><img width="620" height="340" alt="用div+css制作一个CSS3的泡泡动画按钮非常漂亮" src="http://www.jsfoot.com/d/file/css3/items/2011-02-20/df8440960f45b0ad68fe4d1c684e2acc.jpg" /></a></dt>
+			</dl>
+		</div>
+	</div><!--accordioCon end-->
+
+</body>
+</html>

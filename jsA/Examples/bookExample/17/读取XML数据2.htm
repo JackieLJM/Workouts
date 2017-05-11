@@ -1,0 +1,228 @@
+<html>
+
+<head>
+
+<title>加载XML数据</title>
+
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+
+function xmlDom()
+{
+    var a = [
+    "MSXML2.DOMDocument.5.0",
+    "MSXML2.DOMDocument.4.0",
+    "MSXML2.DOMDocument.3.0",
+    "MSXML2.DOMDocument",
+    "Microsoft.XmlDom"
+    ]
+    for(var i = 0 ; i < a.length; i ++ )
+    {
+        try
+        {
+            var o = new ActiveXObject(a[i]);
+            return o;
+        }
+        catch(e)
+        {
+        }
+    }
+    throw new Error("浏览器不支持MSXML组件");
+}
+
+function callback(o)
+{
+    return function()
+    {
+        if(o.readyState == 4)
+        {
+            document.write(o);
+        }
+    }
+}
+
+
+var o = xmlDom();
+o.async = true;
+// o.load("产品.xml");
+
+
+
+
+
+/*
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * 代码：Qr http : // Qr.blogger.org.cn                                      *
+ * 时间：2006 / 07 / 15 21 : 36 : 00                                                  *
+ * 功能：遍历XML的所有节点，仿IE浏览XML方式输出     *
+ * 类型：支持TEXT、CDATA、COMMENT、ELEMENT节点 *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ */
+var xml = null , format = "" , fo = "&nbsp;&nbsp;&nbsp;&nbsp;" ;
+
+function main()
+{
+    createXmlDom("产品.xml");
+    Recursion(xml.documentElement);
+}
+
+function createXmlDom(xmlUrl)
+{
+    // 这里大家可以自己处理一下，以适应不同浏览器
+    xml = xmlDom();
+    xml.async = false;
+    xml.load(xmlUrl);
+}
+
+function Recursion(o)
+{
+    if(typeof(o) == "number")return;
+    if(o.nodeType == 3 || o.nodeType == 4 || o.nodeType == 8)
+    {
+        switch(o.nodeType)
+        {
+            case 3 :
+                // [TEXT型节点]
+                if(o.nextSibling || o.previousSibling)document.write("<br>" + format);
+                document.write(o.nodeValue);
+                // 针对混合节点的末节点为文本节点的情况
+                if( ! o.nextSibling && o.previousSibling)
+                {
+                    document.write("<br>" + format.substr(0, format.length - 24));
+                }
+                break;
+
+            case 4 :
+                // [CDATA型节点]
+                document.write("<br>" + format + "&lt;![CDATA[" + o.nodeValue + "]]&gt;");
+                // .replace("<", "&lt;")
+                break;
+
+            case 8 :
+                // [COMMENT型节点]
+                document.write("<br>" + format + "&lt;!--" + o.nodeValue + "--&gt;");
+                // .replace("<", "&lt;")
+                break;
+        }
+        if(o.nextSibling)
+        {
+            // #有同级兄弟元素节点#//
+            return arguments.callee(o.nextSibling);
+        }
+        else
+        {
+            // #返回上级相邻未解析节点#//
+            return arguments.callee(N2NP(o.parentNode));
+
+            // 开始因为N2NP这个函数有问题，所以用try{}catch(e){}
+            // try{return arguments.callee(N2NP(o.parentNode)); }catch(e){document.write
+
+            ("<b><i>err:" + e + "</i></b>")
+        }
+        ;
+    }
+    if( ! o.hasChildNodes())
+    {
+        // [空无素（ELEMENT）或仅含属性（ATTRIBUTE）]
+        if(o != xml.documentElement)document.write("<br>");
+        if(o.nodeType == 1)document.write(format + "&lt;" + o.nodeName);
+        if(o.attributes.length > 0)
+        {
+            attrparser(o);
+            document.write("/&gt;");
+        }
+        if(o.nextSibling)
+        {
+            // #有同级兄弟元素节点#//
+            return arguments.callee(o.nextSibling);
+        }
+        else
+        {
+            // 针对混合节点的末节点为空元素的情况
+            if(o.previousSibling)document.write("<br>" + format.substr(0, format.length - 24));
+
+            // #返回上级相邻未解析节点#//
+            return arguments.callee(N2NP(o.parentNode));
+
+            // 开始因为N2NP这个函数有问题，所以用try{}catch(e){}
+            // try{return arguments.callee(N2NP(o.parentNode)); }catch(e){document.write("<b>err:" + e + "</b>")};
+        }
+    }
+    if(o.hasChildNodes())
+    {
+        // 有子节点，包括：TEXT、CDATA、COMMENT、ELEMENT
+        if(o.nodeName != xml.documentElement.nodeName)document.write("<br>");
+        if(o.nodeType == 1)document.write(format + "&lt;" + o.nodeName);
+        if(o.attributes.length > 0)attrparser(o);
+        document.write("&gt;");
+
+        if(o.hasChildNodes())
+        {
+            // #有下级元素节点#//
+            format += fo;
+            return arguments.callee(o.firstChild);
+        }
+        else
+        {
+            if(o.nextSibling)
+            {
+                // #有同级兄弟元素节点#//
+                return arguments.callee(o.nextSibling);
+            }
+        }
+    }
+}
+
+function N2NP(p)
+{
+    // alert(p.nodeName + ":" + p.nodeValue)
+
+    if(p.nextSibling)
+    {
+        format = format.substr(0, format.length - 24);
+        // 输出关闭标记
+        if(p.nodeType == 1 && p.firstChild.nodeType == 3)document.write("&lt;/" + p.nodeName + "&gt;");
+        if(p.nodeType == 1 && p.firstChild.nodeType != 3)document.write("<br>" + format + "&lt;/" + p.nodeName + "&gt;");
+        return p.nextSibling;
+        // 返回相邻节点
+    }
+    else
+    {
+
+        format = format.substr(0, format.length - 24);
+        // 输出关闭标记
+        if(p.parentNode && p.firstChild.nodeType == 3)document.write("&lt;/" + p.nodeName + "&gt;");
+        if(p.parentNode && p.firstChild.nodeType != 3)document.write("<br>" + format + "&lt;/" + p.nodeName + "&gt;");
+        if(p == xml.documentElement)
+        {
+            return 0;
+        }
+        else
+        {
+            // 如果不进行判断，函数将返回#document，导致错情
+            return arguments.callee(p.parentNode);
+            // #返回上级相邻未解析元素节点#//
+        }
+    }
+}
+
+function attrparser(o)
+{
+    // 遍历节点元素
+    if(o.attributes)
+    {
+        var attr = o.attributes;
+        for(i = 0; i < attr.length; i ++ )
+        {
+            document.write(" " + attr[i].nodeName + '="'+attr[i].firstChild.nodeValue+'"');
+        }
+    }
+}
+main();
+
+</script>
+</body>
+
+</html>

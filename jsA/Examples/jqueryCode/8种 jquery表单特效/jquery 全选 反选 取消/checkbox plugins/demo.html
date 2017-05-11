@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery插件-全选反选</title>
+<script type="text/javascript" src="http://www.mailuke.com/js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/jquery.checkbox.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//全选
+	$("#allchoose").bind("click",function(){
+		$("#checked input[type=checkbox]").checkBox("all");
+	});
+	
+	// 取消
+	$("#delete").bind("click",function(){
+		$("#checked input[type=checkbox]").checkBox("none");
+	});
+	
+	//反选
+	$("#reverse").bind("click",function(){
+		$("#checked input[type=checkbox]").checkBox("toggle");
+	});
+	
+	//输出
+	$("#exit").bind("click",function(){
+		alert($("#checked input[type=checkbox][checked]").checkedValue());
+	});
+	
+});
+</script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.mar20{margin:20px;}
+</style>
+</head>
+
+<body>
+	
+	<div id="checked">
+		<div class="mar20">
+			<input name="checkbox" type="checkbox" value="checkbox1" id="checkbox1" /><label for="checkbox1">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+		</div>
+		<div class="mar20">
+			<input type="checkbox" name="checkbox" value="checkbox2" id="checkbox2" /><label for="checkbox2">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+		</div>
+		<div class="mar20">
+			<input type="checkbox" name="checkbox" value="checkbox3" id="checkbox3" /><label for="checkbox3">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+		</div>
+		<div class="mar20">
+			<input type="checkbox" name="checkbox" value="checkbox4" id="checkbox4" /><label for="checkbox4">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+		</div>
+		<div class="mar20">
+			<input type="checkbox" name="checkbox" value="checkbox5" id="checkbox5" /><label for="checkbox5">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+		</div>
+	</div>
+	
+	<div class="mar20">
+		<input type="submit" name="1" id="allchoose" value="全选" />
+		<input type="submit" name="2" id="delete" value="全不选" />
+		<input type="submit" name="3" id="reverse" value="反选" />
+		<input type="submit" name="4" id="exit" value="看看我选择了什么" />
+	</div>
+	
+</body>
+</html>

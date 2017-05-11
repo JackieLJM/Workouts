@@ -1,0 +1,49 @@
+<style type="text/css">
+<!--
+.navPoint {COLOR: white; CURSOR: hand; FONT-FAMILY: Webdings; FONT-SIZE: 9pt}
+.STYLE1 {FONT-FAMILY: Webdings; FONT-SIZE: 9pt; cursor: hand;}
+-->
+</style>
+<script>
+function switchSysBar(){
+if (switchPoint.innerText==3){
+switchPoint.innerText=4
+document.all("frmTitle").style.display="none"
+}else{
+switchPoint.innerText=3
+document.all("frmTitle").style.display=""
+}}
+</script>
+<table border="0" cellPadding="0" cellSpacing="0" height="100%" width="100%">
+  <tr>
+    <td width="20%" align="middle" vAlign="center" noWrap bgcolor="#CC99FF" id="frmTitle" name="frmTitle"> </td>
+    <td class=a2 style="WIDTH: 9pt"><table border="0" cellPadding="0" cellSpacing="0" height="100%">
+      <tr>
+        <td style="HEIGHT: 100%" onClick="switchSysBar()"><font style="FONT-SIZE: 9pt; CURSOR: default; COLOR: #ffffff"> <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <font color="#FF0000"><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <span class="STYLE1" id="switchPoint" title="关闭/打开左栏">3</span><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </font><br>
+                <br>
+          屏幕切换 </font></td>
+      </tr>
+    </table></td>
+    <td bgcolor="#FFCC99" style="WIDTH: 100%"> </td>
+  </tr>
+</table>
+文章出处：标准之路(http://www.aa25.cn/code/212.shtml)

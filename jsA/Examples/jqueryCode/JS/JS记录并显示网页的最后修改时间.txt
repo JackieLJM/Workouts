@@ -1,0 +1,4 @@
+<script language=JavaScript> 
+document.write("最后更新时间: " + document.lastModified + "") 
+</script>
+文章出处：标准之路(http://www.aa25.cn/code/860.shtml)

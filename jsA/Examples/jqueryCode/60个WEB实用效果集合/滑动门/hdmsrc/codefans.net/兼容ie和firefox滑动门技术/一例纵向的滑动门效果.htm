@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>test-Download by http://www.codefans.net </title>
+<style>
+td,a,body{font-size:9pt;}
+
+/*--选中的情况下*/
+.DivAround_focus{cursor:pointer;background-color:#A1ACDB;border-right:solid 1px #A1ACDB;border-bottom:solid 1px #333333; border-left:solid 1px #C8CEEA;  border-top:solid 1px #C8CEEA;color:#000000}
+
+/*未选中的情况下还可以控制边框颜色*/
+.DivAround_blur{cursor:pointer;background:#4D5C9F;border-right:solid 1px #eeeeee;border-bottom:solid 1px #333333; border-left:solid 1px #798ACC;  border-top:solid 1px #A1ACDB;color:#FFFFFF}
+
+
+.DivAround_content{background-color:#A1ACDB;border-right:solid 1px #888888;border-bottom:solid 1px #555555; border-left:0px; border-top:solid 1px #C8CEEA;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#6271B1">
+	<tr><td valign="top">
+		<table cellpadding="0" cellspacing="0" border="0"   width="84" id=						"leftButtonTAble">
+        <!--改变下面td 的高来控制整个高度-->
+			<tr><td height="20" align="center" class="DivAround_focus" onMouseOver="ChangeFocus(this)">七星彩</td></tr>
+			<tr><td height="20" align="center" class="DivAround_blur" onMouseOver="ChangeFocus(this)">排列五</td></tr>
+			<tr><td height="20" align="center" class="DivAround_blur" onMouseOver="ChangeFocus(this)">篮球彩</td></tr>
+			<tr><td height="22" align="center" class="DivAround_blur" onMouseOver="ChangeFocus(this)">足球彩</td></tr>
+</table>
+</td>
+
+<td>
+	<table width="303"   border="0" cellpadding="0" cellspacing="0" class="DivAround_content">
+	<tr>
+	  <td valign="top"  id="DivAroundContent" height=80><p>dsadsa&nbsp;</p></td>
+	</tr>
+</table>
+</td></tr>
+</table>
+<script language="javascript">ChangeFocus(document.getElementById("leftButtonTAble").rows[0].cells[0]);</script>
+</body></html>
+<script language="javascript">
+var AroundInfoArray=new Array();
+AroundInfoArray[0]="七星彩";
+AroundInfoArray[1]="排列五";
+AroundInfoArray[2]="篮球彩";
+AroundInfoArray[3]="足球彩";
+function ChangeFocus(obj)
+{
+for(i=0;i<document.getElementById("leftButtonTAble").rows.length;i++)
+{
+if(document.getElementById("leftButtonTAble").rows[i].cells[0]==obj)
+{
+document.getElementById("leftButtonTAble").rows[i].cells[0].className="DivAround_focus";
+document.getElementById("DivAroundContent").innerHTML=AroundInfoArray[i];
+}else{
+document.getElementById("leftButtonTAble").rows[i].cells[0].className="DivAround_blur";
+}
+}
+}
+</script>

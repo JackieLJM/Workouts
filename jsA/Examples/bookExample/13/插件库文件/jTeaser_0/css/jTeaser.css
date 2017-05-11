@@ -1,0 +1,85 @@
+/* 
+    Document   : jTeaser.css
+    Created on : 17-Dec-2010, 10:33:54 PM
+    Author     : SoundWave
+*/
+
+label  {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #555555;
+    line-height: 15px;
+    text-align: left;
+}
+
+input {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+input[type='button'], input[type='reset'] {
+    display: inline-block;
+    font-family: Verdana, Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 10px;
+    color: #4C4C4C;
+    border-color: #D9D9D9;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FCFCFC;
+    float: right;
+    margin: 0px 0px 0px 10px;
+    width: 75px;
+}
+
+input[type='button']:hover, input[type='reset']:hover {
+    text-shadow: 0pt 1px 0pt rgba(255, 255, 255, 0.9);
+    border-color: #999999;
+    color: #333333;
+}
+
+input[type='text'] {
+    width: 60px;
+    background-color: #FCFCFC;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: scroll;
+    opacity: 1;
+    border-color: silver;
+    border-width: 1px;
+    border-style: solid
+}
+
+/*
+ * Calculator
+ */
+.calculator, .results, .operator {
+    border: 0px;
+	padding: 5px;
+	margin: 0px;
+}
+
+.operator {
+	
+}
+
+.calculator {
+	
+}
+
+.results {
+    
+}
+
+.operator {
+    font-family: Verdana, Verdana, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    line-height: 10px;
+}
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li><span>1</span>
+            <a href=""></a>
+        </li>
+        <li><span>2</span>
+            <a href=""></a>
+        </li>
+        <li><span>3</span>
+            <a href=""></a>
+        </li>
+        <li><span>4</span>
+            <a href=""></a>
+        </li>
+    </ul>
+    <button>Click Me!</button>
+    <div id="a">
+        <a href=""></a>
+    </div>
+
+    <script>
+        // DOM对象和Jquery对象转换
+        window.onload = function () {
+            var li = $("li");
+            var liSecond = li[1];
+            var ul = $("ul");
+            console.log(document.images);
+            console.log(ul);
+            console.log(li);
+            console.log(li.get(1));
+            console.log(liSecond);
+            console.log(liSecond.childNodes);
+            console.log($("*"));
+
+            var liDomSecond = document.getElementsByTagName("li");
+            console.log(liDomSecond);
+            // alert(liDomSecond);
+            var obj = { one: 1, two: 2, three: 3 };
+            // each(obj, function (key, val) {
+            //     alert(key);
+            //     alert(val);
+            // });
+            console.log(obj);
+            console.log(document.getElementById("a").childNodes);
+            function nodeListToArray(NodeList) {
+                var arr = [];
+                for (var i = 0; i < NodeList.length; i++) {
+                    arr.push(NodeList[i]);
+                }
+                return arr;
+            }
+            console.log(Array.prototype.slice.call(liDomSecond));
+            console.log(Array.prototype.slice.call(liSecond.childNodes));
+            console.log(nodeListToArray(liSecond.childNodes));
+        }
+        // object.create继承原型方法相当于实例化一个新对象(该对象可以为一个对象字面量)再把该新对象赋值给要继承对象的原型
+        var obj = {
+            length: 4
+        };
+        var obj2 = function () {
+            this.length = 3;
+        }
+        var obj_b = new obj2();
+        var obj_a = Object.create(obj);
+        console.log(obj_a.length);
+        console.log(Object.create(obj_b).length);
+        // 通过return访问函数内作用域
+        var aa = function () {
+            function a() {
+                var a = "apple";
+                return a;
+            }
+            console.log(a());
+        }
+        aa();
+        // 实例化一个函数，在该函数的原型写一个属性方法，通过该原型的该属性方法传递该函数的内部属性方法再赋值给要继承的方法的原型,下面为理解原型链作用机理
+        function arrary() {
+            this.a = "a";
+        }
+        arrary.prototype.getArrary = function () {
+            return this.a;
+        }
+        var arrary_a = new arrary();
+        arrary_a.a = "aa";
+        console.log(arrary_a.a);
+        console.log(arrary_a.getArrary());
+        function arrary2() {
+            this.b = "b";
+        }
+        arrary2.prototype = new arrary();
+        var arrary_b = new arrary2();
+        console.log(arrary_b.getArrary());
+        // each方法
+        $(document).ready(function () {
+            var Tabs = {
+                0: "page1.html",
+                1: "page2.html",
+                2: "page3.html",
+                length: 3
+            };
+
+            //  console.log(Tabs[0]);
+            $.each(Tabs, function (key, val) {
+                console.log(Tabs[key]);
+            });
+            $("a").each(function (i) {
+                $(this).attr("href", Tabs[i]);
+            });
+            console.log($("a"));
+        });
+        // 在最底层的函数内部赋值一个空对象
+        (function link() {
+            var a = function () {
+                var that = {};
+                that.getA = "a";
+                return that;
+            };
+            console.log(a().getA);
+            var b = function () {
+                var that = a();
+                return that;
+            };
+            var c = function () {
+                var that = b();
+                return that;
+            };
+        })();
+        var bbb = "bbb";
+        var aaa = new Object(bbb);
+        console.log(aaa);
+        console.log(typeof null);
+
+        // 不能在构造函数写返回值，否则实例不能获取原型的方法属性或者this的方法属性
+        (function Return() {
+            function getaR() {
+                var a = "a";
+                this.a = "aa";
+                return a;
+            }
+            // 调用构造函数先返回变量a，没有变量a再返回this里的a
+            function geta() {
+                var a = "a";
+                this.a = "aa";
+            }
+             var appleapple =new geta();
+             appleapple.a="aaaa";
+            geta.prototype.a = "aaa";
+            console.log(appleapple.a);
+            console.log(getaR());
+            console.log(new getaR().a);
+            // 构造函数没new不能访问this和prototype的属性方法，先访问this,再访问prototype
+            function getaRR() {
+                var a = "a";
+                this.a = "aa";
+                // getaRR.prototype.a="aaa";
+                // return getaRR.prototype;
+                return this;
+            }
+            console.log(getaRR().a);
+            // 但是可以通过返回this和prototype达到调用构造函数属性方法的目的
+        })();
+
+
+
+        // 函数调用自身实现递归调用函数最佳写法
+        var Return = (function f(num) {
+            if (num >= 1) {
+                return num + f(num - 1);
+            }
+            else if(num ===0){
+                return 0;
+            }
+        });
+        console.log(Return(5));
+        var sum = (function f(num) {
+            // 'use strict'
+            if (num <= 1) {
+                return 1;
+            } else {
+                return num + f(num - 1);
+            }
+        });
+        console.log(sum(5))
+
+        //总结： 写在函数外面的代码比$.ready比window.onload先执行，因为$.ready是DOMContentLoaded的封装
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>js拖拽html层，可改变大小</title>
+</head>
+<STYLE>
+a{
+color:#0000ff;
+text-decoration:none;
+}
+</STYLE>
+<body>
+<input id='count' type='hidden' value='0'>
+<div id='mdiv' style='position:absolute; width:778; height:expression(this.offsetWidth/2); left:expression((window.screen.width-800)/2); border:1 dotted #BED9EB;'></div>
+<div id='sdiv' style='visibility:hidden; position:absolute; background-color:#BED9EB; filter:alpha(opacity=40);'></div>
+<script>count.value=0</script>
+<table id='mywin0' value='141' cellpadding='4' cellspacing='0' style='position:absolute; left:expression(mdiv.offsetLeft+300); top:expression(mdiv.offsetTop+100); width:100; height:100; z-index:100; TABLE-LAYOUT:fixed; WORD-BREAK:break-all; border:1 solid #BED9EB; background-color:#ffffff; FONT-SIZE:12; FONT-FAMILY:宋体;' onmousedown=Focus(this)>
+<tr style='display:none'><td></td><td style='width:45;'></td><td style='width:10;'></td></tr> <!-- 固定单元格宽度 -->
+<tr style='cursor:default; background-color:#BED9EB;' onmousedown=Down(this) onmousemove=Remove(this) onmouseup=Up(this)>
+<td nowrap style='font-weight:bolder; color:#3C8DC4; filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FFFFFF, endColorStr=#BED9EB, gradientType=0);'>
+我能拖又能拽</td>
+<td nowrap colspan='2' align='right' style='filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FFFFFF, endColorStr=#BED9EB, gradientType=0);'>
+<a href='ele_del.php?id=141'>[删]</a><a href='ele_edit.php?id=141'>[改]</a>
+</td>
+</tr>
+<tr>
+<td colspan='3' valign='top' style='height:100%; padding-top:10; padding-left:10; padding-right:10; padding-bottom:0'>
+<a href="http://hi.baidu.com/j2eeSpace">左手的百度Hi</a> </td>
+</tr>
+<tr>
+<td colspan='2'><td style='cursor:se-resize; height:10; background-color:#BED9EB; filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#BED9EB, endColorStr=#FFFFFF, gradientType=1);' onmousedown=Down(this) onmousemove=Resize(this) onmouseup=Up(this)></td>
+</tr>
+</table>
+</body>
+<script>
+/**
+* 初始化
+*/
+move = null; //移动标记
+wmin = 100; //最小的窗口为100x100
+zmax = 10000; //记录当前的最高层
+ssize = 4; //阴影宽度
+/**
+* 父窗口内按下鼠标时，得到相关的值
+*/
+function Down(obj)
+{
+move = 1;
+obj.x = event.x; //鼠标起始位置
+obj.y = event.y;
+obj.l = obj.offsetParent.offsetLeft; //父元素当前位置
+obj.t = obj.offsetParent.offsetTop;
+obj.w = obj.offsetParent.offsetWidth;
+obj.h = obj.offsetParent.offsetHeight;
+obj.ml = mdiv.offsetLeft; //最大的层
+obj.mt = mdiv.offsetTop;
+obj.mw = mdiv.offsetWidth;
+obj.mh = mdiv.offsetHeight;
+Shadow(obj) //重画阴影
+obj.setCapture(); //得到鼠标
+}
+/**
+* 标题栏托动窗口
+* 重要说明：所有窗口的left, top是mdiv的相对位置；width, height是窗口本身的值
+*/
+function Remove(obj)
+{
+if(move != null)
+{
+   cur = event.x - obj.x + obj.l; //父元素新位置 = 鼠标移过的位置 + 父元素原位置
+   cur = Math.max(cur, obj.ml); //父元素的最小位置
+   obj.offsetParent.style.left = Math.min(cur, obj.ml + obj.mw - obj.w); //父元素的最大位置
+   cur = event.y - obj.y + obj.t;
+   cur = Math.max(cur, obj.mt);
+   obj.offsetParent.style.top = Math.min(cur, obj.mt + obj.mh - obj.h);
+   Shadow(obj) //重画阴影
+   }
+}
+/**
+* 状态栏改变窗口大小
+*/
+function Resize(obj)
+{
+if(move != null)
+{
+   cur = event.x - obj.x + obj.w; //父元素新宽度 = 鼠标移过的位置 + 父元素原宽度
+   cur = Math.max(cur, obj.mw / 10); //父元素的最小宽度
+   obj.offsetParent.style.width = Math.min(cur, obj.mw - (obj.l - obj.ml)); //父元素的最大宽度
+   cur = event.y - obj.y + obj.h;
+   cur = Math.max(cur, obj.mw / 10);
+   obj.offsetParent.style.height = Math.min(cur, obj.mh - (obj.t - obj.mt));
+   Shadow(obj) //重画阴影
+}
+}
+
+/**
+* 放开鼠标时，清理不用的东西
+*/
+function Up(obj)
+{
+move = null;
+sdiv.style.visibility = 'hidden'; //隐藏阴影
+obj.releaseCapture(); //释放鼠标
+}
+/**
+* 父窗口按下鼠标时，将当前层置顶
+*/
+function Focus(obj)
+{
+zmax = zmax +10; //最高层（变量）每次点击加10，以保证最高
+obj.style.zIndex = zmax; //将当前层置顶，当前层 = 最高层
+sdiv.style.zIndex = zmax - 1; //阴影的层 = 最高层 - 1
+}
+
+/**
+* 标题栏按下鼠标或移动窗口时，重画阴影
+*/
+function Shadow(obj)
+{
+/**
+* 阴影的位置 = 新的父元素位置 + 阴影宽度
+*/
+sdiv.style.left = obj.offsetParent.offsetLeft + ssize;
+sdiv.style.top = obj.offsetParent.offsetTop + ssize;
+sdiv.style.width = obj.offsetParent.offsetWidth;
+sdiv.style.height = obj.offsetParent.offsetHeight;
+sdiv.style.visibility = 'visible';
+}
+/**
+* 提交
+* data format: left,top,width,height,zindex,id|
+* 100,100,100,194,100,123|100,100,100,411,100,122|
+*/
+function Save()
+{
+for(i=0; i<=count.value; i++)
+{
+   mywin = document.getElementById('mywin'+i);
+   myleft = mywin.offsetLeft - mdiv.offsetLeft;
+   mytop = mywin.offsetTop - mdiv.offsetTop;
+   mywidth = mywin.offsetWidth;
+   myheight = mywin.offsetHeight;
+   myzindex = mywin.style.zIndex;
+   myid = mywin.value;
+   form1.mydata.value += myleft + ',' + mytop + ',' + mywidth + ',' + myheight + ',' + myzindex + ',' + myid + '|';
+}
+form1.mydata.value = form1.mydata.value.substr(0, form1.mydata.value.length - 1);
+}
+</script>
+
+
+
+</body>
+</html>

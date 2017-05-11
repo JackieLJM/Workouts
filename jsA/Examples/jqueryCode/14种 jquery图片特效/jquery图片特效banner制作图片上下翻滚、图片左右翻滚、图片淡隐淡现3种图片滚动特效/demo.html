@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery图片特效banner制作图片上下翻滚、图片左右翻滚、图片淡隐淡现3种图片滚动特效</title>
+</head>
+
+<body>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif;}
+h3{font-size:16px;text-align:center;margin:20px 0;color:#ff6600;}
+/* slidebox */
+.slidebox{width:620px;height:340px;overflow:hidden;position:relative;border:solid 1px #ddd;margin:20px auto;}
+.slidepic{position:absolute;}/* 必要元素 */
+.slidepic li{height:340px;overflow:hidden;}
+.slidebtn{position:absolute;bottom:10px;right:10px;float:right;}
+.slidebtn li{background:#fff;border:1px solid #D00000;cursor:pointer;float:left;font-family:arial;height:18px;line-height:18px;width:18px;margin:4px;text-align:center;color:#D00000;}
+.slidebtn li.current{background:#FF0000;border:1px solid #D00000;height:24px;line-height:24px;width:24px;margin:0 2px;color:#fff;font-weight:800;}
+/* slidepic-01 */
+.slidebox-01{width:620px;height:340px;overflow:hidden;position:relative;border:solid 1px #ddd;margin:20px auto;}
+.slidepic-01{position:absolute;width:9999em;}/* 必要元素 */
+.slidepic-01 li{height:340px;overflow:hidden;float:left;}
+.slidebtn-01{position:absolute;bottom:10px;right:10px;float:right;}
+.slidebtn-01 li{background:#fff;border:1px solid #D00000;cursor:pointer;float:left;font-family:arial;height:18px;line-height:18px;width:18px;margin:4px;text-align:center;color:#D00000;}
+.slidebtn-01 li.current{background:#FF0000;border:1px solid #D00000;height:24px;line-height:24px;width:24px;margin:0 2px;color:#fff;font-weight:800;}
+/* slides */
+.slides{position:relative;width:620px;height:340px;overflow:hidden;margin:0 auto;border:solid 1px #ddd;}
+.slide-pic{overflow:hidden;width:620px;}
+.slide-pic li{display:none;}/* 必要元素 */
+.slide-pic li.current{display:block;}/* 必要元素 */
+.slide-li{left:0px;bottom:1px;position:absolute;}/* 必要元素 */
+.slide-li li{float:left;width:154px;line-height:30px;margin-right:1px;height:30px;text-align:center;}
+.slide-li a{display:block;font-size:14px;color:#fff;height:30px;text-decoration:none;}
+.slide-li li.current a{color:#333;text-decoration:none;}
+.op{filter:alpha(opacity=60);opacity:0.6;}
+.op li{background:#666;}
+.op li.current{background:#fff;}
+</style>
+<h3>jquery图片滚动特效banner图片制作上下翻滚网页特效</h3>
+<div class="slidebox">
+	<ul class="slidepic">
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-17/129.html"><img width="620" height="340" alt="jquery评论星星打分特效、鼠标滑过星星显示评论信息" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-17/9fae30738c94fb8e47dd2ba3e6003290.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-15/124.html"><img width="620" height="340" alt="jquery 图片切换滚动特效带分页索引按钮控制左右图片切换滚动" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-15/c2081239df287adc9fff1cf991e62b2e.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-09/112.html"><img width="620" height="340" alt="基于jquery 选项卡插件jquery tab选项卡支持垂直选项卡滚动、水平选项卡滚动、自动选项卡切换等。" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-09/ba66cb66d48ae5d3afd6567bde85a8c6.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/html5/items/2011-02-21/42.html"><img width="620" height="340" alt="jquery 幻灯片切换应用一个HTML5的幻灯片" src="http://www.jsfoot.com/d/file/html5/items/2011-02-21/5be1afce8d42e773d6eceba386d7189e.jpg" /></a></li>
+	</ul>
+	<div class="slidebtn">
+		<ul>
+			<li class="current">1</li>
+			<li>2</li>
+			<li>3</li>		
+			<li>4</li>				
+		</ul>
+	</div>
+</div><!--slidebox end-->
+
+<h3>jquery图片滚动特效banner图片制作左右翻滚网页特效</h3>
+<div class="slidebox-01">
+	<ul class="slidepic-01">
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-17/129.html"><img width="620" height="340" alt="jquery评论星星打分特效、鼠标滑过星星显示评论信息" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-17/9fae30738c94fb8e47dd2ba3e6003290.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-15/124.html"><img width="620" height="340" alt="jquery 图片切换滚动特效带分页索引按钮控制左右图片切换滚动" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-15/c2081239df287adc9fff1cf991e62b2e.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-09/112.html"><img width="620" height="340" alt="基于jquery 选项卡插件jquery tab选项卡支持垂直选项卡滚动、水平选项卡滚动、自动选项卡切换等。" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-09/ba66cb66d48ae5d3afd6567bde85a8c6.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/html5/items/2011-02-21/42.html"><img width="620" height="340" alt="jquery 幻灯片切换应用一个HTML5的幻灯片" src="http://www.jsfoot.com/d/file/html5/items/2011-02-21/5be1afce8d42e773d6eceba386d7189e.jpg" /></a></li>
+	</ul>
+	<div class="slidebtn-01">
+		<ul>
+			<li class="current">1</li>
+			<li>2</li>
+			<li>3</li>		
+			<li>4</li>				
+		</ul>
+	</div>
+</div><!--slidebox-01 end-->
+
+<h3>jquery图片切换特效banner图片制作淡隐淡现网页特效</h3>
+<div class="slides">
+	<ul class="slide-pic">
+		<li class="current"><a href="http://www.jsfoot.com/jquery/items/2011-08-17/129.html"><img width="620" height="340" alt="jquery评论星星打分特效、鼠标滑过星星显示评论信息" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-17/9fae30738c94fb8e47dd2ba3e6003290.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-15/124.html"><img width="620" height="340" alt="jquery 图片切换滚动特效带分页索引按钮控制左右图片切换滚动" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-15/c2081239df287adc9fff1cf991e62b2e.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/jquery/items/2011-08-09/112.html"><img width="620" height="340" alt="基于jquery 选项卡插件jquery tab选项卡支持垂直选项卡滚动、水平选项卡滚动、自动选项卡切换等。" src="http://www.jsfoot.com/d/file/jquery/items/2011-08-09/ba66cb66d48ae5d3afd6567bde85a8c6.jpg" /></a></li>
+		<li><a href="http://www.jsfoot.com/html5/items/2011-02-21/42.html"><img width="620" height="340" alt="jquery 幻灯片切换应用一个HTML5的幻灯片" src="http://www.jsfoot.com/d/file/html5/items/2011-02-21/5be1afce8d42e773d6eceba386d7189e.jpg" /></a></li>
+	</ul>
+	<ul class="slide-li op">
+		<li class="current"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul class="slide-li slide-txt">
+		<li class="current"><a href="http://www.jsfoot.com/jquery/items/" >jquery 特效</a></li>
+		<li><a href="http://www.jsfoot.com/js/items/">javascript 特效</a></li>
+		<li><a href="http://www.jsfoot.com/css3/items/">CSS 特效</a></li>
+		<li><a href="http://www.jsfoot.com/html5/items/">HTML5 特效</a></li>
+	</ul>
+</div><!--slides end-->
+
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	// 图片上下翻滚
+	var len = $('.slidebtn>ul>li').length;
+	var index = 0;
+	var autoplay;
+	$('.slidebtn li').mouseover(function(){
+		index = $('.slidebtn li').index(this);
+		showImg(index);
+	}).eq(0).mouseover();
+	
+	$('.slidebox').hover(function(){
+		clearInterval(autoplay);
+	},function(){
+		autoplay = setInterval(function(){
+			showImg(index)
+			index++;
+			if(index==len){
+				index=0;
+			}
+		},3000);
+	}).trigger('mouseleave');
+
+	function showImg(index){
+		var picheight = $('.slidebox').height();
+		$('.slidepic').stop(true,false).animate({top:-picheight*index},600)
+		$('.slidebtn li').removeClass('current').eq(index).addClass('current');
+	};
+	
+	
+	// 图片左右翻滚
+	var size = $('.slidebtn-01>ul>li').length;
+	var frist = 0;
+	var datetime;
+	$('.slidebtn-01 li').mouseover(function(){
+		frist = $('.slidebtn-01 li').index(this);
+		showpic(frist);
+	}).eq(0).mouseover();
+	
+	$('.slidebox-01').hover(function(){
+		clearInterval(datetime);
+	},function(){
+		datetime = setInterval(function(){
+			showpic(frist)
+			frist++;
+			if(frist==size){
+				frist=0;
+			}
+		},3000);
+	}).trigger('mouseleave');
+
+	function showpic(frist){
+		var imgheight = $('.slidebox-01').width();
+		$('.slidepic-01').stop(true,false).animate({left:-imgheight*frist},600)
+		$('.slidebtn-01 li').removeClass('current').eq(frist).addClass('current');
+	};
+	
+});
+
+//图片淡隐淡现
+var defaultOpts ={ interval:5000, fadeInTime:300, fadeOutTime:200 };
+
+	var _titles = $("ul.slide-txt li");
+	var _titles_bg = $("ul.op li");
+	var _bodies = $("ul.slide-pic li");
+	var _count = _titles.length;
+	var _current = 0;
+	var _intervalID = null;
+	
+	var stop = function(){
+		window.clearInterval(_intervalID);
+	};
+	
+	var slide = function(opts){
+		if (opts){
+			_current = opts.current || 0;
+		} else{
+			_current = (_current >= (_count - 1)) ? 0 :(++_current);
+		};
+		_bodies.filter(":visible").fadeOut(defaultOpts.fadeOutTime, function(){
+			_bodies.eq(_current).fadeIn(defaultOpts.fadeInTime);
+			_bodies.removeClass("current").eq(_current).addClass("current");
+		});
+		_titles.removeClass("current").eq(_current).addClass("current");
+		_titles_bg.removeClass("current").eq(_current).addClass("current");
+	}; 
+	
+	var go = function(){
+		stop();
+		_intervalID = window.setInterval(function(){
+			slide();
+		}, defaultOpts.interval);
+	}; 
+	
+	var itemMouseOver = function(target, items){
+		stop();
+		var i = $.inArray(target, items);
+		slide({ current:i });
+	};
+	
+	_titles.hover(function(){
+		if($(this).attr('class')!='current'){
+			itemMouseOver(this, _titles);
+		}else{
+			stop();
+		}
+	}, go);
+
+	_bodies.hover(stop, go);
+
+	go();
+	
+</script>
+
+</body>
+</html>

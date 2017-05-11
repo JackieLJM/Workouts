@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>css().html</title>
+	<script type="text/javascript" src="../jquery/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				alert("font-size="+$("#p1").css("font-size")+"\n"+"backgroun-color="+$("#p1").css("background-color"));
+			});
+			$("#b2").click(function(){
+				$("#p1").css("background-color","yellow");/*css("propertyname","value")*/
+			});
+			$("#b3").click(function(){
+				$("#p1").css({"background-color":"green","font-size":"24px"});/*设置多个样式值*/
+			});
+		});
+	</script>
+	<style type="text/css">
+		#p1{
+			font-size: 14px;
+			background-color: blue;
+		}
+	</style>
+  </head>
+  
+  <body>
+    <p id="p1">Test</p>
+    <input type="button" value="获取样式值" id="b1">
+    <input type="button" value="设置样式值" id="b2">
+    <input type="button" value="设置多个样式值" id="b3">
+  </body>
+</html>

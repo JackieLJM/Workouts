@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Fade.html</title>
+	<script type="text/javascript" src="../jquery/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#s1").click(function(){
+			/*
+			$(selector).animate({params},speed,callback);
+			必需的 params 参数定义形成动画的 CSS 属性。
+			可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+			可选的 callback 参数是动画完成后所执行的函数名称
+			*/
+				var s2=$("#s2");
+				s2.animate({left:'800px',width:'-=200',height:'+=100px'},"slow");/*队列 */
+				s2.animate({left:'100px',width:'+=200',height:'-=100px'},"slow");
+			});
+		});
+		function test(){
+			alert("success");
+		}
+	</script>
+	<style type="text/css">
+		img{
+			width: 400px;
+			height: 200px;
+		}
+		#s1{
+			background-color: gray;
+			width: 10px;
+			height: 200px;
+			ma
+		}
+		#s2{
+			position: absolute;/*设置此属性值为 absolute 会将对象拖离出正常的文档流绝对定位而不考虑它周围内容的布局*/
+		}
+	</style>
+  </head>
+  
+  <body>
+  	<span id="s1">Go</span> 
+  	<span id="s2">
+	    <img alt="pic" src="../imgs/1.jpg" id="m1">
+  	</span>
+  </body>
+</html>

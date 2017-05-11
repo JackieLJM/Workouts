@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Size.html</title>
+		<script type="text/javascript" src="../jquery/jquery.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				    var txt="";
+    				txt+="Width of div: " + $("#div1").width() + "</br>";
+   					txt+="Height of div: " + $("#div1").height();
+    				$("#div1").html(txt);
+			});
+			$("#b2").click(function(){
+				    var txt="";
+				    txt+="Width of div: " + $("#div2").width() + "</br>";
+				    txt+="Height of div: " + $("#div2").height() + "</br>";
+				    txt+="Inner width of div: " + $("#div2").innerWidth() + "</br>";
+				    txt+="Inner height of div: " + $("#div2").innerHeight();
+				    $("#div2").html(txt);
+			});
+			$("#b3").click(function(){
+				  	var txt="";
+				  	txt+="Outer width: " + $("#div3").outerWidth() + "</br>";
+				  	txt+="Outer height: " + $("#div3").outerHeight();
+				  	$("#div3").html(txt);
+			});
+		});
+		</script>
+		<style type="text/css">
+			#div1{
+				width:300px;
+				height:200px;
+				background-color: lightblue;
+			}
+			#div2{
+				width:300px;
+				height:200px;
+				background-color: lightblue;
+				padding: 20px;
+			}
+			#div3{
+				width:300px;
+				height:200px;
+				background-color: lightblue;
+				padding: 20px;
+				margin: 20px;
+			}
+		</style>
+  </head>
+  
+  <body>
+    <div id="div1"> </div>
+    <br>
+    <div id="div2"> </div>
+    <br>
+    <div id="div3"> </div>
+    <input type="button" value="ÏÔÊ¾³ß´ç" id="b1">
+    <input type="button" value="ÏÔÊ¾°üÀ¨ÄÚ±ß¾àµÄ³ß´ç" id="b2">
+    <input type="button" value="ÏÔÊ¾°üÀ¨Íâ±ß¾àµÄ³ß´ç" id="b3">
+  </body>
+</html>

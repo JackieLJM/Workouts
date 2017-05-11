@@ -1,0 +1,149 @@
+/*
+    Document   : cascadeStyleSheet
+    Created on : 15-Dec-2010, 3:34:14 AM
+    Author     : SoundWave
+*/
+
+body {
+    padding: 20px;
+    color: #666666;
+    font-family: Tahoma, Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    background-color: #eaeaea;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+.content_container_class {
+    margin: auto;
+    padding: 20px;
+    width: 840px;
+    display: block;
+    background-color: white;
+    border: 1px solid #616D7E;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.banner {
+    width: 840px;
+    height: 150px;
+    border: 1px solid silver;
+    display: block;
+    background: white url('../images/banner.jpg') top left no-repeat;
+    padding: 0px;
+    margin: 0px 0px 20px 0px;
+}
+
+.title {
+    text-align: left;
+    font-family: Tahoma, Arial, Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 22px;
+    color:#616D7E;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 5px 0px;
+    display: block;
+    border-bottom: 1px solid #cccccc;
+}
+
+.title2 {
+    text-align: left;
+    font-family: Tahoma, Arial, Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    color: #616D7E;
+    padding: 0px;
+    margin: 5px 0px 5px 0px;
+    display: block;
+}
+
+.title3 {
+    display: block;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+    text-align: left;
+    font-family: Verdana;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    color: #616D7E;
+    text-transform: uppercase;
+}
+
+DIV.section {
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 20px 0px;
+}
+
+IMG.left {
+    border: none;
+    padding: 0px;
+    margin: 0px 5px 5px 0px;
+    float: left;
+}
+
+IMG.right {
+    border: none;
+    padding: 0px;
+    margin: 0px 0px 5px 5px;
+    float: right;
+}
+
+IMG.center {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    float: none;
+}
+
+P {
+    text-align: left;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+B {
+    color:#616D7E;
+}
+
+a { color: #997755; font-weight: bold; text-decoration: none; }
+a:visited { color: #997755; font-weight: bold; text-decoration: none; }
+a:hover { color: #997755; font-weight: bold; text-decoration: none; }
+a:active { color: #997755; font-weight: bold; text-decoration: none; }
+
+UL.list {
+    text-align: left;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    list-style: square;
+
+}
+
+UL.list2 {
+    text-align: left;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    list-style: disc;
+}
+
+.wraptocenter {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.transparent {
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+

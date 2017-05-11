@@ -1,0 +1,15 @@
+﻿//1 6 7 3 5 2 4
+
+&mnuLink1=http://www.w3cfuns.com/& //产品01
+&mnuLink2=http://www.w3cfuns.com/& //产品02
+&mnuLink3=http://www.w3cfuns.com/& //产品03
+&mnuLink4=http://www.w3cfuns.com/& //产品04
+&mnuLink5=http://www.w3cfuns.com/& //产品05
+&mnuLink6=http://www.w3cfuns.com/& //产品06
+&mnuLink7=http://www.w3cfuns.com/& // 产品07
+
+
+
+//javascript:alert(''); smain.html?movie_no=2000& //말아톤
+//list1korea.html?cts_no=216386 smain.html?movie_no=1907
+//list1korea.html?cts_no=224401

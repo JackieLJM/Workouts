@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color:gray;width:200px;height:200px;position:absolute;" id="drag"></div>
+    <script>
+        var range = { x1: 0, x2: document.body.scrollWidth, y1: 0, y2: document.body.scrollHeight };
+        function dragDrop() {
+            var that = this;
+            this.range = range;
+            this.foo = document.getElementById("drag");
+            // var index = 100;
+            this.foo.onmousedown = function (event) {
+                var foo = that.foo;
+                console.log(event.offsetX);
+                foo.offset = (event.layerX) ? { x: event.layerX, y: event.layerY } : { x: event.offsetX, y: event.offsetY };
+                document.onmousemove = function (event) {
+                    // console.log(foo);
+                    // console.log(event.offsetX);
+                    var doc = document.documentElement,
+                        body = document.body;
+                    var Left = event.clientX + doc.scrollLeft - foo.offset.x;
+                    var Top = event.clientY + body.scrollTop- foo.offset.y;
+                    if (that.range) {
+                        Top = (Top < that.range.y1) ? (that.range.y1) : ((Top > that.range.y2 - foo.offsetHeight) ? (that.range.y2 - foo.offsetHeight) : Top);
+                        Left = (Left < that.range.x1) ? (that.range.x1) : ((Left > that.range.x2 - foo.offsetWidth) ? (that.range.x2 - foo.offsetWidth) : Left);
+                    }
+                    foo.style.left = Left + "px";
+                    foo.style.top = Top + "px";
+                };
+                document.onmouseup = function () {
+                    document.onmousemove = document.onmouseup = null;
+                };
+            };
+
+            // this.foo.onclick = function () {
+            //     console.log(this);
+            //     index++;
+            //     this.style.zIndex = index;
+            //     return true;
+            // };
+        }
+        // new dragDrop();
+        // console.log(new dragDrop());
+        // console.log(dragDrop());
+    </script>
+</body>
+
+</html>

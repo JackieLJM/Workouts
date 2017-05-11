@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery特效制作一个简单的单选按钮选项卡</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font-size:12px;font-family:Arial,"宋体";line-height:150%;}
+.clear{clear:both;height:0;line-height:0;overflow:hidden;display:block;}
+/* bankinfo */
+.banktit{height:26px;border-bottom:solid 1px #ccc;padding:0 10px 0 0;}
+.banktit h2{font-size:14px;height:25px;position:relative;top:0px;left:0;border-bottom:solid 2px #7d98cd;float:left;padding:0 24px 0 2px;}
+.choosebank{padding:10px;float:left;}
+.choosebank li{float:left;margin:10px 20px;display:inline;}
+.choosebank li .radiobtn{float:left;margin:34px 10px 0 0;display:inline;}
+.choosebank li label{width:146px;height:87px;overflow:hidden;background:url(images/bankshow.png) no-repeat;display:block;border:solid 1px #ddd;float:left;cursor:pointer;}
+.choosebank li.cur label{border:solid 1px #ff6600;}
+.choosebank li .bank-01{background-position:0 0;}
+.choosebank li .bank-02{background-position:-146px 0;}
+.choosebank li .bank-03{background-position:-292px 0;}
+.choosebank li .bank-04{background-position:0 -87px;}
+.choosebank li .bank-05{background-position:-146px -87px;}
+.choosebank li .bank-06{background-position:-292px -87px;}
+.choosebank li .bank-07{background-position:0 -174px;}
+.choosebank li .bank-08{background-position:-146px -174px;}
+/* bankcon */
+.bankcon{padding:20px 0 10px 0;}
+.bankcon table td{padding:4px 0;}
+.bankcon table td div{float:left;}
+.bankcon table td .nextbtn{background:url(images/nextbtm.gif) no-repeat;width:81px;height:33px;overflow:hidden;cursor:pointer;border:none;margin:20px 0 0 20px;font-size:14px;color:#fff;font-weight:800;}
+/* tipbox */
+.tipbox{border:solid 1px #c2d4fc;background:#f3f7ff;padding:10px 15px;margin:20px 0 0 0;}
+.tipbox dt{height:24px;color:#ff6600;font-weight:800;}
+.tipbox dd{line-height:22px;}
+/* Validform */
+.Validform_checktip{border:solid 1px #e0e5ff;padding:1px 5px;background:#f5f8ff;}
+</style>
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".bankbox > div:first").show();
+	$(".choosebank li").each(function(index){
+		$(this).click(function(){
+			addrssid = $(this).attr("id");
+			id = addrssid.replace('ban','');
+			if($("#bank"+id).attr("checked")) {
+				$(".choosebank li").removeClass('cur');
+				$("#ban"+id).addClass('cur');
+				$(".bankbox > div:visible").hide();
+				$(".bankbox > div:eq(" + index + ")").show();	
+			}
+		});
+	});											
+});
+</script>
+</head>
+<body>
+
+<div class="bankinfo">
+	<div class="banktit"><h2>选择银行卡</h2></div>
+	<ul class="choosebank">
+		<li id="ban1" class="cur"><input type="radio" name="1" id="bank1" value="" class="radiobtn" checked="checked" /><label class="bank-01" for="bank1"></label></li>
+		<li id="ban2"><input type="radio" name="1" id="bank2" value="" class="radiobtn" /><label class="bank-02" for="bank2"></label></li>
+		<li id="ban3"><input type="radio" name="1" id="bank3" value="" class="radiobtn" /><label class="bank-03" for="bank3"></label></li>
+		<li id="ban4"><input type="radio" name="1" id="bank4" value="" class="radiobtn" /><label class="bank-04" for="bank4"></label></li>
+	</ul>
+	<div class="clear"></div>
+</div><!--bankinfo end-->
+<div class="bankinfo">
+	<div class="banktit"><h2>填写银行卡信息</h2></div>
+	<div class="bankbox">
+		<div class="bankcon">
+			<form method="post" action="" class="icbcform">
+			<table width="100%">
+				<tr>
+					<td width="110px" align="right">真实姓名：</td>
+					<td width="160px"><input type="text" value="" name="name" class="input" datatype="mz" nullmsg="请输入用户名！" errormsg="姓名不合规范，请重新输入！" /></td>
+					<td><div class="Validform_checktip">银行卡户主身份信息必须与基金账户户主身份信息相同！</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡类型：</td><td><select name=""  class="select bankselect" disabled="disabled"><option value="icbc" selected="selected">工商银行卡</option><option value="ccb">建设银行卡</option><option value="abc">农业银行卡</option><option value="cmb">招商银行卡</option><option value="cmbc">民生银行卡</option><option value="spdb">浦发银行卡</option><option value="cib">兴业银行卡</option><option value="ecitic">中信银行卡</option></select></td>
+					<td><div class="Validform_checktip">申购<b class="red">5</b>折、定投<b class="red">4</b>折</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡号：</td>
+					<td><input type="text" value="" name="e-card" class="input" datatype="yhk" nullmsg="请输入银行卡号！" errormsg="请输入银行卡号码有误！"  /></td>
+					<td><div class="Validform_checktip">请正确填写银行卡号，请注意区分16位/19位银行卡号码。</div></td>
+				</tr>
+				<tr>
+					<td align="right">证件类型：</td><td><select name=""  class="select"><option>身份证</option><option>军官证</option><option>驾使证</option></select></td><td></td>
+				</tr>
+				<tr>
+					<td align="right">证件号码：</td>
+					<td><input type="text" value="" name="card" class="input" datatype="i" nullmsg="请输入证件号码！" errormsg="请输入您的证件号码有误！"  /></td>
+					<td><div class="Validform_checktip">请正确填写开卡证件号码，请注意区分15位/18位身份证。</div></td>
+				</tr>
+				<tr>
+					<td align="right">手机号码：</td>
+					<td><input type="text" value="" name="tel" class="input" datatype="m" nullmsg="请输入手机号码！" errormsg="请输入您的手机号码有误！"  /></td>
+					<td><div class="Validform_checktip">请输入11位有效手机号码。</div></td>
+				</tr>
+				<tr>
+					<td></td><td colspan="2"><input type="submit" id="" class="nextbtn" value="下一步" /></td>
+				</tr>
+			</table>
+			</form>							
+			<div class="tipbox">
+				<dl>
+					<dt>温馨提示：</dt>
+					<dd>（1）支持全国范围工行借记卡，支持网银U盾或动态口令卡进行开户、交易和定投。</dd>
+					<dd>（2）工行卡网上交易单笔划款金额和单日累计划款金额均无限额。</dd>
+					<dd>（3）持有效证件到工商银行网点办理一张借记卡；通过工行柜台开通个人网上银行业务，并办理U盾或电子银行口令卡。</dd>
+					<dd>（4）请在正式开户前进行上网浏览器的设置：打开浏览器->工具菜单->internet选项->隐私->点击“阻止弹出窗口”后的“设置”按钮，在“要允许的网站地址”添加mybank.dccnet.com.cn网站->在“通知和筛选级别”中“阻止弹出窗口时显示信息栏”前的勾去掉；在“筛选级别”中选择“允许来自安全站点的弹出窗口”；然后关闭返回，再确认。操作完成后关闭所有浏览器，重新打开浏览器再进行操作。</dd>
+					<dd>（5）请阅读了解《国联安基金投资人权益须知》</dd>
+					<dd>（6）如有疑问可咨询国联安基金客服中心（4008888688）或工商银行客服中心（95588）。</dd>
+				</dl>	
+			</div>
+			
+		</div><!--bankcon end-->
+		
+		<div class="bankcon" style="display:none;">
+			<form method="post" action="" class="ccbform">
+			<table width="100%">
+				<tr>
+					<td width="110px" align="right">真实姓名：</td>
+					<td width="160px"><input type="text" value="" name="name" class="input" /></td>
+					<td><div class="Validform_checktip">银行卡户主身份信息必须与基金账户户主身份信息相同！</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡类型：</td><td><select name=""  class="select bankselect" disabled="disabled"><option value="icbc">工商银行卡</option><option value="ccb" selected="selected">建设银行卡</option><option value="abc">农业银行卡</option><option value="cmb">招商银行卡</option><option value="cmbc">民生银行卡</option><option value="spdb">浦发银行卡</option><option value="cib">兴业银行卡</option><option value="ecitic">中信银行卡</option></select></td>
+					<td><div class="Validform_checktip">申购<b class="red">7</b>折、定投<b class="red">4</b>折</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡号：</td>
+					<td><input type="text" value="" name="e-card" class="input" /></td>
+					<td><div class="Validform_checktip">请正确填写银行卡号，请注意区分16位/19位银行卡号码。</div></td>
+				</tr>
+				<tr>
+					<td align="right">证件类型：</td><td><select name=""  class="select"><option>身份证</option><option>军官证</option><option>驾使证</option></select></td><td></td>
+				</tr>
+				<tr>
+					<td align="right">证件号码：</td>
+					<td><input type="text" value="" name="card" class="input" /></td>
+					<td><div class="Validform_checktip">请正确填写开卡证件号码，请注意区分15位/18位身份证。</div></td>
+				</tr>
+				<tr>
+					<td align="right">手机号码：</td>
+					<td><input type="text" value="" name="tel" class="input" /></td>
+					<td><div class="Validform_checktip">请输入11位有效手机号码。</div></td>
+				</tr>
+				<tr>
+					<td></td><td colspan="2"><input type="submit" id="" class="nextbtn" value="下一步" /></td>
+				</tr>
+			</table>
+			</form>
+			<div class="tipbox">
+				<dl>
+					<dt>温馨提示：</dt>
+					<dd>1、支持全国范围建行借记卡，支持网银U盾或动态口令卡进行开户和交易、支持网银U盾进行定投。</dd>
+					<dd>2、建行卡网上交易单笔/单日划款金额不超过500万元。</dd>
+					<dd>3、持有效证件到建设银行网点办理一张借记卡；通过建行柜台开通个人网上银行业务，并办理U盾或动态口令卡；请在卡中至少预留1分钱，系统需在身份验证时扣除您1分钱。</dd>
+					<dd>4、请在正式开户前进行上网浏览器的设置：打开浏览器-> 工具菜单->internet选项->隐私->“编辑”按钮/“站点”按钮增加“www.ccb.com”网站，并点击“允许”按钮，然后确认返回，再确认。操作完成后，重新打开浏览器再进行操作。</dd>
+					<dd>5、请阅读了解《国联安基金投资人权益须知》</dd>
+					<dd>6、如有疑问可咨询国联安基金客服中心（4008888688）或建设银行客服中心（95533）。</dd>
+				</dl>	
+			</div>
+		</div><!--bankcon end-->
+		
+		<div class="bankcon" style="display:none;">
+			<form method="post" action="" class="abcform">
+			<table width="100%">
+				<tr>
+					<td width="110px" align="right">真实姓名：</td>
+					<td width="160px"><input type="text" value="" name="name" class="input" /></td>
+					<td><div class="Validform_checktip">银行卡户主身份信息必须与基金账户户主身份信息相同！</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡类型：</td><td><select name=""  class="select bankselect" disabled="disabled"><option value="icbc">工商银行卡</option><option value="ccb">建设银行卡</option><option value="abc" selected="selected">农业银行卡</option><option value="cmb">招商银行卡</option><option value="cmbc">民生银行卡</option><option value="spdb">浦发银行卡</option><option value="cib">兴业银行卡</option><option value="ecitic">中信银行卡</option></select></td>
+					<td><div class="Validform_checktip">申购<b class="red">8</b>折</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡号：</td>
+					<td><input type="text" value="" name="e-card" class="input" /></td>
+					<td><div class="Validform_checktip">请正确填写银行卡号，请注意区分16位/19位银行卡号码。</div></td>
+				</tr>
+				<tr>
+					<td align="right">证件类型：</td><td><select name=""  class="select"><option>身份证</option><option>军官证</option><option>驾使证</option></select></td><td></td>
+				</tr>
+				<tr>
+					<td align="right">证件号码：</td>
+					<td><input type="text" value="" name="card" class="input" /></td>
+					<td><div class="Validform_checktip">请正确填写开卡证件号码，请注意区分15位/18位身份证。</div></td>
+				</tr>
+				<tr>
+					<td align="right">手机号码：</td>
+					<td><input type="text" value="" name="tel" class="input"  /></td>
+					<td><div class="Validform_checktip">请输入11位有效手机号码。</div></td>
+				</tr>
+				<tr>
+					<td></td><td colspan="2"><input type="submit" id="" class="nextbtn" value="下一步" /></td>
+				</tr>
+			</table>
+			</form>
+			<div class="tipbox">
+				<dl>
+					<dt>温馨提示：</dt>
+					<dd>1、支持全国范围农行借记卡（必须是有CVD2码的金穗卡），支持所有借记卡进行开户、支持电子支付卡或网银证书（K宝）进行交易、支持网银证书（K宝）进行定投。
+					<dd>2、农行卡网上交易没有单笔交易金额限制和日交易金额限制。</dd>
+					<dd>3、 持有效证件到农业银行网点办理一张借记卡；通过农行柜台开通个人网上银行业务或通过农行网站（www.abchina.com）申请电子支付卡。</dd>
+					<dd>4、注意申请电子支付卡时，银行的初始查询密码不能为相同的6位数或是身份证号码中的连续6位数等简单的号码；申请和使用电子支付卡时，不受单笔1000元的交易金额的限制。</dd>
+					<dd>5、请阅读了解《国联安基金投资人权益须知》</dd>
+					<dd>6、如有疑问可咨询国联安基金客服中心（4008888688）或农业银行客服中心（95599）。</dd>
+				</dl>	
+			</div>
+		</div><!--bankcon end-->
+		
+		<div class="bankcon" style="display:none;">
+			<form method="post" action="" class="cmbform">
+			<table width="100%">
+				<tr>
+					<td width="110px" align="right">真实姓名：</td>
+					<td width="160px"><input type="text" value="" name="name" class="input" /></td>
+					<td><div class="Validform_checktip">银行卡户主身份信息必须与基金账户户主身份信息相同！</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡类型：</td><td><select name=""  class="select bankselect" disabled="disabled"><option value="icbc">工商银行卡</option><option value="ccb">建设银行卡</option><option value="abc">农业银行卡</option><option value="cmb" selected="selected">招商银行卡</option><option value="cmbc">民生银行卡</option><option value="spdb">浦发银行卡</option><option value="cib">兴业银行卡</option><option value="ecitic">中信银行卡</option></select></td>
+					<td><div class="Validform_checktip">申购<b class="red">8</b>折、定投<b class="red">8</b>折</div></td>
+				</tr>
+				<tr>
+					<td align="right">银行卡号：</td>
+					<td><input type="text" value="" name="e-card" class="input" /></td>
+					<td><div class="Validform_checktip">请正确填写银行卡号，请注意区分16位/19位银行卡号码。</div></td>
+				</tr>
+				<tr>
+					<td align="right">证件类型：</td><td><select name=""  class="select"><option>身份证</option><option>军官证</option><option>驾使证</option></select></td><td></td>
+				</tr>
+				<tr>
+					<td align="right">证件号码：</td>
+					<td><input type="text" value="" name="card" class="input" /></td>
+					<td><div class="Validform_checktip">请正确填写开卡证件号码，请注意区分15位/18位身份证。</div></td>
+				</tr>
+				<tr>
+					<td align="right">手机号码：</td>
+					<td><input type="text" value="" name="tel" class="input" /></td>
+					<td><div class="Validform_checktip">请输入11位有效手机号码。</div></td>
+				</tr>
+				<tr>
+					<td></td><td colspan="2"><input type="submit" id="" class="nextbtn" value="下一步" /></td>
+				</tr>
+			</table>
+			</form>
+			<div class="tipbox">
+				<dl>
+					<dt>温馨提示：</dt>
+					<dd>1、支持全国范围招行借记卡，支持所有借记卡进行开户、交易和定投。</dd>
+					<dd>2、招行卡网上交易单笔/单日划款金额默认不超过20万元；大众版客户可通过招商银行自助查询终端的“自助缴费”/“网上支付额度设置”功能，刷卡验证密码后将限额提升至50万元/日；专业版客户可通过招商银行网上个人银行（专业版）的“网上支付”——“自助缴费”功能页面终将协议限额提升至100万元/笔和200万元/日。</dd>
+					<dd>3、请下载并安装“招行一卡通安全控件”， 点击下载。</dd>
+					<dd>4、请阅读了解《国联安基金投资人权益须知》</dd>
+					<dd>5、如有疑问可咨询国联安基金客服中心（4008888688）或招商银行客服中心（95555）。</dd>
+				</dl>	
+			</div>
+		</div><!--bankcon end-->
+	</div><!--bankbox end-->
+</div><!--bankinfo end-->
+</body>
+</html>

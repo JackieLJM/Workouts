@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="Copyright" content="flash滑动焦点图广告代码" />
+<meta name="description" content="flash滑动焦点图广告代码" />
+<meta content="w3cfuns" name="keywords" />
+<title>flash滑动焦点图广告代码</title>
+<script src="js/js.js" type="text/javascript"></script>
+</head>
+<body>
+<table width="520" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div id="flash" align=center></div>
+<script type="text/javascript">
+// <![CDATA[
+var arr1 = new Array;
+var arr2 = new Array;
+var arr3 = new Array;
+
+arr1.push("images/01.jpg");
+arr2.push("http://www.w3cfuns.com/");
+arr3.push("“w3cfuns");
+ arr1.push("images/02.jpg");
+arr2.push("http://www.w3cfuns.com/");
+arr3.push("“w3cfuns");
+ arr1.push("images/03.jpg");
+arr2.push("http://www.w3cfuns.com/");
+arr3.push("w3cfuns");
+ arr1.push("images/04.jpg");
+arr2.push("http://www.w3cfuns.com/");
+arr3.push("w3cfuns");
+ arr1.push("images/05.jpg");
+arr2.push("http://www.w3cfuns.com/");
+arr3.push("w3cfuns");
+ arr1.push("images/06.jpg");
+arr2.push("http://www.w3cfuns.com/");
+arr3.push("w3cfuns");
+ 
+
+var pics = arr1.join("|");
+var mylinks = arr2.join("|");
+var texts = arr3.join("|");
+
+oFlash1 = new sFlash("flash/flash.swf","js","520","200","6","#ffffff");
+oFlash1.addParam("quality", "high");
+oFlash1.addParam("wmode", "opaque")
+oFlash1.addParam("salign", "t");
+oFlash1.addVariable("p",pics);	
+oFlash1.addVariable("l",mylinks);
+oFlash1.addVariable("icon",texts);
+oFlash1.write("flash");
+// ]]>
+</script></td>
+  </tr>
+</table>
+  <br><br>
+  <div align="center">更多请访问：<a  href="http://www.w3cfuns.com/" target="_blank">w3cfuns</a></div>

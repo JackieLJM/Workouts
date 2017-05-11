@@ -1,0 +1,69 @@
+<html>
+
+<head>
+
+<title>加载XML数据</title>
+
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+
+function xmlDom()
+{
+    var a = [
+    "MSXML2.DOMDocument.5.0",
+    "MSXML2.DOMDocument.4.0",
+    "MSXML2.DOMDocument.3.0",
+    "MSXML2.DOMDocument",
+    "Microsoft.XmlDom"
+    ]
+    for(var i = 0 ; i < a.length; i ++ )
+    {
+        try
+        {
+            var o = new ActiveXObject(a[i]);
+            return o;
+        }
+        catch(e)
+        {
+        }
+    }
+    throw new Error("浏览器不支持MSXML组件");
+}
+
+function callback(o)
+{
+    return function()
+    {
+        if(o.readyState == 4)
+        {           
+            //document.write(o);
+        }
+    }
+}
+
+
+var o = xmlDom();
+o.async = true;
+o.onreadystatechange = callback(o);
+o.load("产品1.xml");
+document.write(o.xml);
+
+if(o.parseError != 0){
+    var e = o.parseError;
+    alert("发生了错误，描述如下:\n" +
+            "错误类型：" + e.errorCode + "\n" +
+            "错误行号：" + e.line + "\n" +
+            "行内位置：" + e.linepos + "\n" +
+            "错误原因：" + e.reason + "\n");
+}
+
+
+
+
+
+</script>
+</body>
+
+</html>

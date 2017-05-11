@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>addCss.html</title>
+    <script type="text/javascript" src="../jquery/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("p").addClass("color");/* 向被选元素添加一个或多个类*/
+				$("h4").addClass("important");
+			});
+			$("#b2").click(function(){			
+				$("h4").removeClass("important");/*从被选元素删除一个或多个类*/
+			});
+			$("#b3").click(function(){
+				$("p").toggleClass("color");/* 对被选元素进行添加/删除类的切换操作*/
+				$("h4").toggleClass("important");
+			});
+		});
+	</script>
+	<style type="text/css">
+		.important{
+			font-weight: bold;
+			font-size: x-large;
+		}
+		.color{
+			color: red;
+		}
+	</style>
+  </head>
+  
+  <body>
+  	<p>test</p>
+  	<h4>test</h4>
+    <input type="button" value="设置样式" id="b1">
+    <input type="button" value="删除样式" id="b2">
+    <input type="button" value="切换样式" id="b3">
+    
+  </body>
+</html>

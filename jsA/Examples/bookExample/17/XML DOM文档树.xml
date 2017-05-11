@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- DOM文档对象模型 -->
+<bbs>
+    <item>
+        <user sex="男",QQ="66666666",Email="zhangsan@263.net">张三</user>
+        <content>这里是张三的帖子</content>
+        <time>2009-5-5 16:39:26</time>
+    </item>
+    <item>
+        <user sex="女",QQ="88888888",Email="lishi@sohu.com">李四</user>
+        <content>这里是李四的帖子</content>
+        <time>2009-5-6 16:39:26</time>
+    </item>
+</bbs>

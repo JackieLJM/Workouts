@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上午用jQuery 写的一个 checkbox 列表   具有 全选，反选， 取消，输出， 最后还加上了背景颜色效果。使用起来非常方便，不错。 不错。以后后台管理信息列表， 一定应该可以用上了。 </title>
+<script type="text/javascript" src="http://www.jsfoot.com/skin/js/jquery.js" ></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	// 全选        
+	$("#allselect").click(function(){
+		$(":checkbox").each(function(){
+			$(this).attr("checked",true);
+			$(this).next().css({"background-color":"blue","color":"White" });
+		});    
+	});
+	
+	//反选
+	$("#invert").click(function(){
+		$(":checkbox").each(function(){
+			if($(this).attr("checked")){
+				$(this).attr("checked",false);
+				$(this).next().css({"background-color": "White","color":"black" });
+			}else{
+				$(this).attr("checked",true);
+				$(this).next().css({"background-color": "blue","color":"White" });
+			}
+		});      
+	});
+	
+	//取消
+	$("#cancel").click(function(){
+		$(":checkbox").each(function(){
+			$(this).attr("checked",false);
+			$(this).next().css({"background-color": "White","color":"black" });
+		});      
+	});
+	
+	// 所有复选(:checkbox)框点击事件
+	$(":checkbox").click(function(){
+		if($(this).attr("checked")){
+			$(this).next().css({"background-color": "blue","color":"White" });
+		}else{
+			$(this).next().css({"background-color": "White","color":"black" });
+		}
+	});
+	
+	// 输出
+	$("#output").click(function(){
+		$(":checkbox").each(function(){
+			if($(this).attr("checked")){
+				alert($(this).val());  
+			}
+		});      
+	});
+
+});
+</script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.mar20{margin:20px;}
+</style>
+</head>
+<body>
+	<div class="mar20">
+		<input name="newslist" id="newslist-1" type="checkbox" value="1" /><label for="newslist-1">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+	</div>
+	<div class="mar20">
+		<input name="newslist" id="newslist-2" type="checkbox" value="2" /><label for="newslist-2">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+	</div>
+	<div class="mar20">
+		<input name="newslist" id="newslist-3" type="checkbox" value="3" /><label for="newslist-3">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+	</div>
+	<div class="mar20">
+		<input name="newslist" id="newslist-4" type="checkbox" value="4" /><label for="newslist-4">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+	</div>
+	<div class="mar20">
+		<input name="newslist" id="newslist-5" type="checkbox" value="5" /><label for="newslist-5">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+	</div>
+	<div class="mar20">
+		<input name="newslist" id="newslist-6" type="checkbox" value="6" /><label for="newslist-6">1.jsfoot网页特效 <a href="http://www.jsfoot.com/">http://www.jsfoot.com/</a></label>
+	</div>
+	<div class="mar20">
+		<input name="allselect" id="allselect" type="button" value="全选" />
+		<input name="invert" id="invert" type="button" value="反选" />
+		<input name="cancel" id="cancel" type="button" value="取消" />
+		<input name="output" id="output" type="button" value="输出" />
+	</div>
+</body>
+</html>
