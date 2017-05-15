@@ -1,0 +1,410 @@
+<html>
+
+<head>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="velocity.min.js"></script>
+    <style>
+    .canvas {
+        background-color: #e0f7ff;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    
+    structure {
+        position: absolute;
+    }
+    
+    air {
+        bottom: -16px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    air tile {
+        background-image: url(img/building-sheet.png);
+        background-repeat: no-repeat;
+        background-size: 1040px 588px;
+        height: 90px;
+        overflow: hidden;
+        position: absolute;
+        width: 65px;
+    }
+    
+    tile.tan-base-door {
+        background-position: -600px -499px;
+    }
+    
+    tile.tan-one-window {
+        background-position: -225px -499px;
+    }
+    
+    tile.tan-two-windows {
+        background-position: -375px -499px;
+    }
+    
+    tile.tan-roof-small {
+        background-position: -75px -5px;
+    }
+    
+    tile.tan-roof-grand {
+        background-position: 0px -1px;
+    }
+    
+    tile.stone-base-door {
+        background-position: -675px -301px;
+    }
+    
+    tile.stone-one-window {
+        background-position: -225px -301px;
+    }
+    
+    tile.stone-two-windows {
+        background-position: -375px -301px;
+    }
+    
+    tile.stone-roof-small {
+        background-position: -450px -107px;
+    }
+    
+    earth {
+        bottom: -16px;
+        left: 0;
+        height: 259px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+    }
+    
+    earth > tile {
+        background-image: url(img/tile-sheet.png);
+        background-repeat: no-repeat;
+        background-size: 815px 629px;
+        height: 90px;
+        overflow: hidden;
+        position: absolute;
+        width: 65px;
+    }
+    
+    earth > tile.ledge {
+        background-position: 0px 0px;
+    }
+    
+    earth > tile.water-ledge {
+        background-position: -450px 0px;
+    }
+    
+    earth > tile.grass {
+        background-position: 0px -99px;
+    }
+    
+    earth > tile.water {
+        background-position: -450px -99px;
+    }
+    
+    tile {
+        background-color: transparent;
+        bottom: 0;
+    }
+    
+    tile.blank {
+        background-position: 100px 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <earth></earth>
+        <air></air>
+    </div>
+    <script>
+    var scene = {
+
+        earth: {
+            first: [{
+                count: 4,
+                tile: "ledge"
+            }, {
+                count: 4,
+                tile: "water-ledge"
+            }, {
+                count: "rest",
+                tile: "ledge"
+            }],
+            second: [{
+                count: 4,
+                tile: "grass"
+            }, {
+                count: 3,
+                tile: "water"
+            }, {
+                count: "rest",
+                tile: "grass"
+            }],
+            third: [{
+                count: 5,
+                tile: "grass"
+            }, {
+                count: 2,
+                tile: "water"
+            }, {
+                count: "rest",
+                tile: "grass"
+            }],
+            fourth: [{
+                count: 4,
+                tile: "grass"
+            }, {
+                count: 3,
+                tile: "water"
+            }, {
+                count: "rest",
+                tile: "grass"
+            }],
+            fifth: [{
+                count: 4,
+                tile: "grass"
+            }, {
+                count: 4,
+                tile: "water"
+            }, {
+                count: "rest",
+                tile: "grass"
+            }]
+        }
+    };
+
+    var clouds = ["", "medium", "large", "xl"];
+
+    $(function() {
+
+        var width = $(window).width();
+
+        var across = Math.ceil(width / 65);
+
+        var rows = 0;
+
+        layTiles(scene.earth, 'earth');
+
+        plopStructure(4, 0, [{
+            className: "tan-base-door"
+        }, {
+            className: "tan-one-window"
+        }, {
+            className: "tan-two-windows"
+        }, {
+            className: "tan-two-windows"
+        }, {
+            className: "tan-roof-grand"
+        }]);
+        plopStructure(4, 1, [{
+            className: "tan-base-door"
+        }, {
+            className: "tan-two-windows"
+        }, {
+            className: "tan-two-windows"
+        }, {
+            className: "tan-one-window"
+        }, {
+            className: "tan-one-window"
+        }, {
+            className: "tan-roof-grand"
+        }]);
+        plopStructure(4, 2, [{
+            className: "tan-base-door"
+        }, {
+            className: "tan-one-window"
+        }, {
+            className: "tan-two-windows"
+        }, {
+            className: "tan-roof-small"
+        }]);
+        plopStructure(4, 3, [{
+            className: "tan-base-door"
+        }, {
+            className: "tan-two-windows"
+        }, {
+            className: "tan-one-window"
+        }, {
+            className: "tan-roof-small"
+        }]);
+
+        plopStructure(4, 8, [{
+            className: "stone-base-door"
+        }, {
+            className: "stone-one-window"
+        }, {
+            className: "stone-two-windows"
+        }, {
+            className: "stone-roof-small"
+        }]);
+        plopStructure(4, 9, [{
+            className: "stone-base-door"
+        }, {
+            className: "stone-two-windows"
+        }, {
+            className: "stone-one-window"
+        }, {
+            className: "stone-two-windows"
+        }, {
+            className: "stone-roof-small"
+        }]);
+
+        $('.canvas').css('bottom', ($(window).height()));
+        $('tile').css('opacity', 0);
+
+        $('.canvas').velocity({
+            bottom: "-1px"
+        }, {
+            duration: 600,
+            complete: function() {
+
+                $($('earth tile').get().reverse()).each(function(i) {
+
+                    var $me = $(this);
+                    $me.velocity({
+                        translateY: 15,
+                        opacity: 0.5
+                    }, {
+                        duration: 100,
+                        delay: (i * 30),
+                        complete: function() {
+
+                            $me.velocity({
+                                translateY: 0,
+                                opacity: 1
+                            }, {
+                                duration: 100,
+                                easing: "swing"
+                            });
+
+                            if (i == ($('earth tile').length - 15)) {
+
+                                $('structure').each(function(s) {
+
+                                    var $structure = $(this);
+
+                                    window.setTimeout(function() {
+
+                                        $structure.find('tile').each(function(t) {
+
+                                            $(this).velocity({
+                                                translateY: [0, 50],
+                                                opacity: 1
+                                            }, {
+                                                duration: 200,
+                                                delay: (t * 50),
+                                                easing: "spring"
+                                            });
+                                        });
+                                    }, (s * 200));
+                                });
+                            }
+                        }
+                    });
+                });
+            }
+        });
+
+
+        function plopStructure(row, spot, arr) {
+
+            var $structure = $('<structure>');
+
+            if (row % 2 === 0) {
+                $structure.css('left', (spot * 65) - 32);
+            } else {
+                $structure.css('left', (spot * 65));
+            }
+
+            $structure.css('bottom', (row * 47));
+
+            for (i = 0; i < arr.length; i++) {
+
+                $structure.append($('<tile>').addClass(arr[i].className).css('bottom', (i * 22)));
+            }
+
+            $('air').prepend($structure.fadeIn(200));
+        }
+
+        function placeTile(row, spot, className, appendTo) {
+
+            var $tile = $('<tile>').addClass(className);
+
+            if (row % 2 === 0) {
+                $tile.css('left', (spot * 65) - 32);
+            } else {
+                $tile.css('left', (spot * 65));
+            }
+
+            $(appendTo).append($tile.fadeIn(200));
+        }
+
+        function layTiles(obj, appendTo) {
+
+            var a = 0;
+
+            for (var k in obj) {
+
+                for (i = 0; i < obj[k].length; i++) {
+
+                    if (obj[k][i].count == "rest") {
+
+                        var rest = across - a;
+                        var start = across - rest;
+
+                        for (o = start; o < (across + 2); o++) {
+
+                            var $tile = $('<tile class="' + obj[k][i].tile + '">');
+                            $tile.css('bottom', (rows * 47));
+
+                            if (rows % 2 === 0) {
+                                $tile.css('left', (o * 65) - 32);
+                            } else {
+                                $tile.css('left', (o * 65));
+                            }
+                            $(appendTo).prepend($tile);
+                        }
+
+                        a = 0;
+
+                    } else {
+
+                        while (obj[k][i].count--) {
+
+                            var $tile = $('<tile class="' + obj[k][i].tile + '">');
+                            $tile.css('bottom', (rows * 47));
+
+                            if (rows % 2 === 0) {
+                                $tile.css('left', (a * 65) - 32);
+                            } else {
+                                $tile.css('left', (a * 65));
+                            }
+
+                            $(appendTo).prepend($tile);
+                            ++a;
+                        }
+                    }
+
+                }
+
+                ++rows;
+            }
+
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    });
+    </script>
+</body>
+
+</html>

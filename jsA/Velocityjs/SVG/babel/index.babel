@@ -1,0 +1,88 @@
+//Eyes blinking
+const moveEye = (elem, width, height, delay = 1000) => {
+  Velocity(elem, {
+    rx: width,
+    ry: height
+  }, {
+    duration: 0.1,
+    delay: delay,
+    easing: 'linear'
+  });
+};
+
+//Fish movement
+const moveFish = (elem, moveBy, initialPos, btn, bool = false) => {
+  Velocity(elem, {
+    translateX: [moveBy, initialPos]
+  }, {
+    duration: 5000,
+    easing: 'linear',
+    complete: () => {
+      if (bool) {
+        btn.disabled = false;
+      }
+    }
+  });
+};
+
+//Fish turning around
+const rotateFish = (elem, moveBy) => {
+  Velocity(elem, {
+    rotateY: moveBy,
+    transformOriginX: '50%',
+    transformOriginY: '50%'
+  }, {
+    duration: 500,
+    easing: [.26, 1, .49, 0]
+  });
+};
+
+//Caching elements for animation
+const bubbles = document.querySelectorAll('.bubble'),
+  fish = document.querySelector('.fish'),
+  eyePupil = document.querySelector('.eye-pupil'),
+  eye = document.querySelector('.front-eye'),
+  btnPlay = document.querySelector('.btn-play');
+
+//Bubbles animation
+Velocity(bubbles, {
+  cx: '+=30',
+  cy: '+=30',
+  rx: 3,
+  ry: 2,
+  opacity: 0
+}, {
+  loop: true,
+  easing: 'linear',
+  duration: 2000
+});
+
+//Using requestAnimationFrame() for the looping blinking eye animation
+let eyeMoveTimer;
+
+const eyeMove = (timestamp) => {
+  //close eye
+  moveEye(eyePupil, 0, 0, 5000);
+  moveEye(eye, 30, 2, 5000);
+  //open eye
+  moveEye(eyePupil, 15, 15);
+  moveEye(eye, 50, 50);
+
+  eyeMoveTimer = requestAnimationFrame(eyeMove);
+};
+
+//Set the blinking in motion
+eyeMove();
+
+/*fish movement animation */
+const play = () => {
+  moveFish(fish, '-1000', 0, btnPlay);
+  rotateFish(fish, '180deg');
+  moveFish(fish, 0, '-1000', btnPlay, true);
+  rotateFish(fish, '0deg');
+};
+
+btnPlay.addEventListener('click', function() {
+  this.disabled = true;
+  play();
+});
