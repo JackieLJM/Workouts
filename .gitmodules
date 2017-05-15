@@ -151,3 +151,6 @@
 [submodule "jsA/SVGa/FancyLetterAnimation"]
 	path = jsA/SVGa/FancyLetterAnimation
 	url = https://github.com/codrops/FancyLetterAnimation.git
+[submodule "freeCodeCamp/freecodecamp.cn"]
+	path = freeCodeCamp/freecodecamp.cn
+	url = https://github.com/freecodecampchina/freecodecamp.cn
