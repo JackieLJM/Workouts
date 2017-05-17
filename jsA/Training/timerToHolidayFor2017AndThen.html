@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    div {
-        font-size: 40px;
-    }
+        div {
+            font-size: 40px;
+        }
     </style>
 </head>
 
@@ -19,31 +19,64 @@
         <div id="inputArea">
             <p>请依次输入国家法定节假日的放假日:</p>
             <div id="festival"></div>
-            <input id="input" type="text" name="text" maxlength="7" value="">
-            <input id="submit" type="submit" value="下一个">
+            <input id="input" type="text" name="text" maxlength="7" value="a">
+            <input id="submit" type="submit" value="存储当前日期">
         </div>
+        <div id="header"></div>
     </form>
     <script>
-    // 获取表单子元素的值
-    console.log(typeof my.text.value);
-    // 用对象存储一组键值对
-    var holidays = {
-        "zh": [{
-            "New Year's Day": "元旦节"
-        }, {
-            "the Spring Festival": "春节"
-        }, {
-            "qing Ming Festival": "清明节"
-        }, {
-            "Internatinal Labour Festival": "劳动节"
-        }, {
-            "the Dragon-Boat Festival": "端午节"
-        }, {
-            "the Mid-Autumn Festival": "中秋节"
-        }, {
-            "National Day": "国庆节"
-        }],
-        "2017": [{
+        // 获取表单子元素的值
+        console.log(typeof my.text.value);
+        // 用对象存储一组键值对
+        var holidays = {
+            "zh": [{
+                "New Year's Day": "元旦节"
+            }, {
+                "the Spring Festival": "春节"
+            }, {
+                "qing Ming Festival": "清明节"
+            }, {
+                "Internatinal Labour Festival": "劳动节"
+            }, {
+                "the Dragon-Boat Festival": "端午节"
+            }, {
+                "the Mid-Autumn Festival": "中秋节"
+            }, {
+                "National Day": "国庆节"
+            }],
+            "2017": [{
+                "New Year's Day": "1 1"
+            }, {
+                "the Spring Festival": "1 27"
+            }, {
+                "qing Ming Festival": "4 2"
+            }, {
+                "Internatinal Labour Festival": "5 1"
+            }, {
+                "the Dragon-Boat Festival": "5 28"
+            }, {
+                "the Mid-Autumn Festival": "10 1"
+            }, {
+                "National Day": "10 1"
+            }]
+        }
+        console.log(Object.keys(holidays["2017"][1]));
+        console.log(holidays["2017"]);
+        for (var i = 0; i < 7; i++) {
+            (function () {
+                holidays["2018"] = [];
+                holidays["2018"].push({
+                    "New Year's Day": "1 1"
+                });
+                holidays["2018"].length = 7;
+            })();
+        }
+        console.log(holidays);
+        console.log(holidays["2018"][1]);
+        console.log(Object.values(holidays["2017"][1])[0].split(" ")[0]);
+        console.log(Object.values(holidays["2017"][1])[0].split(" ")[1]);
+        // 用数组存储键值对
+        var holiday = [{
             "New Year's Day": "1 1"
         }, {
             "the Spring Festival": "1 27"
@@ -58,114 +91,101 @@
         }, {
             "National Day": "10 1"
         }]
-    }
-    console.log(Object.keys(holidays["2017"][1]));
-    console.log(holidays["2017"]);
-    for (var i = 0; i < 7; i++) {
-        (function() {
-            holidays["2018"] = [];
-            holidays["2018"].push({
-                "New Year's Day": "1 1"
-            });
-            holidays["2018"].length = 7;
-        })();
-    }
-    console.log(holidays);
-    console.log(holidays["2018"][1]);
-    console.log(Object.values(holidays["2017"][1])[0].split(" ")[0]);
-    console.log(Object.values(holidays["2017"][1])[0].split(" ")[1]);
-    // 用数组存储键值对
-    var holiday = [{
-        "New Year's Day": "1 1"
-    }, {
-        "the Spring Festival": "1 27"
-    }, {
-        "qing Ming Festival": "4 2"
-    }, {
-        "Internatinal Labour Festival": "5 1"
-    }, {
-        "the Dragon-Boat Festival": "5 28"
-    }, {
-        "the Mid-Autumn Festival": "10 1"
-    }, {
-        "National Day": "10 1"
-    }]
 
-    var holidayzh = [{
-        "New Year's Day": "元旦节"
-    }, {
-        "the Spring Festival": "春节"
-    }, {
-        "qing Ming Festival": "清明节"
-    }, {
-        "Internatinal Labour Festival": "劳动节"
-    }, {
-        "the Dragon-Boat Festival": "端午节"
-    }, {
-        "the Mid-Autumn Festival": "中秋节"
-    }, {
-        "National Day": "国庆节"
-    }]
+        var holidayzh = [{
+            "New Year's Day": "元旦节"
+        }, {
+            "the Spring Festival": "春节"
+        }, {
+            "qing Ming Festival": "清明节"
+        }, {
+            "Internatinal Labour Festival": "劳动节"
+        }, {
+            "the Dragon-Boat Festival": "端午节"
+        }, {
+            "the Mid-Autumn Festival": "中秋节"
+        }, {
+            "National Day": "国庆节"
+        }]
 
-    console.log(Object.keys(holiday[1]));
-    console.log(Object.values(holiday[1])[0].split(" ")[0]);
-    console.log(Object.values(holiday[1])[0].split(" ")[1]);
-    // 计算当前时间距离下一个节假日算法
-    function cal() {
-        var now = new Date();
-        var year = now.getFullYear();
-        var month = now.getMonth() + 1;
-        var day = now.getDate();
-        var hours = now.getHours();
-    }
-    // 输入本年份的节假日日期存储到holidays对象里
-    function store() {
-        var year = 2018;
-        var festival = document.getElementById("festival");
-        var submit = document.getElementById("submit");
-        var input = document.getElementById("input");
-        if (year == 2017) {
-            document.getElementById("inputArea").style.display = "none";
-        } else {
-            for (var i = 0; i < 7; i++) {
-                (function(m) {
-                    var div = document.createElement("div");
-                    festival.innerHTML = Object.values(holidays["zh"][m])[0];
-                    submit.onclick = function() {
-                            console.log(input.value);
-                        }
-                        // if(my.text.value=){
-
-                    // }
-                    console.log(input.value === "");
-                    // if(document.getElementById("input").nodeValue)
-                })(i);
-            }
+        console.log(Object.keys(holiday[1]));
+        console.log(Object.values(holiday[1])[0].split(" ")[0]);
+        console.log(Object.values(holiday[1])[0].split(" ")[1]);
+        // 计算当前时间距离下一个节假日算法
+        function cal() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var hours = now.getHours();
         }
-    }
-    // 当前时间自动运转
-    setInterval(function() {
-        var date = new Date();
-        var dates = date.toString();
-        document.getElementById("time").innerHTML = dates;
-    }, 1000);
+        // 输入本年份的节假日日期存储到holidays对象里
+        (function store() {
+            var year = 2018;
+            var festival = document.getElementById("festival");
+            var submit = document.getElementById("submit");
+            var input = document.getElementById("input");
+            if (year == 2017) {
+                document.getElementById("inputArea").style.display = "none";
+            } else {
+                new Promise(function (resolve, reject) {
+                    console.log(this);
+                    submit.onclick = function (event) {
+                        console.log(event.target.nodeName);
+                    }
+                    resolve(3);
+                }).then(function (value) { console.log(Object.values(holidays["zh"][value])[0]) });
 
-    JavaScript
+                console.log(input.value === "");
+
+            }
+        })()
+        // 当前时间自动运转
+        setInterval(function () {
+            var date = new Date();
+            var dates = date.toString();
+            document.getElementById("time").innerHTML = dates;
+        }, 1000);
 
 
-    function changeHeaderDeferred() {
-        var header = document.getElementById("header");
+        // setTimeout返回值示例
+        function changeHeaderDeferred() {
+            var header = document.getElementById("header");
 
-        setTimeout(function changeHeader() {
-            header.style.color = "red";
+            setTimeout(function changeHeader() {
+                header.style.color = "red";
+
+                return false;
+            }, 100);
 
             return false;
-        }, 100);
+        }
+        changeHeaderDeferred();
 
-        return false;
-    }
+        // 异步任务同步任务打印结果示例
+        (function test() {
+            setTimeout(function () { console.log(4) }, 0);
+            new Promise(function executor(resolve) {
+                console.log(1);
+                for (var i = 0; i < 10000; i++) {
+                    i == 9999 && resolve();
+                }
+                console.log(2);
+            }).then(function () {
+                console.log(5);
+            });
 
-    changeHeaderDeferred();
+            new Promise(function executor(resolve) {
+                console.log(6);
+                for (var i = 0; i < 10000; i++) {
+                    i == 9999 && resolve();
+                }
+                console.log(7);
+            }).then(function () {
+                console.log(8);
+            });
+            console.log(3);
+        })()
     </script>
 </body>
 
