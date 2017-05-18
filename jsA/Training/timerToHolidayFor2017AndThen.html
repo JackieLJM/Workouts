@@ -128,13 +128,19 @@
             if (year == 2017) {
                 document.getElementById("inputArea").style.display = "none";
             } else {
-                new Promise(function (resolve, reject) {
+                submit.addEventListener("click", function () {
+                    Object.values(holidays["zh"][0])[0];
+                });
+                console.log(new Promise(function (resolve, reject) { reject(3); }).then(null,function(error){console.log(error);}));
+                var promise= new Promise(function(resolve,reject){resolve(3);});
+                console.log(promise.then(function(value){ return value*2;}).then(function(value){console.log(value);}));
+                console.log(new Promise(function (resolve, reject) {
                     console.log(this);
                     submit.onclick = function (event) {
                         console.log(event.target.nodeName);
                     }
                     resolve(3);
-                }).then(function (value) { console.log(Object.values(holidays["zh"][value])[0]) });
+                }).then(function (value) { console.log(Object.values(holidays["zh"][value])[0]) }));
 
                 console.log(input.value === "");
 
