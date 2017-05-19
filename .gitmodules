@@ -154,3 +154,6 @@
 [submodule "freeCodeCamp/freecodecamp.cn"]
 	path = freeCodeCamp/freecodecamp.cn
 	url = https://github.com/freecodecampchina/freecodecamp.cn
+[submodule "react/react-hn"]
+	path = react/react-hn
+	url = https://github.com/insin/react-hn.git
