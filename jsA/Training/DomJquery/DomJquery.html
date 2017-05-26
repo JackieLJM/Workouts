@@ -146,8 +146,9 @@
             function getaR() {
                 var a = "a";
                 this.a = "aa";
-                return a;
+                // return a;
             }
+            // getaR.prototype.a="bbbbb";
             // 调用构造函数先返回变量a，没有变量a再返回this里的a
 
 
@@ -171,30 +172,36 @@
                 // return getaRR.prototype;
                 return this;
             }
-            console.log(getaRR().a);
+            console.log(new getaRR().a);
+            var RR = new getaRR();
             // 但是可以通过返回this和prototype达到调用构造函数属性方法的目的
-            (function () {
+            (function (RR) {
                 function getaRRR() {
-                    var a = "a";
+                    var a = "b";
                     var c = "b";
-                    // this.a = "aaa";
+                    this.a = "aaa";
                     // this.c = "cc";
                     console.log(this);
                 }
+                getaRRR.prototype = RR;
+                console.log(getaRRR.prototype);
                 getaRRR.prototype = {
-                    a: "a",
+                    a: "c",
                     c: "c",
-                    geta: this.a,
+                    getaaa: this.a,
+                    // 这里的值怎么是"aa"的原因，getaR()函数调用定义了this.a的值，如果没在当前函数定义值，则指向DOM的div#a
                     getc: this.c,
-                    getaa: (function () { this.a="aaaaa"; return this.a })()
+                    getaa: (function () { this.a = "aaaaa"; return this.a })()
                 }
+                console.log(window.a)
                 console.log(getaRRR.prototype);
                 console.log(new getaRRR().a);
                 console.log(new getaRRR().c);
-                console.log(new getaRRR().geta)
+                console.log(new getaRRR().getaaa);
                 // 该构造函数的原型里写字面量，prototype里面的this指向window,不能在该字面量里引用字面量里的属性
-            })()        
+            })(RR);
         })();
+
 
 
 
@@ -218,6 +225,19 @@
         });
         console.log(sum(5))
 
+        // this
+        var fn = function (one, two) {
+            console.log(this, one, two);
+        };
+        var r = {}, g = {}, b = {}, y = {};
+        r.method = fn;
+        r.method(g, b);
+        fn(g, b);
+        var fnn = new fn;
+        console.log(fnn.prototype);
+        fn.call(r, g, b);
+        r.method.call(y, g, b);
+        setTimeout(fn, 1000);
         //总结： 写在函数外面的代码比$.ready比window.onload先执行，而$.ready比window.onload函数先执行是因为$.ready是DOMContentLoaded的封装
     </script>
 </body>

@@ -24,13 +24,15 @@
             <div id="nownow"></div>
             <div id="myBtn">button</div>
             <div id="demo"></div>
+            <p>距离国庆节剩余时间：</p>
+            <div id="left"></div>
         </div>
         <div id="header"></div>
     </form>
     <script>
         // 获取表单子元素的值
         console.log(typeof my.text.value);
-        // 用对象存储一组键值对
+        // 用对象存储一组键值对，该对象是一个JSON对象
         var holidays = {
             "zh": [{
                 "New Year's Day": "元旦节"
@@ -110,18 +112,64 @@
         }, {
             "National Day": "国庆节"
         }]
-
+        var monthDays = {
+            1: 31,
+        }
         console.log(Object.keys(holiday[1]));
         console.log(Object.values(holiday[1])[0].split(" ")[0]);
         console.log(Object.values(holiday[1])[0].split(" ")[1]);
         // 计算当前时间距离下一个节假日算法
-        function cal() {
+        (function cal() {
+            // 声明初始变量
             var now = new Date();
             var year = now.getFullYear();
             var month = now.getMonth() + 1;
             var day = now.getDate();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
             var hours = now.getHours();
-        }
+            var one = 0;
+            var endMonth = 10;
+            var endDay = 1;
+            // 计算剩余天数
+            for (var startMonth = month; startMonth < endMonth; startMonth++) {
+                var days = 0;
+                if (startMonth === 1 || startMonth === 3 || startMonth === 5 || startMonth === 7 || startMonth === 8 || startMonth === 10 || startMonth === 12) {
+                    days = 31;
+                }
+                else if (startMonth === 4 || startMonth === 6 || startMonth === 9 || startMonth === 11) {
+                    days = 30;
+                }
+                else if ((year % 4 === 0 && year % 400 === 0) && startMonth === 2) {
+                    days = 29;
+                }
+                else if (((year % 4 === 0 && year % 400 === 0) === false) && startMonth === 2) {
+                    days = 28;
+                }
+                one = one + days;
+            }
+            one = one + endDay - 1 - day;
+            var leftHours = 24 - hours - 1;
+            var leftMinutes = 60 - minutes - 1;
+            var leftSeconds = 60 - seconds;
+            setInterval(function () {
+                if (leftSeconds === 0) {
+                    leftSeconds = 60;
+                    if (leftMinutes === 0) {
+                        leftMinutes = 60;
+                        if (leftHours === 0) {
+                            leftHours = 24;
+                            one - 1;
+                        }
+                        leftHours = leftHours - 1;
+                    }
+                    leftMinutes = leftMinutes - 1;
+                }
+                leftSeconds = leftSeconds - 1;
+                // console.log(leftSeconds);
+                document.getElementById("left").innerHTML = one + "天" + leftHours + "小时" + leftMinutes + "分钟" + leftSeconds + "秒";
+            }, 1000);
+        })();
         // 输入本年份的节假日日期存储到holidays对象里
 
         (function store() {
@@ -139,7 +187,7 @@
                     event.preventDefault();
                     console.log(typeof input.value);
                     console.log(Object.getOwnPropertyNames(holidays));
-                    console.log(holidays["2017"][0][0]=input.value);
+                    console.log(holidays["2017"][0][0] = input.value);
                     console.log(holidays["2017"][0]);
                     nownow.innerHTML = (Object.values(holidays["2017"][0])[0].split(" ")[0] + "月" + Object.values(holidays["2017"][0])[0].split(" ")[1] + "号");
                 });

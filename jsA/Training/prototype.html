@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="a"></div>
+    <script>
+        (function Return() {
+            function getaR() {
+                this.a = "aa";
+                return this.a;
+            }
+            function getaRR() {
+                this.a = "aaaa";
+            }
+            var RR = new getaRR();
+            // 但是可以通过返回this和prototype达到调用构造函数属性方法的目的
+            (function (RR) {
+                function getaRRR() {
+                    var a = "b";
+                    var c = "b";
+                    // this.a = "aaa";
+                    // this.c = "cc";
+                    console.log(this);
+                }
+                getaRRR.prototype = RR;
+                console.log(getaRRR.prototype);
+                getaRRR.prototype = {
+                    a: "c",
+                    c: "c",
+                    getaaa: this.a,
+                    getc: this.c,
+                    getaa: (function () { this.a = "aaaaa"; return this.a })()
+                    // 这里定义了该方法的返回值也同样作用于window.a
+                }
+                console.log(window.a);
+                console.log(getaRRR.prototype);
+                console.log(new getaRRR().a);
+                console.log(new getaRRR().c);
+                console.log(new getaRRR().getaa);
+                console.log();
+                // 实例化后的this指向该实例而不是window
+                // 该构造函数的原型里写字面量，prototype里面的this指向window,不能在该字面量里引用字面量里的属性
+                console.log(document.referrer);
+                console.log(window.location);
+            })(RR);
+        })();
+    </script>
+</body>
+
+</html>
