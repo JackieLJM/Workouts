@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var Car = function(loc) {
+        var obj = Object.create(Car.methods);
+        obj.loc=loc;
+        return obj;
+    };
+
+    Car.methods = {
+        move: function() {
+            this.loc++;
+        }
+    };
+
+    var amy=Car(1);
+    amy.move();
+    console.log(new Car());
+    console.log(amy);
+    </script>
+</body>
+
+</html>
