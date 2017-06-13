@@ -157,3 +157,6 @@
 [submodule "react/react-hn"]
 	path = react/react-hn
 	url = https://github.com/insin/react-hn.git
+[submodule "jsA/web-starter-kit"]
+	path = jsA/web-starter-kit
+	url = https://github.com/google/web-starter-kit
