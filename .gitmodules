@@ -214,3 +214,6 @@
 [submodule "udacity/ud892"]
 	path = udacity/ud892
 	url = https://github.com/udacity/ud892
+[submodule "udacity/60fps"]
+	path = udacity/60fps
+	url = https://github.com/udacity/60fps
