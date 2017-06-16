@@ -160,3 +160,57 @@
 [submodule "jsA/web-starter-kit"]
 	path = jsA/web-starter-kit
 	url = https://github.com/google/web-starter-kit
+[submodule "udacity/project 2/Course17-23/frontend-nanodegree-mobile-portfolio"]
+	path = udacity/project 2/Course17-23/frontend-nanodegree-mobile-portfolio
+	url = https://github.com/udacity/frontend-nanodegree-mobile-portfolio
+[submodule "udacity/Project 2/Course19-7/devsummit"]
+	path = udacity/Project 2/Course19-7/devsummit
+	url = https://github.com/udacity/devsummit
+[submodule "udacity/project 2/Course20-5/weight-tracker"]
+	path = udacity/project 2/Course20-5/weight-tracker
+	url = https://github.com/paullewis/weight-tracker
+[submodule "udacity/Project 2/7-7/web-workers-demo"]
+	path = udacity/Project 2/7-7/web-workers-demo
+	url = https://github.com/udacity/web-workers-demo
+[submodule "udacity/Project 2/7-9/qrcode"]
+	path = udacity/Project 2/7-9/qrcode
+	url = https://github.com/udacity/qrcode
+[submodule "udacity/Project 2/8-10/pizza-perf"]
+	path = udacity/Project 2/8-10/pizza-perf
+	url = https://github.com/udacity/pizza-perf
+[submodule "freeCodeCamp/clementinejs"]
+	path = freeCodeCamp/clementinejs
+	url = https://github.com/johnstonbl01/clementinejs
+[submodule "freeCodeCamp/clementinejs-angular"]
+	path = freeCodeCamp/clementinejs-angular
+	url = https://github.com/johnstonbl01/clementinejs-angular
+[submodule "freeCodeCamp/clementinejs-fcc"]
+	path = freeCodeCamp/clementinejs-fcc
+	url = https://github.com/johnstonbl01/clementinejs-fcc
+[submodule "udacity/frontend-nanodegree-resume"]
+	path = udacity/frontend-nanodegree-resume
+	url = https://github.com/udacity/frontend-nanodegree-resume
+[submodule "udacity/frontend-nanodegree-feedreader"]
+	path = udacity/frontend-nanodegree-feedreader
+	url = https://github.com/udacity/frontend-nanodegree-feedreader
+[submodule "udacity/news-aggregator"]
+	path = udacity/news-aggregator
+	url = https://github.com/udacity/news-aggregator
+[submodule "udacity/cn-frontend-development-basic"]
+	path = udacity/cn-frontend-development-basic
+	url = https://github.com/udacity/cn-frontend-development-basic
+[submodule "udacity/frontend-nanodegree-arcade-game"]
+	path = udacity/frontend-nanodegree-arcade-game
+	url = https://github.com/udacity/frontend-nanodegree-arcade-game
+[submodule "udacity/AIND-CV-Mimic"]
+	path = udacity/AIND-CV-Mimic
+	url = https://github.com/udacity/AIND-CV-Mimic
+[submodule "udacity/pappu-pakia"]
+	path = udacity/pappu-pakia
+	url = https://github.com/udacity/pappu-pakia
+[submodule "udacity/FEF-Quiz-Angular-Up-and-Running"]
+	path = udacity/FEF-Quiz-Angular-Up-and-Running
+	url = https://github.com/udacity/FEF-Quiz-Angular-Up-and-Running
+[submodule "udacity/ud892"]
+	path = udacity/ud892
+	url = https://github.com/udacity/ud892

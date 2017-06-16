@@ -1,0 +1,1 @@
+6-15号前后UDACITY CHINA FRONT-END(advanced)课程目录发生改变，course17-20前一些发表到论坛的任务或者类似开放性任务没有在project2目录里做归纳。
