@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="catClicker.jpg">
+    <img src="unnamed.jpg">
+    <p></p>
+    <script type="text/javascript">
+    var catone = document.getElementsByTagName('img')[0];
+    var cattwo = document.getElementsByTagName('img')[1];
+    catone.addEventListener("click", (function(e) {
+        var i = 0;
+        return function() {
+            i++;
+            console.log(i);
+        }
+    }()));
+    cattwo.addEventListener("click", (function(e) {
+        var j = 0;
+        return function() {
+            j++;
+            console.log(j);
+        }
+    }()))
+    </script>
+</body>
+
+</html>

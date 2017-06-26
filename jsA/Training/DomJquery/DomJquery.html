@@ -64,6 +64,8 @@
             console.log(Array.prototype.slice.call(liSecond.childNodes));
             console.log(nodeListToArray(liSecond.childNodes));
         }
+        // 该行代码表示dom加载完毕，等于$.load()?
+        $(function(){});
         // object.create继承原型方法相当于实例化一个新对象(该对象可以为一个对象字面量)再把该新对象赋值给要继承对象的原型
         var obj = {
             length: 4
@@ -238,7 +240,7 @@
         fn.call(r, g, b);
         r.method.call(y, g, b);
         setTimeout(fn, 1000);
-        //总结： 写在函数外面的代码比$.ready比window.onload先执行，而$.ready比window.onload函数先执行是因为$.ready是DOMContentLoaded的封装
+        //总结： 写在函数外面的代码比$.ready比window.onload先执行，而$.ready比window.onload函数先执行是因为$.ready是DOMContentLoaded的封装，而$.load是window.onload的封装
     </script>
 </body>
 

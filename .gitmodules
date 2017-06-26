@@ -241,3 +241,9 @@
 [submodule "udacity/project 3/5-16kocatclicker/ud989-cat-clicker-ko-starter"]
 	path = udacity/project 3/5-16kocatclicker/ud989-cat-clicker-ko-starter
 	url = https://github.com/udacity/ud989-cat-clicker-ko-starter
+[submodule "udacity/Project 3/5-23computedObservablesCatFullName/Cat-Clicker-Knockout"]
+	path = udacity/Project 3/5-23computedObservablesCatFullName/Cat-Clicker-Knockout
+	url = https://github.com/suprinakaur/Cat-Clicker-Knockout
+[submodule "udacity/Project 3/6-2todomvc/ud989-todo-app"]
+	path = udacity/Project 3/6-2todomvc/ud989-todo-app
+	url = https://github.com/udacity/ud989-todo-app
