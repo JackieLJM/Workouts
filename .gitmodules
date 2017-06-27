@@ -247,3 +247,6 @@
 [submodule "udacity/Project 3/6-2todomvc/ud989-todo-app"]
 	path = udacity/Project 3/6-2todomvc/ud989-todo-app
 	url = https://github.com/udacity/ud989-todo-app
+[submodule "udacity/Project 3/7-4googleMapsJavascriptAPI/ud864"]
+	path = udacity/Project 3/7-4googleMapsJavascriptAPI/ud864
+	url = https://github.com/udacity/ud864
