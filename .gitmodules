@@ -250,3 +250,6 @@
 [submodule "udacity/Project 3/7-4googleMapsJavascriptAPI/ud864"]
 	path = udacity/Project 3/7-4googleMapsJavascriptAPI/ud864
 	url = https://github.com/udacity/ud864
+[submodule "udacity/Project 3/8-1ssrGoogleMapsApi/google-maps-services-js"]
+	path = udacity/Project 3/8-1ssrGoogleMapsApi/google-maps-services-js
+	url = https://github.com/googlemaps/google-maps-services-js
