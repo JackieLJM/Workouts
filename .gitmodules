@@ -253,3 +253,9 @@
 [submodule "udacity/Project 3/8-1ssrGoogleMapsApi/google-maps-services-js"]
 	path = udacity/Project 3/8-1ssrGoogleMapsApi/google-maps-services-js
 	url = https://github.com/googlemaps/google-maps-services-js
+[submodule "react/react-subjects"]
+	path = react/react-subjects
+	url = https://github.com/ReactTraining/react-subjects
+[submodule "udacity/cn-frontend-development-advanced"]
+	path = udacity/cn-frontend-development-advanced
+	url = https://github.com/udacity/cn-frontend-development-advanced
