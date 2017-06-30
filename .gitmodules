@@ -259,3 +259,9 @@
 [submodule "udacity/cn-frontend-development-advanced"]
 	path = udacity/cn-frontend-development-advanced
 	url = https://github.com/udacity/cn-frontend-development-advanced
+[submodule "udacity/fend-office-hours"]
+	path = udacity/fend-office-hours
+	url = https://github.com/udacity/fend-office-hours
+[submodule "udacity/ud549"]
+	path = udacity/ud549
+	url = https://github.com/udacity/ud549
