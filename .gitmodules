@@ -265,3 +265,6 @@
 [submodule "udacity/ud549"]
 	path = udacity/ud549
 	url = https://github.com/udacity/ud549
+[submodule "udacity/healthTracker/backbone"]
+	path = udacity/healthTracker/backbone
+	url = https://github.com/jashkenas/backbone
