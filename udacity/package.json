@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "angular": "^1.6.4",
     "jquery": "^1.11.3",
     "knockout": "^3.4.2",
     "underscore": "^1.8.3"

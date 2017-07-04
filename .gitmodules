@@ -268,3 +268,6 @@
 [submodule "udacity/healthTracker/backbone"]
 	path = udacity/healthTracker/backbone
 	url = https://github.com/jashkenas/backbone
+[submodule "udacity/more-function-be-added-to-arcade-game/frontend-nanodegree-arcade-game"]
+	path = udacity/more-function-be-added-to-arcade-game/frontend-nanodegree-arcade-game
+	url = https://github.com/JayBtrdgrd/frontend-nanodegree-arcade-game
