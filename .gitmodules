@@ -271,3 +271,6 @@
 [submodule "udacity/more-function-be-added-to-arcade-game/frontend-nanodegree-arcade-game"]
 	path = udacity/more-function-be-added-to-arcade-game/frontend-nanodegree-arcade-game
 	url = https://github.com/JayBtrdgrd/frontend-nanodegree-arcade-game
+[submodule "udacity/react-nano/Project1/1-2/composition-tutorial"]
+	path = udacity/react-nano/Project1/1-2/composition-tutorial
+	url = https://github.com/kevinbgreene/composition-tutorial
