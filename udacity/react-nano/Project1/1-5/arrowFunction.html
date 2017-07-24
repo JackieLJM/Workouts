@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var arr = [{
+        id: 15
+    }, {
+        id: -1
+    }, {
+        id: 0
+    }, {
+        id: 3
+    }, {
+        id: 12.2
+    }, {}, {
+        id: null
+    }, {
+        id: NaN
+    }, {
+        id: 'undefined'
+    }];
+
+    var invalidEntries = 0;
+
+    function isNumber(obj) {
+        return obj.id !== undefined && typeof(obj.id) === 'number' && !isNaN(obj.id);
+    }
+
+    function filterByID(item) {
+        if (isNumber(item.id)) {
+            return true;
+        }
+        invalidEntries++;
+        return false;
+    }
+    var arrByID = arr.filter(isNumber);
+
+    console.log('Filtered Array\n', arrByID);
+    // Filtered Array
+    // [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
+
+    console.log('Number of Invalid Entries = ', invalidEntries);
+    // Number of Invalid Entries = 4
+
+
+
+    var invalidEntriesArrow = 0;
+
+    var arrByIDD = arr.filter(obj => (obj.id !== undefined && typeof(obj.id) === 'number' && !isNaN(obj.id))); //=> (invalidEntriesArrow++));
+
+    console.log('Filtered Array by arrowFunction\n', arrByIDD);
+
+    // console.log('Number of Invalid Entries by arrowFunction =', invalidEntriesArrow);
+    </script>
+</body>
+
+</html>
