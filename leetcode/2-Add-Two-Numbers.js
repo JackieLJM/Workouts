@@ -1,3 +1,4 @@
+// ES5
 var addTwoNumbers = function(l1, l2) {
     var ls=[0];
     for(var index=0;index<l1.lenght;index++){

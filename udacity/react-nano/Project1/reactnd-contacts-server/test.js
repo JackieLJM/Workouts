@@ -26,4 +26,4 @@ const defaultData = {
 token=Math.random().toString(36).substr(-8);
 let data=db[token];
 data=db[token]=clone(defaultData);
-console.log(db);
+console.log(db,data);
