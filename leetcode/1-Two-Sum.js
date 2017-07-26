@@ -13,6 +13,7 @@ var twoSum = function(nums, target) {
     }
 
 };
+// 该函数只返回第一次匹配成功结果，没有显示多种可能性
 var sums=[3,2,4],target=6;
 console.log(sums.length);
 console.log(twoSum(sums,target));

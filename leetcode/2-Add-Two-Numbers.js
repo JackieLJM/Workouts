@@ -15,3 +15,5 @@ var addTwoNumbers = function(l1, l2) {
 
 var list1=[2,4,3],list2=[5,6,4];
 console.log(addTwoNumbers(list1,list2));
+
+// ES6
