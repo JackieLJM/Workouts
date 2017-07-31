@@ -274,3 +274,6 @@
 [submodule "udacity/react-nano/Project1/1-2/composition-tutorial"]
 	path = udacity/react-nano/Project1/1-2/composition-tutorial
 	url = https://github.com/kevinbgreene/composition-tutorial
+[submodule "udacity/react-nano/course-git-blog-project"]
+	path = udacity/react-nano/course-git-blog-project
+	url = https://github.com/udacity/course-git-blog-project
