@@ -28,7 +28,7 @@ var myAtoi = function (str) {
     }
 };
 // console.log(Number(""));
-// console.log(myAtoi(str));
+console.log(myAtoi(str));
 // if ("87" != 87) {
 //     console.log("The string 87 is NOT equal to the number 87");
 // } else {

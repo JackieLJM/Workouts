@@ -17,5 +17,3 @@ var twoSum = function(nums, target) {
 var sums=[3,2,4],target=6;
 console.log(sums.length);
 console.log(twoSum(sums,target));
-
-// ES6
