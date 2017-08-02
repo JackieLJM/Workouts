@@ -1,4 +1,4 @@
-// ES5 20170801 10%Beated
+// ES5 20170801 60%Beated
 var isPalindrome = function (x) {
     // var xLength=x.toString().length;
     // console.log(xLength);
@@ -16,7 +16,8 @@ var isPalindrome = function (x) {
         if (xStr[0] === "-") {
             return false;
         }
-        console.log(xStr);
+        // console.log(xStr);
+        // console.log(xStr.slice(1,xStr.length));
         for (var j = 0; j < (xStr.length % 2 === 0 ? xStr.length / 2 : (xStr.length - 1) / 2); j++) {
             if (xStr[j] !== xStr[xStr.length - 1 - j]) {
                 return false;
@@ -27,4 +28,4 @@ var isPalindrome = function (x) {
         return false;
     }
 };
-console.log(isPalindrome(-123211));
+console.log(isPalindrome(123211));
