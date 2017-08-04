@@ -17,7 +17,7 @@
 //     }
 // };
 
-// ES5 20170802 77%Beated
+// ES5 20170802 80%Beated
 var maxArea = function (height) {
     var maxarea = 0, l = 0, r = height.length - 1;
         while (l < r) {
