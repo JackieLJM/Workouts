@@ -277,3 +277,6 @@
 [submodule "udacity/react-nano/course-git-blog-project"]
 	path = udacity/react-nano/course-git-blog-project
 	url = https://github.com/udacity/course-git-blog-project
+[submodule "udacity/react-nano/Project2/reactnd-udacimeals-complete"]
+	path = udacity/react-nano/Project2/reactnd-udacimeals-complete
+	url = https://github.com/udacity/reactnd-udacimeals-complete
