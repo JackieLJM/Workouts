@@ -1,4 +1,4 @@
-// ES5 自己写的和解决方案超时的两种算法
+// ES5 TimeLimitExceeded TwoWays
 // var maxArea = function (height) {
 //     if (height.length > 1) {
 //         var area = [];
@@ -31,4 +31,5 @@ var maxArea = function (height) {
         }
         return maxarea;
 };
+
 console.log(maxArea([1,2,3,4]));
