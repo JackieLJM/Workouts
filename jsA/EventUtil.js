@@ -1,3 +1,9 @@
+// pagex浏览器兼容
+var doc = document.documentElement,
+    body = document.body;
+event.pageX = event.clientX + (doc && doc.scrollLeft || body && body.scrollLeft || 0) - (doc && doc.clientLeft || body && body.clientLeft || 0);
+event.pageY = event.clientY + (doc && doc.scrollTop || body && body.scrollTop || 0) - (doc && doc.clientTop || body && body.clientTop || 0);
+
 var EventUtil = {
 
     addHandler: function (element, type, handler, isCapture) {
@@ -54,11 +60,11 @@ var EventUtil = {
             // ie外浏览器onmousemove,onmouseover触发
             return event.relatedTarget;
         } else if (event.toElement) {
-       
+
             // ie浏览器onmousemove事件触发
             return event.toElement;
         } else if (event.fromElement) {
-            
+
             // ie浏览器onmouseover事件触发
             return event.fromElement;
         } else {
