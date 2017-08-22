@@ -280,3 +280,9 @@
 [submodule "udacity/react-nano/Project2/reactnd-udacimeals-complete"]
 	path = udacity/react-nano/Project2/reactnd-udacimeals-complete
 	url = https://github.com/udacity/reactnd-udacimeals-complete
+[submodule "jsA/photo-gallery-RN"]
+	path = jsA/photo-gallery-RN
+	url = https://github.com/narendrashetty/photo-gallery-RN
+[submodule "react/react-data-fetching"]
+	path = react/react-data-fetching
+	url = https://github.com/rwieruch/react-data-fetching
