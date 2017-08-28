@@ -286,3 +286,6 @@
 [submodule "react/react-data-fetching"]
 	path = react/react-data-fetching
 	url = https://github.com/rwieruch/react-data-fetching
+[submodule "react/hackernews-client"]
+	path = react/hackernews-client
+	url = https://github.com/rwieruch/hackernews-client
