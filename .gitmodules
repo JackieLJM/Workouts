@@ -160,24 +160,6 @@
 [submodule "jsA/web-starter-kit"]
 	path = jsA/web-starter-kit
 	url = https://github.com/google/web-starter-kit
-[submodule "udacity/project 2/Course17-23/frontend-nanodegree-mobile-portfolio"]
-	path = udacity/project 2/Course17-23/frontend-nanodegree-mobile-portfolio
-	url = https://github.com/udacity/frontend-nanodegree-mobile-portfolio
-[submodule "udacity/Project 2/Course19-7/devsummit"]
-	path = udacity/Project 2/Course19-7/devsummit
-	url = https://github.com/udacity/devsummit
-[submodule "udacity/project 2/Course20-5/weight-tracker"]
-	path = udacity/project 2/Course20-5/weight-tracker
-	url = https://github.com/paullewis/weight-tracker
-[submodule "udacity/Project 2/7-7/web-workers-demo"]
-	path = udacity/Project 2/7-7/web-workers-demo
-	url = https://github.com/udacity/web-workers-demo
-[submodule "udacity/Project 2/7-9/qrcode"]
-	path = udacity/Project 2/7-9/qrcode
-	url = https://github.com/udacity/qrcode
-[submodule "udacity/Project 2/8-10/pizza-perf"]
-	path = udacity/Project 2/8-10/pizza-perf
-	url = https://github.com/udacity/pizza-perf
 [submodule "freeCodeCamp/clementinejs"]
 	path = freeCodeCamp/clementinejs
 	url = https://github.com/johnstonbl01/clementinejs
@@ -187,90 +169,15 @@
 [submodule "freeCodeCamp/clementinejs-fcc"]
 	path = freeCodeCamp/clementinejs-fcc
 	url = https://github.com/johnstonbl01/clementinejs-fcc
-[submodule "udacity/frontend-nanodegree-resume"]
-	path = udacity/frontend-nanodegree-resume
-	url = https://github.com/udacity/frontend-nanodegree-resume
-[submodule "udacity/frontend-nanodegree-feedreader"]
-	path = udacity/frontend-nanodegree-feedreader
-	url = https://github.com/udacity/frontend-nanodegree-feedreader
-[submodule "udacity/news-aggregator"]
-	path = udacity/news-aggregator
-	url = https://github.com/udacity/news-aggregator
-[submodule "udacity/cn-frontend-development-basic"]
-	path = udacity/cn-frontend-development-basic
-	url = https://github.com/udacity/cn-frontend-development-basic
-[submodule "udacity/frontend-nanodegree-arcade-game"]
-	path = udacity/frontend-nanodegree-arcade-game
-	url = https://github.com/udacity/frontend-nanodegree-arcade-game
 [submodule "udacity/AIND-CV-Mimic"]
 	path = udacity/AIND-CV-Mimic
 	url = https://github.com/udacity/AIND-CV-Mimic
-[submodule "udacity/pappu-pakia"]
-	path = udacity/pappu-pakia
-	url = https://github.com/udacity/pappu-pakia
 [submodule "udacity/FEF-Quiz-Angular-Up-and-Running"]
 	path = udacity/FEF-Quiz-Angular-Up-and-Running
 	url = https://github.com/udacity/FEF-Quiz-Angular-Up-and-Running
-[submodule "udacity/ud892"]
-	path = udacity/ud892
-	url = https://github.com/udacity/ud892
-[submodule "udacity/60fps"]
-	path = udacity/60fps
-	url = https://github.com/udacity/60fps
-[submodule "udacity/Project 3/3-21/ud989-pizzamvo"]
-	path = udacity/Project 3/3-21/ud989-pizzamvo
-	url = https://github.com/udacity/ud989-pizzamvo
-[submodule "udacity/Project 3/3-24/ud989-retain"]
-	path = udacity/Project 3/3-24/ud989-retain
-	url = https://github.com/udacity/ud989-retain
-[submodule "udacity/Project 3/4-5/ud989-cat-clicker-andy"]
-	path = udacity/Project 3/4-5/ud989-cat-clicker-andy
-	url = https://github.com/udacity/ud989-cat-clicker-andy
-[submodule "udacity/Project 3/4-10/ud989-cat-clicker-premium-vanilla"]
-	path = udacity/Project 3/4-10/ud989-cat-clicker-premium-vanilla
-	url = https://github.com/udacity/ud989-cat-clicker-premium-vanilla
-[submodule "udacity/Project 3/4-18/ud989-school-attendance"]
-	path = udacity/Project 3/4-18/ud989-school-attendance
-	url = https://github.com/udacity/ud989-school-attendance
-[submodule "udacity/Project 3/4-18 refactor the school attendance/ud989-school-attendance"]
-	path = udacity/Project 3/4-18 refactor the school attendance/ud989-school-attendance
-	url = https://github.com/udacity/ud989-school-attendance
 [submodule "jsA/web-animations-demos"]
 	path = jsA/web-animations-demos
 	url = https://github.com/web-animations/web-animations-demos.git
-[submodule "udacity/project 3/5-16kocatclicker/ud989-cat-clicker-ko-starter"]
-	path = udacity/project 3/5-16kocatclicker/ud989-cat-clicker-ko-starter
-	url = https://github.com/udacity/ud989-cat-clicker-ko-starter
-[submodule "udacity/Project 3/5-23computedObservablesCatFullName/Cat-Clicker-Knockout"]
-	path = udacity/Project 3/5-23computedObservablesCatFullName/Cat-Clicker-Knockout
-	url = https://github.com/suprinakaur/Cat-Clicker-Knockout
-[submodule "udacity/Project 3/6-2todomvc/ud989-todo-app"]
-	path = udacity/Project 3/6-2todomvc/ud989-todo-app
-	url = https://github.com/udacity/ud989-todo-app
-[submodule "udacity/Project 3/7-4googleMapsJavascriptAPI/ud864"]
-	path = udacity/Project 3/7-4googleMapsJavascriptAPI/ud864
-	url = https://github.com/udacity/ud864
-[submodule "udacity/Project 3/8-1ssrGoogleMapsApi/google-maps-services-js"]
-	path = udacity/Project 3/8-1ssrGoogleMapsApi/google-maps-services-js
-	url = https://github.com/googlemaps/google-maps-services-js
-[submodule "react/react-subjects"]
-	path = react/react-subjects
-	url = https://github.com/ReactTraining/react-subjects
-[submodule "udacity/cn-frontend-development-advanced"]
-	path = udacity/cn-frontend-development-advanced
-	url = https://github.com/udacity/cn-frontend-development-advanced
-[submodule "udacity/fend-office-hours"]
-	path = udacity/fend-office-hours
-	url = https://github.com/udacity/fend-office-hours
-[submodule "udacity/ud549"]
-	path = udacity/ud549
-	url = https://github.com/udacity/ud549
-[submodule "udacity/healthTracker/backbone"]
-	path = udacity/healthTracker/backbone
-	url = https://github.com/jashkenas/backbone
-[submodule "udacity/more-function-be-added-to-arcade-game/frontend-nanodegree-arcade-game"]
-	path = udacity/more-function-be-added-to-arcade-game/frontend-nanodegree-arcade-game
-	url = https://github.com/JayBtrdgrd/frontend-nanodegree-arcade-game
 [submodule "udacity/react-nano/Project1/1-2/composition-tutorial"]
 	path = udacity/react-nano/Project1/1-2/composition-tutorial
 	url = https://github.com/kevinbgreene/composition-tutorial
@@ -289,3 +196,9 @@
 [submodule "react/hackernews-client"]
 	path = react/hackernews-client
 	url = https://github.com/rwieruch/hackernews-client
+[submodule "isomorphic-react-redux/react-boilerplate"]
+	path = isomorphic-react-redux/react-boilerplate
+	url = https://github.com/react-boilerplate/react-boilerplate.git
+[submodule "react-native/ChainReactApp"]
+	path = react-native/ChainReactApp
+	url = https://github.com/infinitered/ChainReactApp.git
