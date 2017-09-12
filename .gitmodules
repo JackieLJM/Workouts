@@ -202,3 +202,6 @@
 [submodule "react-native/ChainReactApp"]
 	path = react-native/ChainReactApp
 	url = https://github.com/infinitered/ChainReactApp.git
+[submodule "jsDB/clean-code-javascript"]
+	path = jsDB/clean-code-javascript
+	url = https://github.com/ryanmcdermott/clean-code-javascript.git
