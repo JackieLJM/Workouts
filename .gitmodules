@@ -205,3 +205,12 @@
 [submodule "jsDB/clean-code-javascript"]
 	path = jsDB/clean-code-javascript
 	url = https://github.com/ryanmcdermott/clean-code-javascript.git
+[submodule "udacity/react-nano/Project3/reactnd-UdaciFitness-complete"]
+	path = udacity/react-nano/Project3/reactnd-UdaciFitness-complete
+	url = https://github.com/udacity/reactnd-UdaciFitness-complete
+[submodule "udacity/react-nano/Project1/MyReads-A-Book-Tracking-App"]
+	path = udacity/react-nano/Project1/MyReads-A-Book-Tracking-App
+	url = https://github.com/garcrich/MyReads-A-Book-Tracking-App.git
+[submodule "udacity/react-nano/Project2/react-readable"]
+	path = udacity/react-nano/Project2/react-readable
+	url = https://github.com/omaralbeik/react-readable.git
