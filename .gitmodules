@@ -215,3 +215,9 @@
 	path = isomorphic-react-redux/react-boilerplate
 	url = https://github.com/react-boilerplate/react-boilerplate.git
 
+[submodule "jsA/css-modal"]
+	path = jsA/css-modal
+	url = https://github.com/drublic/css-modal
+[submodule "react/material-ui"]
+	path = react/material-ui
+	url = https://github.com/callemall/material-ui
