@@ -196,9 +196,6 @@
 [submodule "react/hackernews-client"]
 	path = react/hackernews-client
 	url = https://github.com/rwieruch/hackernews-client
-[submodule "isomorphic-react-redux/react-boilerplate"]
-	path = isomorphic-react-redux/react-boilerplate
-	url = https://github.com/react-boilerplate/react-boilerplate.git
 [submodule "react-native/ChainReactApp"]
 	path = react-native/ChainReactApp
 	url = https://github.com/infinitered/ChainReactApp.git
@@ -214,3 +211,7 @@
 [submodule "udacity/react-nano/Project2/react-readable"]
 	path = udacity/react-nano/Project2/react-readable
 	url = https://github.com/omaralbeik/react-readable.git
+[submodule "isomorphic-react-redux/react-boilerplate"]
+	path = isomorphic-react-redux/react-boilerplate
+	url = https://github.com/react-boilerplate/react-boilerplate.git
+
