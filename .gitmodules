@@ -214,10 +214,18 @@
 [submodule "isomorphic-react-redux/react-boilerplate"]
 	path = isomorphic-react-redux/react-boilerplate
 	url = https://github.com/react-boilerplate/react-boilerplate.git
-
 [submodule "jsA/css-modal"]
 	path = jsA/css-modal
 	url = https://github.com/drublic/css-modal
 [submodule "react/material-ui"]
 	path = react/material-ui
 	url = https://github.com/callemall/material-ui
+[submodule "react-native/f8app"]
+	path = react-native/f8app
+	url = https://github.com/fbsamples/f8app.git
+[submodule "combination/reactotron"]
+	path = combination/reactotron
+	url = https://github.com/infinitered/reactotron.git
+[submodule "react-native/redux-offline"]
+	path = react-native/redux-offline
+	url = https://github.com/jevakallio/redux-offline
