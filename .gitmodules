@@ -229,3 +229,9 @@
 [submodule "react-native/redux-offline"]
 	path = react-native/redux-offline
 	url = https://github.com/jevakallio/redux-offline
+[submodule "react-native/react-native-firestack"]
+	path = react-native/react-native-firestack
+	url = https://github.com/fullstackreact/react-native-firestack.git
+[submodule "react-native/react-native-firebase"]
+	path = react-native/react-native-firebase
+	url = https://github.com/invertase/react-native-firebase.git
