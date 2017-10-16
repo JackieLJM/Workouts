@@ -1,0 +1,727 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rem",
+				"removeEventListener\t( type: DOMString, callback: EventListener, capture?: boolean ): void EventTarget"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"re",
+				"removeEventListener〔function〕"
+			],
+			[
+				"getE",
+				"getElementsByClassName\t( classNames: DOMString ): HTMLCollection Element"
+			],
+			[
+				"getEl",
+				"getElementsByClassName\t( classNames: DOMString ): HTMLCollection Element"
+			],
+			[
+				"sty",
+				"style\t Style CSS"
+			],
+			[
+				"query",
+				"querySelector\t( selectors: DOMString ): Element (Selectors) Element"
+			],
+			[
+				"background-c",
+				"background-clip"
+			],
+			[
+				"client",
+				"clientWidth"
+			],
+			[
+				"cli",
+				"clientHeight"
+			],
+			[
+				"doc",
+				"docEl"
+			],
+			[
+				"bu",
+				"buffer"
+			],
+			[
+				"sprite",
+				"spritesmith"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"s",
+				"score.js"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"return",
+				"return"
+			],
+			[
+				"require",
+				"require〔function〕"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"a",
+				"align-self"
+			],
+			[
+				"fe",
+				"flex-end"
+			],
+			[
+				"align",
+				"align-self"
+			],
+			[
+				"al",
+				"align-content"
+			],
+			[
+				"fle",
+				"flex"
+			],
+			[
+				"je",
+				"justify-content"
+			],
+			[
+				"cent",
+				"center"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ca",
+				"canvas"
+			],
+			[
+				"can",
+				"canvas\tTag"
+			],
+			[
+				"he",
+				"height\t.height()"
+			],
+			[
+				"in",
+				"innerWidth〔variable〕"
+			],
+			[
+				"add",
+				"addEventListener\t( type: DOMString, callback: EventListener, capture?: boolean ): void EventTarget"
+			],
+			[
+				"ta",
+				"target\t: EventTarget Event"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"fel",
+				"flex-start"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"sp",
+				"space-around"
+			],
+			[
+				"alig",
+				"align-content"
+			],
+			[
+				"c",
+				"column"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"oncl",
+				"onclick\t: EventHandler Window"
+			],
+			[
+				"onc",
+				"onclick〔function〕"
+			],
+			[
+				"propa",
+				"stopPropagation\t(): void Event"
+			],
+			[
+				"getEle",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"line",
+				"inline-block"
+			],
+			[
+				"ge",
+				"getElementById〔function〕"
+			],
+			[
+				"score",
+				"scoreBoard"
+			],
+			[
+				"cancel",
+				"cancelBigButton"
+			],
+			[
+				"remove",
+				"removeAttribute\t( name: DOMString ): void Element"
+			],
+			[
+				"big",
+				"bigButton"
+			],
+			[
+				"chang",
+				"changBigButton"
+			],
+			[
+				"class",
+				"className\t: DOMString Element"
+			],
+			[
+				"set",
+				"setAttribute\t( name: DOMString, value: DOMString ): void Element"
+			],
+			[
+				"g",
+				"getElementById〔function〕"
+			],
+			[
+				"attr",
+				"attr\t.attr() - single"
+			],
+			[
+				"att",
+				"attributes\t: Attr[] Element"
+			],
+			[
+				"spa",
+				"space-between"
+			],
+			[
+				"stop",
+				"stopPropagation\t(): void Event"
+			],
+			[
+				"preve",
+				"preventDefault\t(): void Event"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"di",
+				"display〔variable〕"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"sum",
+				"sumIn"
+			],
+			[
+				"bo",
+				"inline-block"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"men",
+				"menu"
+			],
+			[
+				"par",
+				"parse\t$.parseXML()"
+			],
+			[
+				"info",
+				"infoTitle"
+			],
+			[
+				"geel",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tex",
+				"textContent\t: DOMString Node"
+			],
+			[
+				"cl",
+				"cl\tconsole.log"
+			],
+			[
+				"on",
+				"onclick〔function〕"
+			],
+			[
+				"gete",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"100",
+				"1000px"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"flex-",
+				"flex-direction"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"spe",
+				"space-between"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"ul",
+				"ul\t<ul>"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"get",
+				"getElementById〔function〕"
+			],
+			[
+				"app",
+				"append\t.append()"
+			],
+			[
+				"fir",
+				"first\t.first()"
+			],
+			[
+				"create",
+				"createElement()\tReact"
+			],
+			[
+				"inse",
+				"insertBefore\t.insertBefore()"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"crea",
+				"createElement〔function〕"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "sync",
+		"selected_items":
+		[
+			[
+				"sync",
+				"Sync Settings: Download"
+			],
+			[
+				"open",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"li",
+				"Package Control: List Packages"
+			],
+			[
+				"ter",
+				"Terminal: Open in project folder"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"openin",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"browser",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"canvas",
+				"Canvas Snippets: Open ChangeLog"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"for",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"terminal",
+				"Preferences: Terminality Settings – Default"
+			],
+			[
+				"livereload",
+				"LiveReload: Help"
+			],
+			[
+				"syn",
+				"Sync Settings: Create and Upload"
+			],
+			[
+				"br",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 600.0
+	},
+	"console":
+	{
+		"height": 390.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/LIUJIAMING/Desktop/Workouts/jsA"
+	],
+	"file_history":
+	[
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/sublime.sublime-project",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/menu/readme.html",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.js",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.html",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.css",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/img/logo.png",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/menu/index.html",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/Sync Settings/SyncSettings.sublime-settings",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/User/SyncSettings.sublime-settings",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/package.json",
+		"/C/Users/LIUJIAMING/Desktop/PesonalProjects/.gitmodules",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/gulpfile.js",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/logo.css",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/build/logo.css",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/build/logo.png",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/logo.png",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/build/score.min.css",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/score.js",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/score.html",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/score.css",
+		"/C/Users/LIUJIAMING/Desktop/Works/2016-12-21/mobileTeacher/css/t.css",
+		"/C/Users/LIUJIAMING/Desktop/Workouts/.gitignore",
+		"/C/Users/LIUJIAMING/Desktop/Works/.gitignore",
+		"/C/Users/LIUJIAMING/Desktop/Works/2016-12-21/mobileTeacher/index.html",
+		"/C/Users/LIUJIAMING/Desktop/Works/2016-12-21/mobileTeacher/password.html",
+		"/C/Users/LIUJIAMING/Desktop/Works/2016-12-21/mobileTeacher/exam.html",
+		"/C/Users/LIUJIAMING/Desktop/Works/2016-12-21/mobileTeacher/examlist.html",
+		"/C/Users/LIUJIAMING/Downloads/ZeroExamples.svg",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/fastclick.js",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/LIUJIAMING/Downloads/未标题-3.svg",
+		"/C/Users/LIUJIAMING/Downloads/未标题-1.svg",
+		"/C/Users/LIUJIAMING/Downloads/未标题-2.svg",
+		"/C/Users/LIUJIAMING/Desktop/Workouts/.gitmodules",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/auto-save/Default (Windows).sublime-keymap",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/auto-save/auto_save.sublime-settings",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/User/auto_save.sublime-settings",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/Canvas-Snippets/Changes.txt",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/Terminality/Terminality.sublime-settings",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/User/Terminality.sublime-keymap",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/Terminality/Default.sublime-keymap",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/scoreResource/score.js",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/User/Terminality.sublime-settings",
+		"/C/Users/LIUJIAMING/AppData/Roaming/Sublime Text 3/Packages/Terminality/README.md"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 62.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "animation.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 211.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
