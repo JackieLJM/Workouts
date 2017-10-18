@@ -557,10 +557,12 @@
 	],
 	"file_history":
 	[
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/menu/js/stopExecutionOnTimeout.js",
+		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.html",
+		"/C/Users/LIUJIAMING/AppData/Local/Temp/tmp5F2B.tmp.txt",
 		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/sublime.sublime-project",
 		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/menu/readme.html",
 		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.js",
-		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.html",
 		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/src/score.css",
 		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/img/logo.png",
 		"/C/Users/LIUJIAMING/Desktop/Works/2017-9-22/menu/index.html",
@@ -606,7 +608,7 @@
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -719,7 +721,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211.0,
+	"side_bar_width": 206.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
