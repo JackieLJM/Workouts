@@ -235,3 +235,9 @@
 [submodule "react-native/react-native-firebase"]
 	path = react-native/react-native-firebase
 	url = https://github.com/invertase/react-native-firebase.git
+[submodule "jsA/browser-sync"]
+	path = jsA/browser-sync
+	url = https://github.com/BrowserSync/browser-sync.git
+[submodule "jsA/h5bp/html5-boilerplate"]
+	path = jsA/h5bp/html5-boilerplate
+	url = https://github.com/h5bp/html5-boilerplate.git
