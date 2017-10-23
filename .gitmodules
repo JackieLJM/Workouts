@@ -241,3 +241,6 @@
 [submodule "jsA/h5bp/html5-boilerplate"]
 	path = jsA/h5bp/html5-boilerplate
 	url = https://github.com/h5bp/html5-boilerplate.git
+[submodule "jsA/gulp"]
+	path = jsA/gulp
+	url = https://github.com/gulpjs/gulp.git
