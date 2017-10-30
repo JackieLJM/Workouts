@@ -244,3 +244,9 @@
 [submodule "jsA/gulp"]
 	path = jsA/gulp
 	url = https://github.com/gulpjs/gulp.git
+[submodule "udacity/frontend-nano/neighborhood-map"]
+	path = udacity/frontend-nano/neighborhood-map
+	url = https://github.com/6stringbeliever/neighborhood-map.git
+[submodule "react-native/styled-components-native-code-mod"]
+	path = react-native/styled-components-native-code-mod
+	url = https://github.com/styled-components/styled-components-native-code-mod.git
