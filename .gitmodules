@@ -124,9 +124,6 @@
 [submodule "jsA/Snap.svg"]
 	path = jsA/Snap.svg
 	url = https://github.com/adobe-webplatform/Snap.svg
-[submodule "jsA/html5-boilerplate"]
-	path = jsA/html5-boilerplate
-	url = https://github.com/h5bp/html5-boilerplate.git
 [submodule "isomorphic-react-redux/js-stack-from-scratch"]
 	path = isomorphic-react-redux/js-stack-from-scratch
 	url = https://github.com/verekia/js-stack-from-scratch.git
@@ -250,3 +247,12 @@
 [submodule "react-native/styled-components-native-code-mod"]
 	path = react-native/styled-components-native-code-mod
 	url = https://github.com/styled-components/styled-components-native-code-mod.git
+[submodule "udacity/frontend-nano/Project5-NeighborhoodMap"]
+	path = udacity/frontend-nano/Project5-NeighborhoodMap
+	url = https://github.com/sheryllun/Project5-NeighborhoodMap.git
+[submodule "visual/materialize"]
+	path = visual/materialize
+	url = https://github.com/Dogfalo/materialize.git
+[submodule "visual/material-design-lite"]
+	path = visual/material-design-lite
+	url = https://github.com/google/material-design-lite.git
