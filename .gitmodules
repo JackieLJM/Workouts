@@ -253,3 +253,9 @@
 [submodule "visual/material-design-lite"]
 	path = visual/material-design-lite
 	url = https://github.com/google/material-design-lite.git
+[submodule "react-native/react-native-starter-app"]
+	path = react-native/react-native-starter-app
+	url = https://github.com/mcnamee/react-native-starter-app.git
+[submodule "firebase/functions-samples"]
+	path = firebase/functions-samples
+	url = https://github.com/firebase/functions-samples.git
