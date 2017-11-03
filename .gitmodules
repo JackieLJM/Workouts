@@ -1,3 +1,261 @@
-[submodule "udacity/frontend-nano/yelp-neighborhood-map/neighborhood-map"]
-	path = udacity/frontend-nano/yelp-neighborhood-map/neighborhood-map
-	url = https://github.com/micyang/neighborhood-map.git
+[submodule "react/react-hot-boilerplate"]
+	path = react/react-hot-boilerplate
+	url = https://github.com/gaearon/react-hot-boilerplate.git
+[submodule "react/react-tutorial"]
+	path = react/react-tutorial
+	url = https://github.com/reactjs/react-tutorial.git
+[submodule "isomorphic-react-redux/isomorphic-redux-app"]
+	path = isomorphic-react-redux/isomorphic-redux-app
+	url = https://github.com/caljrimmer/isomorphic-redux-app.git
+[submodule "isomorphic-react-redux/redux-tutorial"]
+	path = isomorphic-react-redux/redux-tutorial
+	url = https://github.com/happypoulp/redux-tutorial.git
+[submodule "isomorphic-react-redux/simplest-redux-example"]
+	path = isomorphic-react-redux/simplest-redux-example
+	url = https://github.com/jackielii/simplest-redux-example.git
+[submodule "react/react-router-tutorial"]
+	path = react/react-router-tutorial
+	url = https://github.com/reactjs/react-router-tutorial
+[submodule "isomorphic-react-redux/koa-react-full-example"]
+	path = isomorphic-react-redux/koa-react-full-example
+	url = https://github.com/dozoisch/koa-react-full-example
+[submodule "react/react-router"]
+	path = react/react-router
+	url = https://github.com/ReactTraining/react-router.git
+[submodule "combination/electron-react-boilerplate"]
+	path = combination/electron-react-boilerplate
+	url = https://github.com/chentsulin/electron-react-boilerplate
+[submodule "visual/recharts"]
+	path = visual/recharts
+	url = https://github.com/recharts/recharts.git
+[submodule "react/react-demos"]
+	path = react/react-demos
+	url = https://github.com/ruanyf/react-demos
+[submodule "react/reactMonkey"]
+	path = react/reactMonkey
+	url = https://github.com/ziaochina/reactMonkey.git
+[submodule "react/react-simple-pwa"]
+	path = react/react-simple-pwa
+	url = https://github.com/BosNaufal/react-simple-pwa.git
+[submodule "isomorphic-react-redux/message-board"]
+	path = isomorphic-react-redux/message-board
+	url = https://github.com/defshine/message-board.git
+[submodule "react-native/navigation"]
+	path = react-native/navigation
+	url = https://github.com/mozillo/navigation.git
+[submodule "combination/react-native-meteor-boilerplate"]
+	path = combination/react-native-meteor-boilerplate
+	url = https://github.com/spencercarli/react-native-meteor-boilerplate.git
+[submodule "isomorphic-react-redux/react-redux-universal-hot-example"]
+	path = isomorphic-react-redux/react-redux-universal-hot-example
+	url = https://github.com/erikras/react-redux-universal-hot-example.git
+[submodule "isomorphic-react-redux/redux"]
+	path = isomorphic-react-redux/redux
+	url = https://github.com/reactjs/redux.git
+[submodule "isomorphic-react-redux/react-redux"]
+	path = isomorphic-react-redux/react-redux
+	url = https://github.com/reactjs/react-redux.git
+[submodule "react-native/example-react-native-redux"]
+	path = react-native/example-react-native-redux
+	url = https://github.com/alinz/example-react-native-redux
+[submodule "react-native/native-starter-kit"]
+	path = react-native/native-starter-kit
+	url = https://github.com/start-react/native-starter-kit.git
+[submodule "react-native/react-native-one"]
+	path = react-native/react-native-one
+	url = https://github.com/wutongke/react-native-one.git
+[submodule "isomorphic-react-redux/Webpack2-React-Redux-Boilerplate"]
+	path = isomorphic-react-redux/Webpack2-React-Redux-Boilerplate
+	url = https://github.com/wxyyxc1992/Webpack2-React-Redux-Boilerplate.git
+[submodule "react-native/react-native-firebase-starter"]
+	path = react-native/react-native-firebase-starter
+	url = https://github.com/jsappme/react-native-firebase-starter.git
+[submodule "react-native/react-native-hot-redux-starter"]
+	path = react-native/react-native-hot-redux-starter
+	url = https://github.com/adampash/react-native-hot-redux-starter
+[submodule "isomorphic-react-redux/react-server"]
+	path = isomorphic-react-redux/react-server
+	url = https://github.com/huqingliang/react-server.git
+[submodule "isomorphic-react-redux/react-isomorph-demo"]
+	path = isomorphic-react-redux/react-isomorph-demo
+	url = https://github.com/larry011/react-isomorph-demo.git
+[submodule "react-native/react-native-redux"]
+	path = react-native/react-native-redux
+	url = https://github.com/sibelius/react-native-redux.git
+[submodule "isomorphic-react-redux/redux-saga"]
+	path = isomorphic-react-redux/redux-saga
+	url = https://github.com/redux-saga/redux-saga.git
+[submodule "isomorphic-react-redux/redux-saga-beginner-tutorial"]
+	path = isomorphic-react-redux/redux-saga-beginner-tutorial
+	url = https://github.com/redux-saga/redux-saga-beginner-tutorial
+[submodule "react-native/reading"]
+	path = react-native/reading
+	url = https://github.com/attentiveness/reading.git
+[submodule "react-native/snowflake"]
+	path = react-native/snowflake
+	url = https://github.com/bartonhammond/snowflake.git
+[submodule "mern-starter"]
+	path = mern-starter
+	url = https://github.com/Hashnode/mern-starter.git
+[submodule "isomorphic-react-redux/webpack-react-redux-es6-boilerplate"]
+	path = isomorphic-react-redux/webpack-react-redux-es6-boilerplate
+	url = https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate
+[submodule "react/css-modules-demos"]
+	path = react/css-modules-demos
+	url = https://github.com/ruanyf/css-modules-demos.git
+[submodule "react/webpack-demo"]
+	path = react/webpack-demo
+	url = https://github.com/css-modules/webpack-demo
+[submodule "isomorphic-react-redux/React-News-Board"]
+	path = isomorphic-react-redux/React-News-Board
+	url = https://github.com/ethan-funny/React-News-Board.git
+[submodule "react-native/noder-react-native"]
+	path = react-native/noder-react-native
+	url = https://github.com/soliury/noder-react-native.git
+[submodule "react/minimal-example-for-babel-plugin-webpack-loaders"]
+	path = react/minimal-example-for-babel-plugin-webpack-loaders
+	url = https://github.com/istarkov/minimal-example-for-babel-plugin-webpack-loaders.git
+[submodule "react-native/react-native-template-demo"]
+	path = react-native/react-native-template-demo
+	url = https://github.com/mkonicek/react-native-template-demo.git
+[submodule "react-native/pepperoni-app-kit"]
+	path = react-native/pepperoni-app-kit
+	url = https://github.com/futurice/pepperoni-app-kit.git
+[submodule "jsA/Snap.svg"]
+	path = jsA/Snap.svg
+	url = https://github.com/adobe-webplatform/Snap.svg
+[submodule "isomorphic-react-redux/js-stack-from-scratch"]
+	path = isomorphic-react-redux/js-stack-from-scratch
+	url = https://github.com/verekia/js-stack-from-scratch.git
+[submodule "jsA/fastclick"]
+	path = jsA/fastclick
+	url = https://github.com/ftlabs/fastclick.git
+[submodule "isomorphic-react-redux/react-slingshot"]
+	path = isomorphic-react-redux/react-slingshot
+	url = https://github.com/coryhouse/react-slingshot.git
+[submodule "jsA/jquery-ui"]
+	path = jsA/jquery-ui
+	url = https://github.com/jquery/jquery-ui.git
+[submodule "isomorphic-react-redux/react-starter-kit"]
+	path = isomorphic-react-redux/react-starter-kit
+	url = https://github.com/kriasoft/react-starter-kit.git
+[submodule "jsA/Velocityjs/velocityjs-demo"]
+	path = jsA/Velocityjs/velocityjs-demo
+	url = https://github.com/cmoody/velocityjs-demo.git
+[submodule "jsA/Examples/SegmentEffect"]
+	path = jsA/Examples/SegmentEffect
+	url = https://github.com/codrops/SegmentEffect.git
+[submodule "jsA/SVGa/FancyLetterAnimation"]
+	path = jsA/SVGa/FancyLetterAnimation
+	url = https://github.com/codrops/FancyLetterAnimation.git
+[submodule "freeCodeCamp/freecodecamp.cn"]
+	path = freeCodeCamp/freecodecamp.cn
+	url = https://github.com/freecodecampchina/freecodecamp.cn
+[submodule "react/react-hn"]
+	path = react/react-hn
+	url = https://github.com/insin/react-hn.git
+[submodule "jsA/web-starter-kit"]
+	path = jsA/web-starter-kit
+	url = https://github.com/google/web-starter-kit
+[submodule "freeCodeCamp/clementinejs"]
+	path = freeCodeCamp/clementinejs
+	url = https://github.com/johnstonbl01/clementinejs
+[submodule "freeCodeCamp/clementinejs-angular"]
+	path = freeCodeCamp/clementinejs-angular
+	url = https://github.com/johnstonbl01/clementinejs-angular
+[submodule "freeCodeCamp/clementinejs-fcc"]
+	path = freeCodeCamp/clementinejs-fcc
+	url = https://github.com/johnstonbl01/clementinejs-fcc
+[submodule "udacity/AIND-CV-Mimic"]
+	path = udacity/AIND-CV-Mimic
+	url = https://github.com/udacity/AIND-CV-Mimic
+[submodule "udacity/FEF-Quiz-Angular-Up-and-Running"]
+	path = udacity/FEF-Quiz-Angular-Up-and-Running
+	url = https://github.com/udacity/FEF-Quiz-Angular-Up-and-Running
+[submodule "jsA/web-animations-demos"]
+	path = jsA/web-animations-demos
+	url = https://github.com/web-animations/web-animations-demos.git
+[submodule "udacity/react-nano/Project1/1-2/composition-tutorial"]
+	path = udacity/react-nano/Project1/1-2/composition-tutorial
+	url = https://github.com/kevinbgreene/composition-tutorial
+[submodule "udacity/react-nano/course-git-blog-project"]
+	path = udacity/react-nano/course-git-blog-project
+	url = https://github.com/udacity/course-git-blog-project
+[submodule "udacity/react-nano/Project2/reactnd-udacimeals-complete"]
+	path = udacity/react-nano/Project2/reactnd-udacimeals-complete
+	url = https://github.com/udacity/reactnd-udacimeals-complete
+[submodule "jsA/photo-gallery-RN"]
+	path = jsA/photo-gallery-RN
+	url = https://github.com/narendrashetty/photo-gallery-RN
+[submodule "react/react-data-fetching"]
+	path = react/react-data-fetching
+	url = https://github.com/rwieruch/react-data-fetching
+[submodule "react-native/ChainReactApp"]
+	path = react-native/ChainReactApp
+	url = https://github.com/infinitered/ChainReactApp.git
+[submodule "jsDB/clean-code-javascript"]
+	path = jsDB/clean-code-javascript
+	url = https://github.com/ryanmcdermott/clean-code-javascript.git
+[submodule "udacity/react-nano/Project3/reactnd-UdaciFitness-complete"]
+	path = udacity/react-nano/Project3/reactnd-UdaciFitness-complete
+	url = https://github.com/udacity/reactnd-UdaciFitness-complete
+[submodule "udacity/react-nano/Project1/MyReads-A-Book-Tracking-App"]
+	path = udacity/react-nano/Project1/MyReads-A-Book-Tracking-App
+	url = https://github.com/garcrich/MyReads-A-Book-Tracking-App.git
+[submodule "udacity/react-nano/Project2/react-readable"]
+	path = udacity/react-nano/Project2/react-readable
+	url = https://github.com/omaralbeik/react-readable.git
+[submodule "isomorphic-react-redux/react-boilerplate"]
+	path = isomorphic-react-redux/react-boilerplate
+	url = https://github.com/react-boilerplate/react-boilerplate.git
+[submodule "jsA/css-modal"]
+	path = jsA/css-modal
+	url = https://github.com/drublic/css-modal
+[submodule "react/material-ui"]
+	path = react/material-ui
+	url = https://github.com/callemall/material-ui
+[submodule "react-native/f8app"]
+	path = react-native/f8app
+	url = https://github.com/fbsamples/f8app.git
+[submodule "combination/reactotron"]
+	path = combination/reactotron
+	url = https://github.com/infinitered/reactotron.git
+[submodule "react-native/redux-offline"]
+	path = react-native/redux-offline
+	url = https://github.com/jevakallio/redux-offline
+[submodule "react-native/react-native-firestack"]
+	path = react-native/react-native-firestack
+	url = https://github.com/fullstackreact/react-native-firestack.git
+[submodule "react-native/react-native-firebase"]
+	path = react-native/react-native-firebase
+	url = https://github.com/invertase/react-native-firebase.git
+[submodule "jsA/browser-sync"]
+	path = jsA/browser-sync
+	url = https://github.com/BrowserSync/browser-sync.git
+[submodule "jsA/h5bp/html5-boilerplate"]
+	path = jsA/h5bp/html5-boilerplate
+	url = https://github.com/h5bp/html5-boilerplate.git
+[submodule "jsA/gulp"]
+	path = jsA/gulp
+	url = https://github.com/gulpjs/gulp.git
+[submodule "udacity/frontend-nano/neighborhood-map"]
+	path = udacity/frontend-nano/neighborhood-map
+	url = https://github.com/6stringbeliever/neighborhood-map.git
+[submodule "react-native/styled-components-native-code-mod"]
+	path = react-native/styled-components-native-code-mod
+	url = https://github.com/styled-components/styled-components-native-code-mod.git
+[submodule "udacity/frontend-nano/Project5-NeighborhoodMap"]
+	path = udacity/frontend-nano/Project5-NeighborhoodMap
+	url = https://github.com/sheryllun/Project5-NeighborhoodMap.git
+[submodule "visual/materialize"]
+	path = visual/materialize
+	url = https://github.com/Dogfalo/materialize.git
+[submodule "visual/material-design-lite"]
+	path = visual/material-design-lite
+	url = https://github.com/google/material-design-lite.git
+[submodule "react-native/react-native-starter-app"]
+	path = react-native/react-native-starter-app
+	url = https://github.com/mcnamee/react-native-starter-app.git
+[submodule "firebase/functions-samples"]
+	path = firebase/functions-samples
+	url = https://github.com/firebase/functions-samples.git
