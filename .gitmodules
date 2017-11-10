@@ -259,3 +259,6 @@
 [submodule "firebase/functions-samples"]
 	path = firebase/functions-samples
 	url = https://github.com/firebase/functions-samples.git
+[submodule "jsDB/fetch-examples"]
+	path = jsDB/fetch-examples
+	url = https://github.com/mdn/fetch-examples.git
