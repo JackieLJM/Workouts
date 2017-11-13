@@ -262,3 +262,6 @@
 [submodule "jsDB/fetch-examples"]
 	path = jsDB/fetch-examples
 	url = https://github.com/mdn/fetch-examples.git
+[submodule "jsDB/normalizr"]
+	path = jsDB/normalizr
+	url = https://github.com/paularmstrong/normalizr.git
