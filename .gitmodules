@@ -265,3 +265,15 @@
 [submodule "jsDB/normalizr"]
 	path = jsDB/normalizr
 	url = https://github.com/paularmstrong/normalizr.git
+[submodule "isomorphic-react-redux/sound-redux"]
+	path = isomorphic-react-redux/sound-redux
+	url = https://github.com/andrewngu/sound-redux.git
+[submodule "react/styled-components"]
+	path = react/styled-components
+	url = https://github.com/styled-components/styled-components.git
+[submodule "visual/material-components-web"]
+	path = visual/material-components-web
+	url = https://github.com/material-components/material-components-web.git
+[submodule "react/rmwc"]
+	path = react/rmwc
+	url = https://github.com/jamesmfriedman/rmwc.git
