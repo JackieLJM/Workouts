@@ -207,7 +207,7 @@
 	url = https://github.com/omaralbeik/react-readable.git
 [submodule "isomorphic-react-redux/react-boilerplate"]
 	path = isomorphic-react-redux/react-boilerplate
-	url = https://github.com/react-boilerplate/react-boilerplate.git
+	url = https://github.com/react-boilerplate/react-boilerplate
 [submodule "jsA/css-modal"]
 	path = jsA/css-modal
 	url = https://github.com/drublic/css-modal
