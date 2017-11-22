@@ -289,3 +289,18 @@
 [submodule "FULLSTACK/scalable-react-boilerplate"]
 	path = FULLSTACK/scalable-react-boilerplate
 	url = https://github.com/scalable-react/scalable-react-boilerplate.git
+[submodule "react/react-playbook"]
+	path = react/react-playbook
+	url = https://github.com/kylpo/react-playbook.git
+[submodule "react/neos-ui"]
+	path = react/neos-ui
+	url = https://github.com/neos/neos-ui.git
+[submodule "react/react-document-title-decorator"]
+	path = react/react-document-title-decorator
+	url = https://github.com/gigobyte/react-document-title-decorator.git
+[submodule "react/react-document-title"]
+	path = react/react-document-title
+	url = https://github.com/gaearon/react-document-title.git
+[submodule "react/react-cool-starter"]
+	path = react/react-cool-starter
+	url = https://github.com/wellyshen/react-cool-starter.git
