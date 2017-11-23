@@ -307,3 +307,6 @@
 [submodule "isomorphic-react-redux/react-pxq"]
 	path = isomorphic-react-redux/react-pxq
 	url = https://github.com/bailicangdu/react-pxq.git
+[submodule "isomorphic-react-redux/apple-basket-redux"]
+	path = isomorphic-react-redux/apple-basket-redux
+	url = https://github.com/ckinmind/apple-basket-redux.git
