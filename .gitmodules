@@ -304,3 +304,6 @@
 [submodule "react/react-cool-starter"]
 	path = react/react-cool-starter
 	url = https://github.com/wellyshen/react-cool-starter.git
+[submodule "isomorphic-react-redux/react-pxq"]
+	path = isomorphic-react-redux/react-pxq
+	url = https://github.com/bailicangdu/react-pxq.git
