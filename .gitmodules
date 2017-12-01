@@ -316,3 +316,21 @@
 [submodule "isomorphic-react-redux/React-Redux-Server-Rendering"]
 	path = isomorphic-react-redux/React-Redux-Server-Rendering
 	url = https://github.com/cllgeek/React-Redux-Server-Rendering.git
+[submodule "react/redbox-react"]
+	path = react/redbox-react
+	url = https://github.com/commissure/redbox-react.git
+[submodule "react-native/react-native-full-example"]
+	path = react-native/react-native-full-example
+	url = https://github.com/liumingmusic/react-native-full-example.git
+[submodule "react-native/GD"]
+	path = react-native/GD
+	url = https://github.com/shaojianye/GD.git
+[submodule "FULLSTACK/ServerSideApplication-Development-And-System-Architecture"]
+	path = FULLSTACK/ServerSideApplication-Development-And-System-Architecture
+	url = https://github.com/wxyyxc1992/ServerSideApplication-Development-And-System-Architecture.git
+[submodule "FULLSTACK/Web-Development-And-Engineering-Practices"]
+	path = FULLSTACK/Web-Development-And-Engineering-Practices
+	url = https://github.com/wxyyxc1992/Web-Development-And-Engineering-Practices.git
+[submodule "FULLSTACK/SoftwareEngineering-Essentials"]
+	path = FULLSTACK/SoftwareEngineering-Essentials
+	url = https://github.com/wxyyxc1992/SoftwareEngineering-Essentials.git
