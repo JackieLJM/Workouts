@@ -334,3 +334,15 @@
 [submodule "FULLSTACK/SoftwareEngineering-Essentials"]
 	path = FULLSTACK/SoftwareEngineering-Essentials
 	url = https://github.com/wxyyxc1992/SoftwareEngineering-Essentials.git
+[submodule "react/recompose"]
+	path = react/recompose
+	url = https://github.com/acdlite/recompose.git
+[submodule "react/egghead-recompose"]
+	path = react/egghead-recompose
+	url = https://github.com/timkindberg/egghead-recompose.git
+[submodule "isomorphic-react-redux/favesound-redux"]
+	path = isomorphic-react-redux/favesound-redux
+	url = https://github.com/rwieruch/favesound-redux.git
+[submodule "isomorphic-react-redux/react-redux-soundcloud"]
+	path = isomorphic-react-redux/react-redux-soundcloud
+	url = https://github.com/rwieruch/react-redux-soundcloud.git
