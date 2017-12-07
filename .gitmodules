@@ -201,7 +201,7 @@
 	url = https://github.com/omaralbeik/react-readable.git
 [submodule "isomorphic-react-redux/react-boilerplate"]
 	path = isomorphic-react-redux/react-boilerplate
-	url = https://github.com/react-boilerplate/react-boilerplate
+	url = https://github.com/react-boilerplate/react-boilerplate.git
 [submodule "jsA/css-modal"]
 	path = jsA/css-modal
 	url = https://github.com/drublic/css-modal
@@ -346,3 +346,12 @@
 [submodule "isomorphic-react-redux/react-redux-soundcloud"]
 	path = isomorphic-react-redux/react-redux-soundcloud
 	url = https://github.com/rwieruch/react-redux-soundcloud.git
+[submodule "jsDB/immutable-js"]
+	path = jsDB/immutable-js
+	url = https://github.com/facebook/immutable-js.git
+[submodule "react/reselect"]
+	path = react/reselect
+	url = https://github.com/reactjs/reselect.git
+[submodule "udacity/react-nano/Project2/reactnd-project-readable"]
+	path = udacity/react-nano/Project2/reactnd-project-readable
+	url = https://github.com/sujinleeme/reactnd-project-readable.git
