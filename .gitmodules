@@ -61,8 +61,8 @@
 [submodule "isomorphic-react-redux/Webpack2-React-Redux-Boilerplate"]
 	path = isomorphic-react-redux/Webpack2-React-Redux-Boilerplate
 	url = https://github.com/wxyyxc1992/Webpack2-React-Redux-Boilerplate.git
-[submodule "react-native/react-native-firebase-starter"]
-	path = react-native/react-native-firebase-starter
+[submodule "firebase/react-native-firebase-starter"]
+	path = firebase/react-native-firebase-starter
 	url = https://github.com/jsappme/react-native-firebase-starter.git
 [submodule "react-native/react-native-hot-redux-starter"]
 	path = react-native/react-native-hot-redux-starter
@@ -217,11 +217,11 @@
 [submodule "react-native/redux-offline"]
 	path = react-native/redux-offline
 	url = https://github.com/jevakallio/redux-offline
-[submodule "react-native/react-native-firestack"]
-	path = react-native/react-native-firestack
+[submodule "firebase/react-native-firestack"]
+	path = firebase/react-native-firestack
 	url = https://github.com/fullstackreact/react-native-firestack.git
-[submodule "react-native/react-native-firebase"]
-	path = react-native/react-native-firebase
+[submodule "firebase/react-native-firebase"]
+	path = firebase/react-native-firebase
 	url = https://github.com/invertase/react-native-firebase.git
 [submodule "jsA/browser-sync"]
 	path = jsA/browser-sync
@@ -355,3 +355,12 @@
 [submodule "udacity/react-nano/Project2/reactnd-project-readable"]
 	path = udacity/react-nano/Project2/reactnd-project-readable
 	url = https://github.com/sujinleeme/reactnd-project-readable.git
+[submodule "firebase/friendlychat-web"]
+	path = firebase/friendlychat-web
+	url = https://github.com/firebase/friendlychat-web.git
+[submodule "firebase/react-hn"]
+	path = firebase/react-hn
+	url = https://github.com/insin/react-hn.git
+[submodule "firebase/re-base"]
+	path = firebase/re-base
+	url = https://github.com/tylermcginnis/re-base.git
