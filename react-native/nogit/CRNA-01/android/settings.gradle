@@ -1,0 +1,3 @@
+rootProject.name = 'CRNA01'
+
+include ':app'

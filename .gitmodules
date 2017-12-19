@@ -247,9 +247,6 @@
 [submodule "visual/material-design-lite"]
 	path = visual/material-design-lite
 	url = https://github.com/google/material-design-lite.git
-[submodule "react-native/react-native-starter-app"]
-	path = react-native/react-native-starter-app
-	url = https://github.com/mcnamee/react-native-starter-app.git
 [submodule "firebase/functions-samples"]
 	path = firebase/functions-samples
 	url = https://github.com/firebase/functions-samples.git
@@ -364,3 +361,15 @@
 [submodule "firebase/re-base"]
 	path = firebase/re-base
 	url = https://github.com/tylermcginnis/re-base.git
+[submodule "FULLSTACK/express-react-hmr-boilerplate"]
+	path = FULLSTACK/express-react-hmr-boilerplate
+	url = https://github.com/gocreating/express-react-hmr-boilerplate.git
+[submodule "firebase/react-native-starter-app"]
+	path = firebase/react-native-starter-app
+	url = https://github.com/mcnamee/react-native-starter-app.git
+[submodule "firebase/firebase-react-native-sample"]
+	path = firebase/firebase-react-native-sample
+	url = https://github.com/davideast/firebase-react-native-sample.git
+[submodule "react-native/react-native-router-flux"]
+	path = react-native/react-native-router-flux
+	url = https://github.com/aksonov/react-native-router-flux.git
