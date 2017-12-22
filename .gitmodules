@@ -373,3 +373,12 @@
 [submodule "react-native/react-native-router-flux"]
 	path = react-native/react-native-router-flux
 	url = https://github.com/aksonov/react-native-router-flux.git
+[submodule "FULLSTACK/node-booklet-code"]
+	path = FULLSTACK/node-booklet-code
+	url = https://github.com/scotch-io/node-booklet-code.git
+[submodule "isomorphic-react-redux/redux-async-demo"]
+	path = isomorphic-react-redux/redux-async-demo
+	url = https://github.com/RukiQ/redux-async-demo.git
+[submodule "isomorphic-react-redux/react-boilerplate-ssr"]
+	path = isomorphic-react-redux/react-boilerplate-ssr
+	url = https://github.com/AlanWei/react-boilerplate-ssr.git
