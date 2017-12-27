@@ -31,9 +31,6 @@
 [submodule "react/react-demos"]
 	path = react/react-demos
 	url = https://github.com/ruanyf/react-demos
-[submodule "isomorphic-react-redux/message-board"]
-	path = isomorphic-react-redux/message-board
-	url = https://github.com/defshine/message-board.git
 [submodule "react-native/navigation"]
 	path = react-native/navigation
 	url = https://github.com/mozillo/navigation.git
@@ -382,3 +379,12 @@
 [submodule "isomorphic-react-redux/react-boilerplate-ssr"]
 	path = isomorphic-react-redux/react-boilerplate-ssr
 	url = https://github.com/AlanWei/react-boilerplate-ssr.git
+[submodule "isomorphic-react-redux/steamer-react"]
+	path = isomorphic-react-redux/steamer-react
+	url = https://github.com/steamerjs/steamer-react
+[submodule "firebase/reactfire"]
+	path = firebase/reactfire
+	url = https://github.com/firebase/reactfire.git
+[submodule "combination/message-board"]
+	path = combination/message-board
+	url = https://github.com/defshine/message-board.git
