@@ -388,3 +388,6 @@
 [submodule "combination/message-board"]
 	path = combination/message-board
 	url = https://github.com/defshine/message-board.git
+[submodule "isomorphic-react-redux/react-curd"]
+	path = isomorphic-react-redux/react-curd
+	url = https://github.com/awaw00/react-curd.git
