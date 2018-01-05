@@ -391,3 +391,15 @@
 [submodule "isomorphic-react-redux/react-curd"]
 	path = isomorphic-react-redux/react-curd
 	url = https://github.com/awaw00/react-curd.git
+[submodule "FULLSTACK/pro-mern-stack"]
+	path = FULLSTACK/pro-mern-stack
+	url = https://github.com/vasansr/pro-mern-stack.git
+[submodule "FULLSTACK/restful-api-express-mongoose"]
+	path = FULLSTACK/restful-api-express-mongoose
+	url = https://github.com/fedosejev/restful-api-express-mongoose.git
+[submodule "FULLSTACK/express-api-token-authentication"]
+	path = FULLSTACK/express-api-token-authentication
+	url = https://github.com/fedosejev/express-api-token-authentication.git
+[submodule "FULLSTACK/user-authentication-with-react"]
+	path = FULLSTACK/user-authentication-with-react
+	url = https://github.com/fedosejev/user-authentication-with-react.git
