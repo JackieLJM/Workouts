@@ -1,0 +1,17 @@
+{
+  "name": "@ljmlionshy/how-to-npm",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Congratulation.",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jackieljm/workouts/ABOUTTEACHLEARN/NodeSchool/Core/how-to-npm"
+  }
+}
