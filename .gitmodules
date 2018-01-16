@@ -403,3 +403,6 @@
 [submodule "FULLSTACK/user-authentication-with-react"]
 	path = FULLSTACK/user-authentication-with-react
 	url = https://github.com/fedosejev/user-authentication-with-react.git
+[submodule "ABOUTTEACHLEARN/art-of-node"]
+	path = ABOUTTEACHLEARN/art-of-node
+	url = https://github.com/maxogden/art-of-node.git
