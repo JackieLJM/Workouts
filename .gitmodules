@@ -406,3 +406,6 @@
 [submodule "ABOUTTEACHLEARN/art-of-node"]
 	path = ABOUTTEACHLEARN/art-of-node
 	url = https://github.com/maxogden/art-of-node.git
+[submodule "visual/react-canvas"]
+	path = visual/react-canvas
+	url = https://github.com/Flipboard/react-canvas.git
