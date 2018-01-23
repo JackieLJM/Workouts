@@ -91,12 +91,6 @@
 [submodule "isomorphic-react-redux/webpack-react-redux-es6-boilerplate"]
 	path = isomorphic-react-redux/webpack-react-redux-es6-boilerplate
 	url = https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate
-[submodule "react/css-modules-demos"]
-	path = react/css-modules-demos
-	url = https://github.com/ruanyf/css-modules-demos.git
-[submodule "react/webpack-demo"]
-	path = react/webpack-demo
-	url = https://github.com/css-modules/webpack-demo
 [submodule "isomorphic-react-redux/React-News-Board"]
 	path = isomorphic-react-redux/React-News-Board
 	url = https://github.com/ethan-funny/React-News-Board.git
@@ -409,3 +403,15 @@
 [submodule "visual/react-canvas"]
 	path = visual/react-canvas
 	url = https://github.com/Flipboard/react-canvas.git
+[submodule "visual/react-trello-board"]
+	path = visual/react-trello-board
+	url = https://github.com/web-pal/react-trello-board.git
+[submodule "visual/react-art"]
+	path = visual/react-art
+	url = https://github.com/reactjs/react-art.git
+[submodule "visual/react-layer-stack"]
+	path = visual/react-layer-stack
+	url = https://github.com/fckt/react-layer-stack.git
+[submodule "visual/react-dnd"]
+	path = visual/react-dnd
+	url = https://github.com/react-dnd/react-dnd.git
