@@ -1,3 +1,16 @@
+//ES5 20180124 260ms 65%Beated 
+// var roman =["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];    
+// var value = [1000,900,500,400,100,90,50,40,10,9,5,4,1]; 
+// var result="";
+//   for(var i=0; num!=0; i++){
+//         while(num >= value[i]){
+//             num -= value[i];
+//             result+=roman[i];
+//         }
+//     }
+//     return result;
+// }
+
 // ES5 20170803 15%Beated
 var intToRoman = function (num) {
     if (num < 4000 && num > 0) {

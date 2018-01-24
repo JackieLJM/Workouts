@@ -418,3 +418,6 @@
 [submodule "FULLSTACK/server-configs-nginx"]
 	path = FULLSTACK/server-configs-nginx
 	url = https://github.com/h5bp/server-configs-nginx.git
+[submodule "leetcode/leetcode"]
+	path = leetcode/leetcode
+	url = https://github.com/haoel/leetcode.git
