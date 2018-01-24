@@ -415,3 +415,6 @@
 [submodule "visual/react-dnd"]
 	path = visual/react-dnd
 	url = https://github.com/react-dnd/react-dnd.git
+[submodule "FULLSTACK/server-configs-nginx"]
+	path = FULLSTACK/server-configs-nginx
+	url = https://github.com/h5bp/server-configs-nginx.git
