@@ -421,3 +421,18 @@
 [submodule "leetcode/leetcode"]
 	path = leetcode/leetcode
 	url = https://github.com/haoel/leetcode.git
+[submodule "jsDB/javascript-datastructures-algorithms"]
+	path = jsDB/javascript-datastructures-algorithms
+	url = https://github.com/loiane/javascript-datastructures-algorithms.git
+[submodule "visual/react-motion"]
+	path = visual/react-motion
+	url = https://github.com/chenglou/react-motion.git
+[submodule "visual/animate"]
+	path = visual/animate
+	url = https://github.com/react-component/animate.git
+[submodule "visual/velocity-react"]
+	path = visual/velocity-react
+	url = https://github.com/google-fabric/velocity-react.git
+[submodule "isomorphic-react-redux/react-dashboard"]
+	path = isomorphic-react-redux/react-dashboard
+	url = https://github.com/flatlogic/react-dashboard.git
