@@ -436,3 +436,15 @@
 [submodule "isomorphic-react-redux/react-dashboard"]
 	path = isomorphic-react-redux/react-dashboard
 	url = https://github.com/flatlogic/react-dashboard.git
+[submodule "FULLSTACK/node-http-proxy"]
+	path = FULLSTACK/node-http-proxy
+	url = https://github.com/nodejitsu/node-http-proxy.git
+[submodule "FULLSTACK/express-for-APIs"]
+	path = FULLSTACK/express-for-APIs
+	url = https://github.com/jedwood/express-for-APIs.git
+[submodule "FULLSTACK/express-mongoose"]
+	path = FULLSTACK/express-mongoose
+	url = https://github.com/LearnBoost/express-mongoose.git
+[submodule "FULLSTACK/express-resource"]
+	path = FULLSTACK/express-resource
+	url = https://github.com/expressjs/express-resource
