@@ -1,0 +1,74 @@
+body {
+  background: whitesmoke;
+  font-family: tahoma;
+}
+
+.maptile {
+  float:left;
+  margin:0;
+  width:128px;
+  height:128px;
+}
+
+.tile-grass1 {
+  background-image: url('/tiles/grass_tile.png');
+}
+
+.tile-grass2 {
+  background-image: url('/tiles/grass_tile.png');
+}
+
+.tile-dirt-4way {
+  background: url('/tiles/dungeon_tileset_128.png') -768px -384px;
+}
+
+.tile-dirt-topleft {
+  background: url('/tiles/dungeon_tileset_128.png') -896px -384px;
+}
+
+.tile-dirt-topright {
+  background: url('/tiles/dungeon_tileset_128.png') -896px -512px;
+}
+
+.tile-dirt-uponly {
+  background: url('/tiles/dungeon_tileset_128.png') -256px -512px;
+}
+
+.maprow {
+  margin:0px;
+  clear:left;
+}
+
+
+/* Bogus sprite definitions... to be replaced with real ones later. */
+
+#player {
+  width: 64px;
+  height: 64px;
+  background: url('/sprites/orc-64.png');
+  margin: 32px;
+}
+
+#home {
+      width: 46px;
+      height: 44px;
+      background: url('/sprites/img_navsprites_hover.gif') 0 0;
+      display: block;
+      margin-left: 48px;
+      margin-top: 48px;
+    }
+
+    #prev {
+      width: 46px;
+      height: 44px;
+      background: url('/sprites/img_navsprites_hover.gif') -47px 0;
+      display: block;
+      margin-left: 48px;
+      margin-top: 48px;
+    }
+    #prev:hover {
+      background: url('/sprites/img_navsprites_hover.gif') -47px -45px;
+    }
+    #home:hover {
+      background: url('/sprites/img_navsprites_hover.gif') 0 -45px;
+    }
