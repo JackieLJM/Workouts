@@ -466,3 +466,12 @@
 [submodule "FULLSTACK/Node-Simple-Cache"]
 	path = FULLSTACK/Node-Simple-Cache
 	url = https://github.com/hh54188/Node-Simple-Cache.git
+[submodule "visual/koa-antd-admin"]
+	path = visual/koa-antd-admin
+	url = https://github.com/yukrain/koa-antd-admin.git
+[submodule "FULLSTACK/koa-demos"]
+	path = FULLSTACK/koa-demos
+	url = https://github.com/ruanyf/koa-demos.git
+[submodule "FULLSTACK/examples"]
+	path = FULLSTACK/examples
+	url = https://github.com/koajs/examples.git
