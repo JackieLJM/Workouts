@@ -5,5 +5,8 @@ function foo(argument) {
 	function zip(argument) {
 		// body...
 		var quux;
+		bar=true;
 	}
+
+	return zip;
 }
