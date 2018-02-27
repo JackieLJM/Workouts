@@ -475,3 +475,6 @@
 [submodule "FULLSTACK/examples"]
 	path = FULLSTACK/examples
 	url = https://github.com/koajs/examples.git
+[submodule "ABOUTTEACHLEARN/samples"]
+	path = ABOUTTEACHLEARN/samples
+	url = https://github.com/GoogleChrome/samples.git
