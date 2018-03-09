@@ -478,3 +478,6 @@
 [submodule "ABOUTTEACHLEARN/samples"]
 	path = ABOUTTEACHLEARN/samples
 	url = https://github.com/GoogleChrome/samples.git
+[submodule "FULLSTACK/node-modules-demo"]
+	path = FULLSTACK/node-modules-demo
+	url = https://github.com/chenshenhai/node-modules-demo.git
