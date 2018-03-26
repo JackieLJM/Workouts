@@ -21,26 +21,27 @@ function ListNode(val){
     this.val=val;
     this.next=null;
 }
-var l1={
-    val:1,
-    next:{
-        val:2,
-        next:{
-            val:3,
-            next:null
-        }
-    }
-}
-var l2={
-    val:1,
-    next:{
-        val:8,
-        next:{
-            val:3,
-            next:null
-        }
-    }
-}
+// var l1={
+//     val:1,
+//     next:
+//     {
+//         val:2,
+//         next:{
+//             val:3,
+//             next:null
+//         }
+//     }
+// }
+// var l2={
+//     val:1,
+//     next:{
+//         val:8,
+//         next:{
+//             val:3,
+//             next:null
+//         }
+//     }
+// }
 
 var addTwoNumbers = function(l1, l2) {
     var ls=new ListNode();
@@ -62,5 +63,5 @@ var addTwoNumbers = function(l1, l2) {
     }
     return ls;
 };
-console.log(addTwoNumbers(l1,l2));
-console.log(l1);
+// console.log(addTwoNumbers(l1,l2));
+console.log(l1.next);
