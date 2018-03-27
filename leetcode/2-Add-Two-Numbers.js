@@ -42,7 +42,8 @@ function ListNode(val){
 //         }
 //     }
 // }
-
+var l1=new ListNode(0);
+console.log(l1);
 var addTwoNumbers = function(l1, l2) {
     var ls=new ListNode();
     // var i=1;
