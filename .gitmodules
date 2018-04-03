@@ -481,3 +481,6 @@
 [submodule "FULLSTACK/node-modules-demo"]
 	path = FULLSTACK/node-modules-demo
 	url = https://github.com/chenshenhai/node-modules-demo.git
+[submodule "isomorphic-react-redux/30-days-of-react"]
+	path = isomorphic-react-redux/30-days-of-react
+	url = https://github.com/fullstackreact/30-days-of-react.git
