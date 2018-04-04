@@ -484,3 +484,21 @@
 [submodule "isomorphic-react-redux/30-days-of-react"]
 	path = isomorphic-react-redux/30-days-of-react
 	url = https://github.com/fullstackreact/30-days-of-react.git
+[submodule "leetcode/Java/leetcode"]
+	path = leetcode/Java/leetcode
+	url = https://github.com/gouthampradhan/leetcode.git
+[submodule "leetcode/Java/awesome-java-leetcode"]
+	path = leetcode/Java/awesome-java-leetcode
+	url = https://github.com/Blankj/awesome-java-leetcode.git
+[submodule "leetcode/Java/java/leetcode"]
+	path = leetcode/Java/java/leetcode
+	url = https://github.com/mengli/leetcode.git
+[submodule "leetcode/Python/algorithm-exercise"]
+	path = leetcode/Python/algorithm-exercise
+	url = https://github.com/billryan/algorithm-exercise.git
+[submodule "leetcode/Java/LintCode"]
+	path = leetcode/Java/LintCode
+	url = https://github.com/awangdev/LintCode.git
+[submodule "leetcode/javascript/leetcode"]
+	path = leetcode/javascript/leetcode
+	url = https://github.com/hanzichi/leetcode.git
