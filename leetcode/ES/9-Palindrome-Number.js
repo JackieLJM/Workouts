@@ -1,3 +1,18 @@
+// Determine whether an integer is a palindrome. Do this without extra space.
+// Some hints:
+// Could negative integers be palindromes? (ie, -1)
+// If you are thinking of converting the integer to string, note the restriction of using extra space.
+// You could also try reversing an integer. However, if you have solved the problem "Reverse Integer", you know that the reversed integer might overflow. How would you handle such case?
+// There is a more generic way of solving this problem.
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+
+
+// 20180409 update
+// Your runtime beats 95.16 % of javascript submissions.
+// 248ms
 // ES5 20170801 60%Beated
 var isPalindrome = function (x) {
     // var xLength=x.toString().length;
@@ -27,5 +42,25 @@ var isPalindrome = function (x) {
     } else {
         return false;
     }
+};
+
+
+// 224ms
+var isPalindrome = function(x) {
+    var xS = x.toString();
+    if(xS.length == 1) {
+        return true;
+    }
+    var i = xS.length - 1;
+    var k = 0;
+    while(i > k) {
+         if(xS[i] != xS[k]){
+            return false
+        }
+        i--;
+        k++;
+    }
+    
+    return true;
 };
 console.log(isPalindrome(123211));

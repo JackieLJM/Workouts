@@ -18,6 +18,9 @@
 // };
 
 // ES5 20170802 80%Beated
+// 20180409
+// Your runtime beats 97.86 % of javascript submissions..
+// 60ms
 var maxArea = function (height) {
     var maxarea = 0, l = 0, r = height.length - 1;
         while (l < r) {
@@ -32,4 +35,21 @@ var maxArea = function (height) {
         return maxarea;
 };
 
+
+// 56ms
+var maxArea = function(height) {
+  let l = 0;
+  let r = height.length-1;
+  let max = 0;
+  
+  while (l < r) {
+    max = Math.max(max, (r - l) * Math.min(height[l], height[r]));
+    if (height[l] < height[r]) {
+      l++;
+    } else {
+      r--;
+    }
+  }
+  return max;
+};
 console.log(maxArea([1,2,3,4]));

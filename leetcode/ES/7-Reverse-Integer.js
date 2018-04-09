@@ -7,11 +7,15 @@
 // >>>>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 // Note:
 // The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.
-
 /**
  * @param {number} x
  * @return {number}
  */
+
+
+// 20180409 update
+// Your runtime beats 96.47 % of javascript submissions.
+// 76ms
 var reverse = function (x) {
     let max = 2147483647,
         min = -max - 1,sum = 0,n;
@@ -31,6 +35,30 @@ var reverse = function (x) {
         // console.log(-123 / 10);
     }
     return sum;
+};
+
+
+// 64ms
+var reverse = function(x) {
+    var isNeg = x < 0;
+    var result = 0;
+    
+    x = Math.abs(x);
+    
+    while(x) {
+        var lastDigit = x%10;
+        result *= 10;
+        result += lastDigit;
+        x = parseInt(x/10);
+    }
+
+    result = isNeg ? -result : result;
+    
+    if(result > Math.pow(2,31) - 1 || result < -Math.pow(2,31)) {
+        return 0;
+    }
+    
+    return result;
 };
 
 console.log(reverse(-123));

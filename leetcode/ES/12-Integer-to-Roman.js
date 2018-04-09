@@ -1,15 +1,44 @@
+// Given an integer, convert it to a roman numeral.
+// Input is guaranteed to be within the range from 1 to 3999.
+/**
+ * @param {number} num
+ * @return {string}
+ */
+
+
+// 20180409
+// Your runtime beats 89.60 % of javascript submissions.
+// 152ms
 //ES5 20180124 260ms 65%Beated 
-// var roman =["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];    
-// var value = [1000,900,500,400,100,90,50,40,10,9,5,4,1]; 
-// var result="";
-//   for(var i=0; num!=0; i++){
-//         while(num >= value[i]){
-//             num -= value[i];
-//             result+=roman[i];
-//         }
-//     }
-//     return result;
-// }
+var intToRoman=function(num){
+    var roman =["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];    
+    var value = [1000,900,500,400,100,90,50,40,10,9,5,4,1]; 
+    var result="";
+      for(var i=0; num!=0; i++){
+            while(num >= value[i]){
+                num -= value[i];
+                result+=roman[i];
+            }
+        }
+        return result;
+    }
+}
+
+
+//132ms
+var intToRoman = function(num) {
+  var result = '';
+  var decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  var roman = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"];
+  for (var i = 0;i<=decimal.length;i++) {
+    while (num%decimal[i] < num) {     
+      result += roman[i];
+      num -= decimal[i];
+    }
+  }
+  return result;
+};
+
 
 // ES5 20170803 15%Beated
 var intToRoman = function (num) {
