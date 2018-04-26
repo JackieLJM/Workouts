@@ -502,3 +502,6 @@
 [submodule "leetcode/javascript/leetcode"]
 	path = leetcode/javascript/leetcode
 	url = https://github.com/hanzichi/leetcode.git
+[submodule "udacity/WeChat/cn-wechat-weather"]
+	path = udacity/WeChat/cn-wechat-weather
+	url = https://github.com/udacity/cn-wechat-weather.git
