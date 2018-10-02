@@ -421,9 +421,6 @@
 [submodule "leetcode/leetcode"]
 	path = leetcode/leetcode
 	url = https://github.com/haoel/leetcode.git
-[submodule "jsDB/javascript-datastructures-algorithms"]
-	path = jsDB/javascript-datastructures-algorithms
-	url = https://github.com/loiane/javascript-datastructures-algorithms.git
 [submodule "visual/react-motion"]
 	path = visual/react-motion
 	url = https://github.com/chenglou/react-motion.git
@@ -505,3 +502,21 @@
 [submodule "udacity/WeChat/cn-wechat-weather"]
 	path = udacity/WeChat/cn-wechat-weather
 	url = https://github.com/udacity/cn-wechat-weather.git
+[submodule "algorithm-datastructure/grokking_algorithms"]
+	path = algorithm-datastructure/grokking_algorithms
+	url = https://github.com/egonSchiele/grokking_algorithms.git
+[submodule "algorithm-datastructure/algs4"]
+	path = algorithm-datastructure/algs4
+	url = https://github.com/kevin-wayne/algs4
+[submodule "algorithm-datastructure/algorithm-essentials"]
+	path = algorithm-datastructure/algorithm-essentials
+	url = https://github.com/soulmachine/algorithm-essentials
+[submodule "algorithm-datastructure/javascript-algorithms"]
+	path = algorithm-datastructure/javascript-algorithms
+	url = https://github.com/trekhleb/javascript-algorithms
+[submodule "algorithm-datastructure/lago"]
+	path = algorithm-datastructure/lago
+	url = https://github.com/yangshun/lago
+[submodule "algorithm-datastructure/javascript-datastructures-algorithms"]
+	path = algorithm-datastructure/javascript-datastructures-algorithms
+	url = https://github.com/loiane/javascript-datastructures-algorithms
