@@ -1,13 +1,15 @@
+// Your runtime beats 100.00 % of javascript submissions.
 /**
  * @param {number[]} nums
  * @return {number}
  */
 var firstMissingPositive = function(nums) {
-    var sort=Array.from(nums);
-    nums.sort();
-    for(var i=0;i<sort.length;i++){
-        if(nums[0]===sort[i]){
-            return i;
-        }
-    }
+    var hash = [];
+  for(var i = 0, len = nums.length; i < len; i++)
+    if (nums[i] <= 0) continue;
+    else hash[nums[i]] = true;
+
+  for(var i = 1; ; i++) 
+    if (!hash[i])
+      return i;
 };
