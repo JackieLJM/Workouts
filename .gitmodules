@@ -520,3 +520,15 @@
 [submodule "algorithm-datastructure/javascript-datastructures-algorithms"]
 	path = algorithm-datastructure/javascript-datastructures-algorithms
 	url = https://github.com/loiane/javascript-datastructures-algorithms
+[submodule "FULLSTACK/mern"]
+	path = FULLSTACK/mern
+	url = https://github.com/tech-dojo/mern.git
+[submodule "FULLSTACK/Mastering-Full-Stack-React-Web-Development"]
+	path = FULLSTACK/Mastering-Full-Stack-React-Web-Development
+	url = https://github.com/PacktPublishing/Mastering-Full-Stack-React-Web-Development.git
+[submodule "isomorphic-react-redux/next.js"]
+	path = isomorphic-react-redux/next.js
+	url = https://github.com/zeit/next.js.git
+[submodule "visual/ant-design"]
+	path = visual/ant-design
+	url = https://github.com/ant-design/ant-design.git
