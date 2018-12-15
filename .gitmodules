@@ -85,9 +85,6 @@
 [submodule "react-native/snowflake"]
 	path = react-native/snowflake
 	url = https://github.com/bartonhammond/snowflake.git
-[submodule "mern-starter"]
-	path = mern-starter
-	url = https://github.com/Hashnode/mern-starter.git
 [submodule "isomorphic-react-redux/webpack-react-redux-es6-boilerplate"]
 	path = isomorphic-react-redux/webpack-react-redux-es6-boilerplate
 	url = https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate
@@ -385,9 +382,6 @@
 [submodule "isomorphic-react-redux/react-curd"]
 	path = isomorphic-react-redux/react-curd
 	url = https://github.com/awaw00/react-curd.git
-[submodule "FULLSTACK/pro-mern-stack"]
-	path = FULLSTACK/pro-mern-stack
-	url = https://github.com/vasansr/pro-mern-stack.git
 [submodule "FULLSTACK/restful-api-express-mongoose"]
 	path = FULLSTACK/restful-api-express-mongoose
 	url = https://github.com/fedosejev/restful-api-express-mongoose.git
@@ -451,9 +445,6 @@
 [submodule "FULLSTACK/rest-api"]
 	path = FULLSTACK/rest-api
 	url = https://github.com/arccode/rest-api.git
-[submodule "FULLSTACK/Gracejs"]
-	path = FULLSTACK/Gracejs
-	url = https://github.com/xiongwilee/Gracejs.git
 [submodule "visual/sass-boilerplate"]
 	path = visual/sass-boilerplate
 	url = https://github.com/HugoGiraudel/sass-boilerplate.git
@@ -520,12 +511,6 @@
 [submodule "algorithm-datastructure/javascript-datastructures-algorithms"]
 	path = algorithm-datastructure/javascript-datastructures-algorithms
 	url = https://github.com/loiane/javascript-datastructures-algorithms
-[submodule "FULLSTACK/mern"]
-	path = FULLSTACK/mern
-	url = https://github.com/tech-dojo/mern.git
-[submodule "FULLSTACK/Mastering-Full-Stack-React-Web-Development"]
-	path = FULLSTACK/Mastering-Full-Stack-React-Web-Development
-	url = https://github.com/PacktPublishing/Mastering-Full-Stack-React-Web-Development.git
 [submodule "isomorphic-react-redux/next.js"]
 	path = isomorphic-react-redux/next.js
 	url = https://github.com/zeit/next.js.git
