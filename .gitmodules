@@ -517,3 +517,12 @@
 [submodule "visual/ant-design"]
 	path = visual/ant-design
 	url = https://github.com/ant-design/ant-design.git
+[submodule "FULLSTACK/koa-passport-example"]
+	path = FULLSTACK/koa-passport-example
+	url = https://github.com/mapmeld/koa-passport-example.git
+[submodule "FULLSTACK/typescript-starter"]
+	path = FULLSTACK/typescript-starter
+	url = https://github.com/nestjs/typescript-starter.git
+[submodule "fullstack/nest"]
+	path = fullstack/nest
+	url = https://github.com/nestjs/nest.git
