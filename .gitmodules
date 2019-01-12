@@ -217,9 +217,6 @@
 [submodule "jsA/h5bp/html5-boilerplate"]
 	path = jsA/h5bp/html5-boilerplate
 	url = https://github.com/h5bp/html5-boilerplate.git
-[submodule "jsA/gulp"]
-	path = jsA/gulp
-	url = https://github.com/gulpjs/gulp.git
 [submodule "udacity/frontend-nano/neighborhood-map"]
 	path = udacity/frontend-nano/neighborhood-map
 	url = https://github.com/6stringbeliever/neighborhood-map.git
