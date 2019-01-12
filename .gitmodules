@@ -523,6 +523,6 @@
 [submodule "FULLSTACK/typescript-starter"]
 	path = FULLSTACK/typescript-starter
 	url = https://github.com/nestjs/typescript-starter.git
-[submodule "fullstack/nest"]
-	path = fullstack/nest
-	url = https://github.com/nestjs/nest.git
+[submodule "FULLSTACK/nest"]
+	path = FULLSTACK/nest
+	url = https://github.com/nestjs/nest
