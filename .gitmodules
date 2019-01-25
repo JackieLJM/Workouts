@@ -526,3 +526,6 @@
 [submodule "fullstack/nest"]
 	path = fullstack/nest
 	url = https://github.com/nestjs/nest.git
+[submodule "FULLSTACK/simple-react-full-stack"]
+	path = FULLSTACK/simple-react-full-stack
+	url = https://github.com/crsandeep/simple-react-full-stack.git
