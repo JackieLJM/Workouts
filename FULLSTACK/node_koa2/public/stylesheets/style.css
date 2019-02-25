@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.logindiv{ width: 250px; margin:100px auto; }
+.logindiv .btn{ margin-left: 20px; cursor: pointer; }
+
+
+.page{ width:95%; margin:20px auto; max-width:1200px;}
+.top-wrap a{ display: inline-block; padding: 3px 15px; background-color: #f0f0f0; color:#666; border-radius: 5px; border:1px solid #f9f0f0; margin-right:20px;}
+
+.welcome{ text-align: center; font-size: 18px; padding-top: 150px; line-height: 50px; color:#666; }
+.input{ width: 80%; line-height: 30px; }
+.txt{width: 80%; line-height: 30px; min-height: 100px}
+.list-wrap table{border-collapse: collapse;display: table; width:90%; margin-bottom: 10px;}
+.list-wrap table,.list-wrap table tr th, .list-wrap table tr td {border:1px solid #aab3b9; padding:3px;text-align:center; min-width:70px; }
+.list-wrap table p{margin:0; padding:0;}
+.list-wrap td a{ display: inline-block; padding: 3px 10px; background-color: #f0f0f0; color:#666; border-radius: 5px; border:1px solid #f9f0f0; margin-right:20px;}
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js + Koa2 构建网站简单示例</title>
+    <link rel="styleSheet" type="text/css" href="/stylesheets/style.css">   
+</head>
+<body>
+    <div class="page">
+        <% include components/top.inc.ejs %>
+        <div class="content-wrap">
+            <div>
+                <% if (showType=='add'){ %>
+                <h2>新闻添加</h2>
+                <form action="" method="post">
+                    <P>标题：<input type="text" class="input" name="title"></P>
+                    <P>内容：<textarea name="info" class="txt"></textarea></P>                    
+                    <P style="text-align: center;"><input type="submit" value="添 加"></P>
+                </form>
+                <% }else if(showType=='mod'){ %>
+                <h2>新闻修改</h2>
+                <form action="" method="post">
+                    <input type="hidden" name="modid" value="<%=modData.Id%>">
+                    <P>标题：<input type="text" name="title" class="input" value="<%=modData.title%>"></P>        <P>内容：<textarea name="info" class="txt"><%=modData.info%></textarea></P>                   
+                    <P style="text-align: center;"><input type="submit" value="修改"></P>
+                </form>
+                <% } %>
+            </div>
+
+            <div class="list-wrap">
+                <h2>新闻列表信息</h2>             
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>标题：</th>                       
+                        <th style='width: 180px; text-align: center;'>操作</th>
+                    </tr>
+                    <tbody>
+                        <% for(var i=0;i<newsList.length;i++) { %>
+                        <tr>
+                            <td><%=newsList[i].Id %></td>
+                            <td><%=newsList[i].title %></td>                            
+                            <td>
+                                <a href="?act=mod&id=<%=newsList[i].Id %>"> mod </a> 
+                                <a href="?act=del&id=<%=newsList[i].Id %>" onclick="return confirm('你确宝要删除吗?');"> del </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+
+            
+
+        </div>
+    </div>
+    <script src="/javascripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/javascripts/logout.js" type="text/javascript"></script>  
+</body>
+</html>
