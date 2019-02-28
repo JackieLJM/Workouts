@@ -520,8 +520,8 @@
 [submodule "FULLSTACK/typescript-starter"]
 	path = FULLSTACK/typescript-starter
 	url = https://github.com/nestjs/typescript-starter.git
-[submodule "fullstack/nest"]
-	path = fullstack/nest
+[submodule "FULLSTACK/nest"]
+	path = FULLSTACK/nest
 	url = https://github.com/nestjs/nest.git
 [submodule "FULLSTACK/simple-react-full-stack"]
 	path = FULLSTACK/simple-react-full-stack
@@ -530,3 +530,6 @@
 [submodule "ABOUTTEACHLEARN/learn-javascript"]
 	path = ABOUTTEACHLEARN/learn-javascript
 	url = https://github.com/michaelliao/learn-javascript.git
+[submodule "aboutteachlearn/learn-javascript"]
+	path = aboutteachlearn/learn-javascript
+	url = https://github.com/michaelliao/learn-javascript
