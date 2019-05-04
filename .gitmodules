@@ -526,7 +526,6 @@
 [submodule "FULLSTACK/simple-react-full-stack"]
 	path = FULLSTACK/simple-react-full-stack
 	url = https://github.com/crsandeep/simple-react-full-stack.git
-
 [submodule "ABOUTTEACHLEARN/learn-javascript"]
 	path = ABOUTTEACHLEARN/learn-javascript
 	url = https://github.com/michaelliao/learn-javascript.git
@@ -536,6 +535,3 @@
 [submodule "FULLSTACK/NodeMiddle"]
 	path = FULLSTACK/NodeMiddle
 	url = https://github.com/KeyonY/NodeMiddle.git
-[submodule "fullstack/puppeteer-examples"]
-	path = fullstack/puppeteer-examples
-	url = https://github.com/GoogleChromeLabs/puppeteer-examples
