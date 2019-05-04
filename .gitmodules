@@ -536,3 +536,6 @@
 [submodule "FULLSTACK/NodeMiddle"]
 	path = FULLSTACK/NodeMiddle
 	url = https://github.com/KeyonY/NodeMiddle.git
+[submodule "fullstack/puppeteer-examples"]
+	path = fullstack/puppeteer-examples
+	url = https://github.com/GoogleChromeLabs/puppeteer-examples
