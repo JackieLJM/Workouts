@@ -90,7 +90,7 @@
 	url = https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate
 [submodule "isomorphic-react-redux/React-News-Board"]
 	path = isomorphic-react-redux/React-News-Board
-	url = https://github.com/ethan-funny/React-News-Board.git
+	url = https://github.com/laplace-vi/React-News-Board.git
 [submodule "react-native/noder-react-native"]
 	path = react-native/noder-react-native
 	url = https://github.com/soliury/noder-react-native.git
