@@ -535,3 +535,9 @@
 [submodule "FULLSTACK/NodeMiddle"]
 	path = FULLSTACK/NodeMiddle
 	url = https://github.com/KeyonY/NodeMiddle.git
+[submodule "3D/react-three-fiber"]
+	path = 3D/react-three-fiber
+	url = https://github.com/drcmda/react-three-fiber.git
+[submodule "react/architecting-single-page-applications"]
+	path = react/architecting-single-page-applications
+	url = https://github.com/intojs/architecting-single-page-applications.git
