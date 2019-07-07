@@ -544,3 +544,6 @@
 [submodule "FULLSTACK/colors"]
 	path = FULLSTACK/colors
 	url = https://github.com/harryfyodor/colors.git
+[submodule "3D/echarts-gl"]
+	path = 3D/echarts-gl
+	url = https://github.com/ecomfe/echarts-gl.git
