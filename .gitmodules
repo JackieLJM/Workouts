@@ -547,3 +547,6 @@
 [submodule "3D/echarts-gl"]
 	path = 3D/echarts-gl
 	url = https://github.com/ecomfe/echarts-gl.git
+[submodule "visual/react-simple-maps"]
+	path = visual/react-simple-maps
+	url = https://github.com/zcreativelabs/react-simple-maps.git
