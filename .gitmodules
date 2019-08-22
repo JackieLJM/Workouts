@@ -550,3 +550,6 @@
 [submodule "visual/react-simple-maps"]
 	path = visual/react-simple-maps
 	url = https://github.com/zcreativelabs/react-simple-maps.git
+[submodule "combination/React-Redux-Flask"]
+	path = combination/React-Redux-Flask
+	url = https://github.com/dternyak/React-Redux-Flask.git
